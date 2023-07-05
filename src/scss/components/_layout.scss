@@ -1,0 +1,26 @@
+#mainDiv{
+    display: flex;
+    flex-wrap: wrap;
+    .sidebar{
+        width: 280px;
+        min-width: 280px;
+    }
+    #content{
+        width: calc(100% - 280px);
+        flex-wrap: wrap;
+        align-items: flex-start;
+        .navbar{
+            width: 100%;
+        }
+        .content{
+            width: 100%;
+        
+            div{
+                background: var(--content-background);
+                margin: 20px;
+                border-radius: 6px;
+            }
+        }
+    }
+
+}

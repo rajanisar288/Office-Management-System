@@ -1,0 +1,19 @@
+#navbar{
+    width: 100%;
+    box-sizing: border-box;
+    height: 55px;
+    margin: 0;
+    .navbar-inner{
+        background: var(--content-background);
+        margin: 20px;
+        border-radius: 6px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 55px;
+        .bread-crumbs{
+            padding-left: 20px;
+            font-family: poppins-bold;
+        }
+    }
+}

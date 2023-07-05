@@ -1,0 +1,35 @@
+.card{
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    border-radius: 6px;
+    background: var(--content-background);
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--text-color);
+    box-sizing: border-box;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border: 1px solid $_color-orange-light;
+    .card-title{
+        width: 50%;
+        min-width: 130px;
+        font-size: 20px;
+        padding: 5px;
+        position: relative;
+        border-radius: 6px;
+        &::after{
+            content: '';
+            width: 100px;
+            height: 2px;
+            top: 50%;
+            left: 190px;
+            position: absolute;
+            background: $_color-blue;
+        }
+    }
+    .card-peragraph{
+        padding: 10px 0;
+        width: 100%;
+        color: $_color-blue; 
+    }
+}

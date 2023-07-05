@@ -1,0 +1,238 @@
+//theme switcher
+// .themeSwitcher{
+//     position: absolute;
+//     z-index: 99;
+//     right: 0;
+//     top: 100px;
+//     background:var(--content-background);
+//     border-top-left-radius: 6px;
+//     border-bottom-left-radius:6px ;
+//     width: 100px;
+//     height: 50px;
+// }
+.humburgerMenu{
+    position: fixed;
+    display: none;
+    top: 0;
+    button{
+        width: 65px;
+        height: 50px;
+        border-radius: 6px;
+        outline: none;
+        border: none;
+        background:var(--content-background);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        span{
+            width: 80%;
+            float: left;
+            height: 1px;
+            background: $_color-orange;
+            position: relative;
+            transition: 320ms;
+            &::after{
+                content: "";
+                width: 80%;
+                float: left;
+                height: 1px;
+                top: 9px;
+                position: absolute;
+                background: $_color-blue;
+                left: 1px;
+                transition: 320ms;
+            }
+            &::before{
+                content: "";
+                width: 55%;
+                float: left;
+                height: 1px;
+                top: -9px;
+                position: absolute;
+                background: $_color-orange;
+                left: 1px;
+                transition: 320ms;
+            }
+        }
+        &:hover > span::after{
+            width: 100%;
+            transition: 320ms;
+        }
+        &:hover > span::before{
+            width: 80%;
+            transition: 320ms;
+        }
+        &:hover > span{
+            width: 70%;
+            transition: 320ms;
+        }
+    
+    }
+}
+
+
+.home-navbar{
+    position: fixed;
+    width: 100%;
+    transition: 320ms;
+    top: 0;
+}
+.navbarHomeInner{
+    height: 50px; transition: 320ms;
+}
+
+.logo{
+    color: $_color-orange;
+    font-family: poppins-bold;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    &::after{
+        content: '</>';
+        font-family: poppins;
+        background: $_color-blue-light;
+        padding: 4px 13px;
+        color: var(--text-color);
+        border-radius: 6px;
+        margin-left: 5px;
+    }
+}
+
+.mene-item{
+    list-style-type: none;
+    width: 100px;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 6px; 
+    &:hover{
+        background: $_color-blue-light;
+        transition: 320ms;
+    }
+    &.active{
+        background: red;
+    }
+    a{
+        text-decoration: none;
+    
+    }
+}
+.home-icon{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 0;
+    a{
+        width: 70px;
+        height: 70px;
+        text-align: center;
+         line-height: 70px;
+        border-radius: 6px;
+        margin-left: 10px;
+        border: 1px solid $_color-orange-light;
+        background: var(--content-background);
+        font-size: 25px;
+        transition: hover 200ms;
+        i{
+            color: $_color-orange;
+        }
+        &:hover{
+            background: $_color-orange;
+            transition: 200ms;
+            // line-height: 50px;
+            font-size: 40px;
+        }
+        &:hover > i{
+            transition: 200ms;
+            color: var(--content-background);
+            
+        }
+        
+    }
+}
+.mt-150{
+    margin-top: 150px;
+}
+
+.section2{
+    #svgBox{
+        fill: var(--content-background);
+    }
+    #svgText{
+        fill: $_color-blue;
+    }
+    #svgText2{
+        fill: $_color-orange;
+    }
+    .svgLeaf{
+        animation: leaf 5s linear infinite;
+        fill: $_color-orange;
+        transform-box: fill-box;
+        transform-origin: bottom;
+        @keyframes leaf{
+            from{
+                translate: 0 1rem;
+            }
+            to{
+                translate: 0 0rem;
+            }
+        }
+    }
+   
+    
+}
+
+
+
+
+//media 999px
+@media  screen and  (max-width: $tablet-view){
+    .humburgerMenu{
+        display: block;
+         position: fixed;
+         right: 0;
+    }
+    .homeNavbarHide{
+        transition: 320ms;
+        margin-left: -300px;
+    }
+    .home-navbar{
+        position: fixed;
+        width: 300px;
+        background: var(--content-background);
+        height: 100vh;
+        border-radius: 6px;
+        display: flex;
+        flex-wrap: wrap;
+        z-index: 99;
+
+        .navbarHomeInner{
+            flex-wrap: wrap;
+            height: auto;
+            border-radius: 0;
+            width: 90%;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 6px;
+
+            .menu{
+                display: flex;
+                 width: 100%;
+                 flex-wrap: wrap;
+                 margin-top: 50px;
+                 .mene-item{
+                    width: 100%;
+                    height: 50px;
+                    text-align: left;
+                    padding-left: 20px;
+                    display: flex;
+                    align-items: center;
+                 }
+            }
+        }
+    }
+    .mt-150{
+        margin-top: 0;
+    }
+}

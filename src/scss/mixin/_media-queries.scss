@@ -1,0 +1,7 @@
+// For Phone Size 320px
+
+@mixin for-Phone {
+    @media only screen and (max-width: $phone-min){
+        @content;
+    }
+}

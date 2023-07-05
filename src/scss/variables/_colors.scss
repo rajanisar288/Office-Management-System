@@ -1,0 +1,31 @@
+// Colors 
+// $_color_orange:#FFBF00;
+// $_color_orangeLight:#FAD5A5;
+// $_color_orangeExtraDark:#C69749;
+
+$_color-orange:#c79f04;
+$_color-blue:#1890ff;
+$_color-blue-light:#1890ff6e;
+$_color-orange-light:#7a7a7a30;
+
+
+// Light Theme
+body {
+  --background:rgb(235 242 255);
+  --background-Light:white;
+  --content-background:white;
+  --text-color:rgb(39, 39, 39);
+  }
+
+// Dark Theme  
+  body.dark-theme {
+    --background:#1C1C1C;
+    --background-Light:rgb(28 53 97);
+    --text-color:rgb(146 146 149);
+    --content-background:#111111;
+  }
+
+body{
+  background: var(--background);
+}
+
