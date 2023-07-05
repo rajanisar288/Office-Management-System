@@ -7,7 +7,7 @@ import { ProjectsComponent } from './admin/projects/projects.component';
 
 const routes: Routes = [
   {
-    path: '', component:AdminComponent, children : [
+    path: 'admin', component:AdminComponent, children : [
       {
         path: '', component:AdminHomeComponent
       },
