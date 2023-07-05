@@ -12,12 +12,15 @@ const routes: Routes = [
       //   path: 'home', component:AdminHomeComponent
       // },
       {
-        path:'project', component:ProjectsComponent
+        path:'admin/project', component:ProjectsComponent
       }
     ]
   },
   {
     path: 'user', component:TotallUserComponent
+  },
+  {
+    path: 'admin', component:AdminComponent
   }
 ];
 
