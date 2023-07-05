@@ -8,9 +8,9 @@ import { ProjectsComponent } from './admin/projects/projects.component';
 const routes: Routes = [
   {
     path: 'admin', component:AdminComponent, children : [
-      {
-        path: '', component:AdminHomeComponent
-      },
+      // {
+      //   path: 'home', component:AdminHomeComponent
+      // },
       {
         path:'project', component:ProjectsComponent
       }
