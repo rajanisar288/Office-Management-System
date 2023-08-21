@@ -53,10 +53,20 @@
     flex-wrap: wrap;
     box-sizing: border-box;
 }
+
+.container-fluid {
+    width: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
 .row{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 10px;
 }
 
 

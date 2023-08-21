@@ -2,7 +2,7 @@ import { AfterViewInit, Component, ElementRef, Inject, ViewChild } from '@angula
 import { HostListener } from '@angular/core';
 import { DOCUMENT } from '@angular/common'; 
 import { AuthService } from 'src/app/auth/auth.service';
-
+import { gsap } from 'gsap';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +16,39 @@ export class HomeComponent implements AfterViewInit {
   
   constructor(@Inject(DOCUMENT) document: Document,private _authService:AuthService  ){}
 
-  ngOnInit() {}
+  ngOnInit() {
+   let  landingPage =  document.getElementsByClassName('home-navbar')
+   let item = document.getElementsByClassName('mene-item')
+   let detailCard = document.getElementById('detailCard')
+   let socialCard = document.getElementById('socialCard')
+   let linkedin = document.getElementsByClassName('linkedin')
+   let facebook = document.getElementsByClassName('facebook')
+   let twitter = document.getElementsByClassName('twitter')
+   let instagram = document.getElementsByClassName('instagram')
+    const gsapTimeLine = gsap.timeline()
+          gsapTimeLine.from(landingPage,{
+            opacity:0,
+          }).from(item,{
+            scale:2,
+            letterSpacing:-10,
+            opacity:0,
+            
+          }).from(detailCard, {
+            y:50,
+            scale:2,
+            skew:20,
+            opacity:0,
+            duration:1
+           
+          }).from(socialCard, {
+            y:50,
+            scale:2,
+            opacity:0,
+            duration:1
+
+          })
+        }
+      
 
   //show  Modal
   openModal(){
@@ -51,9 +83,11 @@ export class HomeComponent implements AfterViewInit {
     if(window.pageYOffset >= 10){
       document.getElementById('navbarHome')?.classList.remove('top-20')
       document.getElementById('navbarHome')?.classList.add('top')
+      document.getElementById('navbarHome')?.classList.add('bg-light')
     }else if(window.pageYOffset <= 10){
       document.getElementById('navbarHome')?.classList.add('top-20')
       document.getElementById('navbarHome')?.classList.remove('top')
+      document.getElementById('navbarHome')?.classList.remove('bg-light')
     }
 }
 

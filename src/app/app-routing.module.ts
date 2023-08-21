@@ -6,13 +6,13 @@ const routes: Routes = [
   {
     path: '' , loadChildren: () => import('./public/home/home.module').then(m => m.HomeModule)
   },
-  {
-    path: 'home' , loadChildren: () => import('./public/home/home.module').then(m => m.HomeModule)
-  },
+  // {
+  //   path: 'home' , loadChildren: () => import('./public/home/home.module').then(m => m.HomeModule)
+  // },
 
   {
     path: 'admin',
-    loadChildren: () => import('./features/admin/admin.module').then(m => m.AdminModule), canActivate:[AuthGuard]
+    loadChildren: () => import('./features/admin.module').then(m => m.AdminModule), canActivate:[AuthGuard]
   },
   {
     path: '',
