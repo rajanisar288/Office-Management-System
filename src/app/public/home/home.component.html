@@ -1,4 +1,4 @@
-<div id="main">
+<div id="main" id="home">
     
 
     <div id="landingPage">
@@ -9,20 +9,20 @@
         </div>
 
 
-        <div class="home-navbar homeNavbarHide container-fluid" #navbarhomes>
+        <div class="home-navbar homeNavbarHide container-fluid" #navbarhomes >
             <div class="container-fluid" id="navbarHome">
                 <div class="container top-20  d-flex align-item-center br-6 navbarHomeInner">
                     <div class="row justify-content-space-between">
                         <div class="menu d-flex p-r">
-                            <li class="mene-item"><a href="#about">Home</a></li>
+                            <li class="mene-item"><a href="#home">Home</a></li>
                             <li class="mene-item"><a href="#about">About</a></li>
-                            <li class="mene-item"><a href="#about">Service</a></li>
+                            <!-- <li class="mene-item"><a href="#about">Service</a></li> -->
                         </div>
                         <div class="logo p-l">dev. <i class="fa-solid fa-heart" ></i></div>
                         <div class="menu d-flex p-r">
-                            <li class="mene-item"><a href="#about">Skills</a></li>
-                            <li class="mene-item"><a href="#about">Project</a></li>
-                            <li (click)="openModal()" class="mene-item"><a>Login</a></li>
+                            <li class="mene-item"><a href="#skill">Skills</a></li>
+                            <li class="mene-item"><a href="#projects">Project</a></li>
+                            <!-- <li (click)="openModal()" class="mene-item"><a>Login</a></li> -->
                         </div>
                     </div>
                 </div>
@@ -84,50 +84,52 @@
             </div>
         </div>
 
-        <div class="container about">
+        <div class="container text-left" style="margin-top: 120px;"><h1 style="position: relative; margin-left: 12px;" class="theme-text" id="skill">Skills</h1></div>
+        <div class="container about" style="margin-top: 50px;">
             <div class="row">
-                <div class="col-sm-4  p-lg">
+                <div class="col-sm-3  p-lg p-relative" *ngFor="let skill of skills" id="skillCard">
+                    <div class="card d-flex m-t-lg" style="padding-left: 20px;">
+                        <h3 class="w-100">{{skill.language}}</h3>
+                        <h5 class="w-100 p text-blue">{{skill.experience}}</h5>
+                        <div class="card-icon"><i class="{{skill.icon}} m-t-lg" style="font-size: 40px;"></i></div>
+                        <div class="per theme-text">{{skill.per}}%</div>
+                    </div>
+                </div>
+                <!-- <div class="col-sm-3 p-lg">
                     <div class="card d-flex m-t-lg" style="padding-left: 20px;">
                         <h3 class="w-100">Angular</h3>
                         <h5 class="w-100 p text-blue">Experienced</h5>
                         <div><i class="fa-brands fa-angular m-t-lg" style="font-size: 40px;"></i></div>
                     </div>
                 </div>
-                <div class="col-sm-4 p-lg">
+                <div class="col-sm-3 p-lg">
                     <div class="card d-flex m-t-lg" style="padding-left: 20px;">
                         <h3 class="w-100">Angular</h3>
                         <h5 class="w-100 p text-blue">Experienced</h5>
                         <div><i class="fa-brands fa-angular m-t-lg" style="font-size: 40px;"></i></div>
                     </div>
                 </div>
-                <div class="col-sm-4 p-lg">
+                <div class="col-sm-3 p-lg">
                     <div class="card d-flex m-t-lg" style="padding-left: 20px;">
                         <h3 class="w-100">Angular</h3>
                         <h5 class="w-100 p text-blue">Experienced</h5>
                         <div><i class="fa-brands fa-angular m-t-lg" style="font-size: 40px;"></i></div>
                     </div>
                 </div>
-                <div class="col-sm-4 p-lg">
+                <div class="col-sm-3 p-lg">
                     <div class="card d-flex m-t-lg" style="padding-left: 20px;">
                         <h3 class="w-100">Angular</h3>
                         <h5 class="w-100 p text-blue">Experienced</h5>
                         <div><i class="fa-brands fa-angular m-t-lg" style="font-size: 40px;"></i></div>
                     </div>
                 </div>
-                <div class="col-sm-4 p-lg">
+                <div class="col-sm-3 p-lg">
                     <div class="card d-flex m-t-lg" style="padding-left: 20px;">
                         <h3 class="w-100">Angular</h3>
                         <h5 class="w-100 p text-blue">Experienced</h5>
                         <div><i class="fa-brands fa-angular m-t-lg" style="font-size: 40px;"></i></div>
                     </div>
-                </div>
-                <div class="col-sm-4 p-lg">
-                    <div class="card d-flex m-t-lg" style="padding-left: 20px;">
-                        <h3 class="w-100">Angular</h3>
-                        <h5 class="w-100 p text-blue">Experienced</h5>
-                        <div><i class="fa-brands fa-angular m-t-lg" style="font-size: 40px;"></i></div>
-                    </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

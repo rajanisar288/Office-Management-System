@@ -16,7 +16,7 @@ import { AuthService } from './auth/auth.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [AuthGuard, AuthService],
   bootstrap: [AppComponent]

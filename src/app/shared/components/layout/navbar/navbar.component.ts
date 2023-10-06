@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { UtilityService } from 'src/app/shared/services/utility.service';
+import { DOCUMENT } from '@angular/common';
 
 
 @Component({
@@ -9,8 +10,17 @@ import { UtilityService } from 'src/app/shared/services/utility.service';
 })
 export class NavbarComponent {
   breadcrumbs : string |  undefined
-  constructor (private  _utilityService:UtilityService){
-    this.breadcrumbs = this._utilityService.breadcrumbs   
+  menuToggle:any
+  sideMenu:boolean = true
+  constructor (private  _utilityService:UtilityService, @Inject(DOCUMENT) private document: Document){
+    this.breadcrumbs = this._utilityService.breadcrumbs  
+  }
+
+  toggler(){
+    this.menuToggle = document.querySelector('.toggle');
+    this.menuToggle.classList.toggle('active')
+
   }
 
 }
+

@@ -1,15 +1,40 @@
 <div id="mainDiv">
-    <div class="sidebar"><app-sidebar></app-sidebar></div>
-    <div id="content">
-        <div class="navbar">
-            <div class="navbar-child">
-                <app-navbar></app-navbar>
+    <div class="sidebar defaultBg" [ngClass]="isSidebarCollapse ? 'sidebarUnCollapse': 'sidebar-collapse'"><app-sidebar></app-sidebar></div>
+    <div id="content" [ngClass]="isSidebarCollapse ? '': 'contentFullWidth'">
+        <div class="navbar defaultBg">
+            <div class="toggle" (click)="toggler()">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+           <div class="mainNavbar">
+            <app-navbar></app-navbar>
+           </div>
         </div>
-        <div class="content">
-            <div>
+        <div class="contents br-6">
+            <div class="content-wrap">
                 <router-outlet></router-outlet>
             </div>
+        </div>
+    </div>
+    <div class="themeChanger" [ngClass]="isThemeChangerActive ? 'themeActive': 'themeNotActive'">
+        <button (click)="setting()"><i class="fa-solid fa-gear"></i></button>
+        <div class="theme" *ngIf="isThemeChangerActive">
+            <div class="themes">
+                <button class="dark-theme" (click)="activeDarkTheme()"><i class="fa-regular fa-moon"></i></button>
+            </div>
+            <div class="themes">
+                <button class="light-theme" (click)="activeLightTheme()"><i class="fa-regular fa-sun"></i></button>
+            </div>
+            <!-- <button class="black-theme"></button>   -->
+        </div>
+        <div class="sidebarChanger" *ngIf="isThemeChangerActive">
+            <p class="d-block w-100 text-primary pl-10 pb-10">Change Side Background</p>
+            <button class="bg-1"></button>
+            <button class="bg-2"></button>
+            <button class="bg-3"></button>
+            <button class="bg-4"></button>
+            <button class="bg-5"></button>
         </div>
     </div>
 

@@ -1,0 +1,50 @@
+body{
+    @include small-screen{
+        background: red;
+    }   
+}
+
+.sidebarCollapse {
+    @include small-screen{
+        width: 200px;
+        position: fixed;
+        transition: 320ms;
+        margin-left: 0px;
+        z-index: 66;
+       margin-left: -200px;
+        top: 51px; 
+    } 
+}
+#mainDiv .sidebar-collapse {
+    @include small-screen{
+        width: 200px !important;
+        position: fixed;
+        z-index: 66;
+        //  margin-left: -200px;
+        top: 51px; 
+    }
+}
+
+.sidebarUnCollapse {
+    @include small-screen{
+       margin-left: 0px;
+       width: 200px !important;
+       position: fixed;
+       min-width: 200px !important;
+       z-index: 66;
+       margin-left: -200px;
+        top: 51px; 
+    }
+}
+
+ #mainDiv #content  {
+    @include small-screen{
+        width: 100% !important;
+    }
+}
+
+.card-wrapper{
+    @include small-screen{
+        justify-content: center;
+    }
+}

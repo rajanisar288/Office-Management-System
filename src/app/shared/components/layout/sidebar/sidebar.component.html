@@ -1,18 +1,11 @@
-<div class="sidebar">
-    <div class="user-detail">
-        <img src="../../../../../assets/images/profile.jpg" alt="user">
-        <p>{{name}}</p>
-        <p>{{desc}}</p>
-    </div>
+<div id="sidebar">
+    <div class="companyLogo"><p> <i class="fa-solid fa-truck-fast"></i> Shipping</p></div>
     <div class="menu">
-        <ul>
-            <li routerLink="/admin" routerLinkActive="active"  [routerLinkActiveOptions]="{exact: true}"><img src="../../../../../assets/images/menu/home.png" alt=""> <a>Home</a></li>
-            <li routerLink="project" routerLinkActive="active"><img src="../../../../../assets/images/menu/projects.png" alt=""> <a>Project</a></li>
-            <li routerLink="x" routerLinkActive="active"><img src="../../../../../assets/images/menu/skills.png" alt=""> <a>Skill</a></li>
-            <li routerLink="x" routerLinkActive="active"><img src="../../../../../assets/images/menu/setting.png" alt=""> <a>Setting</a></li>
+        <ul *ngFor="let menuList of menuList">
+            <li routerLink="{{menuList.route}}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <i class="{{menuList.icon}}"></i>
+                <span>{{menuList.routeName}}</span>
+            </li>
         </ul>
-    </div>
-    <div class="sidebar-footer">
-        <button (click)="logOut()">logOut</button>
     </div>
 </div>

@@ -3,16 +3,20 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './shared/guards/auth.guard';
 
 const routes: Routes = [
-  {
-    path: '' , loadChildren: () => import('./public/home/home.module').then(m => m.HomeModule)
-  },
+  // {
+  //   path: '' , loadChildren: () => import('./public/home/home.module').then(m => m.HomeModule)
+  // },
   // {
   //   path: 'home' , loadChildren: () => import('./public/home/home.module').then(m => m.HomeModule)
   // },
 
   {
+    path: '',
+    loadChildren: () => import('./features/admin.module').then(m => m.AdminModule),
+  },
+  {
     path: 'admin',
-    loadChildren: () => import('./features/admin.module').then(m => m.AdminModule), canActivate:[AuthGuard]
+    loadChildren: () => import('./features/admin.module').then(m => m.AdminModule),
   },
   {
     path: '',

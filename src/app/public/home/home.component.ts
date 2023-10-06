@@ -13,6 +13,46 @@ export class HomeComponent implements AfterViewInit {
   isLightTheme: boolean = true;
   menuHideAndShow: boolean = true
   modal = false;
+
+  skills = [
+    {
+      language:'Angular',
+      experience: 'mid',
+      icon:'fa-brands fa-angular',
+      per:50
+    },
+    {
+      language:'Node js',
+      experience: 'mid',
+      icon:'fa-brands fa-node-js',
+      per:50
+    },
+    {
+      language:'JavaScript',
+      experience: 'senior',
+      icon:'fa-brands fa-js',
+      per:50
+    },
+    {
+      language:'Bootstrap',
+      experience: 'mid',
+      icon:'fa-brands fa-bootstrap',
+      per:50
+    },
+    {
+      language:'Git',
+      experience: 'mid',
+      icon:'fa-brands fa-github',
+      per:50
+    },
+    {
+      language:'Sass',
+      experience: 'mid',
+      icon:'fa-brands fa-sass',
+      per:50
+    }
+
+  ]
   
   constructor(@Inject(DOCUMENT) document: Document,private _authService:AuthService  ){}
 

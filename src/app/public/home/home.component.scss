@@ -44,6 +44,10 @@
     transform: scale(1.1);
     transform: 320ms;
     cursor: pointer;
+    &:hover > .card-icon i{
+        font-size: 50px;
+        transition: 320ms;
+    }
 }
 
 .about .card:hover::before {
@@ -89,4 +93,16 @@
     border-radius: 6px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     padding: 32px;
+}
+
+.per{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 10px;
+    border-radius: 50%;
+    font-size: 24px;
 }

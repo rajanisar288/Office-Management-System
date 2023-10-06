@@ -1,59 +1,59 @@
-// Colors 
-// $_color_orange:#FFBF00;
-// $_color_orangeLight:#FAD5A5;
-// $_color_orangeExtraDark:#C69749;
-
-$_color-orange:#FE3833;
-$_color-blue:#1890ff;
-$_color-blue-light:#1890ff6e;
-$_color-orange-light:#7a7a7a30;
-
-
 // Light Theme
 body {
-  --background:rgb(235 242 255);
-  --background-Light:white;
-  --content-background:white;
-  --text-color:rgb(39, 39, 39);
-  --linear-background:  linear-gradient(
-    20deg,
-    hsl(0deg 0% 100%) 0%,
-    hsl(225deg 28% 93%) 49%,
-    hsl(225deg 28% 86%) 69%,
-    hsl(224deg 28% 80%) 81%,
-    hsl(223deg 28% 73%) 88%,
-    hsl(222deg 28% 66%) 93%,
-    hsl(221deg 28% 59%) 97%,
-    hsl(220deg 28% 53%) 99%,
-    hsl(218deg 34% 46%) 100%,
-    hsl(215deg 48% 38%) 100%,
-    hsl(209deg 86% 28%) 100%
-  );
-  }
-
-// Dark Theme  
-  body.dark-theme {
-    --background:#1C1C1C;
-    --background-Light:rgb(28 53 97);
-    --text-color:rgb(146 146 149);
-    --content-background:#111111;
-    --linear-background:linear-gradient(
-      30deg,
-      hsl(0deg 0% 1%) 0%,
-      hsl(224deg 27% 7%) 7%,
-      hsl(221deg 33% 11%) 24%,
-      hsl(219deg 40% 15%) 56%,
-      hsl(217deg 46% 19%) 76%,
-      hsl(216deg 52% 22%) 87%,
-      hsl(215deg 57% 26%) 93%,
-      hsl(213deg 63% 29%) 97%,
-      hsl(212deg 69% 33%) 99%,
-      hsl(211deg 76% 35%) 100%,
-      hsl(209deg 85% 38%) 100%
-    );
-  }
-
-body{
-  background: var(--background);
+  --primary: #F6F6F6;
+  --secondary: white; //#F0F0F0
+  --cardColor:#EBEBEB;
+  --borderPrimary: #e2e2e2;
+  --boxShadowPrimary: rgb(149 149 149 / 27%) 7px 7px 76px -18px;
+  --boxShadowSecondary:0px 10px 15px -3px rgba(0,0,0,0.1);
+  --borderWithShadow: #dfdfdf66;
+  --textPrimary: #414141d1;
+  --textSecondary: #3e3e3eba;
 }
 
+// Dark Theme  
+body.dark-theme {
+  --primary: black;
+  --secondary: #232323fc;
+  --cardColor:#EBEBEB;
+  --borderPrimary: #29292980;
+  --boxShadowPrimary: rgb(19 7 7) 10px 12px 69px 17px;
+  --boxShadowSecondary: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075), /* shadow ring 👇 */ 0 0 0 1px hsla(0, 0%, 0%, 0.05), /* multiple soft shadows 👇 */ 0 0.3px 0.4px hsla(0, 0%, 0%, 0.02), 0 0.9px 1.5px hsla(0, 0%, 0%, 0.045), 0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+  --borderWithShadow: #5a56562b;
+  --textPrimary: #adababd4;
+  --textSecondary: #6d6565;
+}
+
+//Theme Setup
+$primary: var(--primary);
+$secondary: var(--secondary);
+$main-bg:var(--cardColor);
+$box-shadow-secondary:var(--boxShadowSecondary);
+$border-primary: var(--borderPrimary);
+$box-shadow-primary: var(--boxShadowPrimary);
+$shadow-border: var(--borderWithShadow);
+$text-primary: var(--textPrimary);
+$text-secondary: var(--textSecondary);
+
+
+
+//Color Variant (RED, GREEN , BLUE, YELLOW)
+$green-dark: #618264;
+$green-medium: #79AC78;
+$green-light: #B0D9B1;
+
+$red-dark: #e60000;
+$red-medium: #FF6969;
+$red-light: #FF6666;
+
+$yellow-dark: #e5e600;
+$yellow-medium: #ffff1a;
+$yellow-light: #ffff4d;
+
+$blue-dark: #0000e6;
+$blue-medium: #4d4dff;
+$blue-light: #8080ff;
+
+//Global Colors
+$color-turquoise:#00e6a4;
+$color-blue:#219bc4;

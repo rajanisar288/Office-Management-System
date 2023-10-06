@@ -1,5 +1,1 @@
-body{
-    @include for-Phone{
-        background: red;
-    }
-}
+@import './mobile.scss'
