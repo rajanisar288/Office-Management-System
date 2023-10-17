@@ -1,0 +1,5 @@
+.container {
+    @include for-macbookair{
+        width: 1000px !important;
+    }
+}

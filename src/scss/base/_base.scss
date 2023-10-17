@@ -102,9 +102,31 @@ body{
     border-radius: 50px;
 }
 
-.icon-blue{
+.color-blue{
     color: $color-blue;
 }
-.icon-green{
+.color-green{
     color: $color-turquoise;
+}
+
+
+//Validation
+.inValidInput{
+    border: 2px solid red;
+    border-radius: 6px;
+}
+.validInput{
+    border:2px solid green;
+    border-radius: 6px;
+}
+input{
+    width: 200px;
+    height: 50px;
+    font-size: 18px;
+    border: none;
+    border-bottom:1px solid black ;
+    margin-right: 10px;
+    &:focus{
+        outline: none;
+    }
 }

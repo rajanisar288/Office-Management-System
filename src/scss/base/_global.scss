@@ -7,11 +7,23 @@
         box-sizing: border-box;
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-evenly;
         .wrap{
-            width: 20%;
+            width: 23%;
             min-width: 300px;
             box-sizing: border-box;
             padding: 10px 10px;
         }
+    }
+}
+.chart-wrapper{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 10px;
+    flex-wrap: wrap;
+    .chart-wrap{
+        width: 30%;
+        min-width: 300px;
     }
 }

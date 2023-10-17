@@ -1,3 +1,9 @@
 body{
-    @include for-tablet{}
+    @include for-tablet{
+        .container{
+            width: 700px !important;
+            background: orange;
+        }
+    }
 }
+

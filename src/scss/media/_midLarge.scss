@@ -1,0 +1,11 @@
+//@--------------------------------------------@//
+//this media queries only for midLarge devices// 
+//@-------------------------------------------@//
+
+body {
+    @include for-midLarge {
+        .container {
+            width: 800px !important;
+        }
+    }
+}

@@ -3,44 +3,45 @@
     display: flex;
     flex-wrap: wrap;
     border-radius: 6px;
-    border: 1px solid $border-primary;
+    border-top: 2px solid $border-primary;
     padding: 10px;
     box-sizing: border-box;
-    background: $primary;
+    background: $secondary;
     color: $text-primary;
+    box-shadow: $box-shadow-secondary;
     transition: 320ms;
     .title{
         width: 100%;
         padding: 10px 0;
         font-family: $poppins-bold;
         color: $text-primary;
-        border-bottom: 1px solid $color-blue;
+         position: relative;
+         font-size: 25px;
         display: flex;
         justify-content: space-between;
-        i{
-            font-size: 30px;
-            margin-right: 30px;
-        }
+       img{
+        position: absolute;
+        right: 0;
+        top: 32px;
+       }
     }
     .card-data{
         width: 100%;
         padding: 30px 0;
         font-size: 28px;
-        color: $blue-light;
+        color: $blue-dark;
     }
     .card-pera{
         display: flex;
-        border:1px solid #8080ff57;
         border-radius: 6px;
         padding: 10px 10px;
-        background: rgb(128 128 255 / 19%);
         width: 100%;
+        background: $main-bg;
         box-sizing: border-box;
         p{
             display: flex;
             flex-wrap: wrap;
             span{
-                color: $green-light;
                 font-size: 16px;
                 width: 100%;
                 text-align: right;

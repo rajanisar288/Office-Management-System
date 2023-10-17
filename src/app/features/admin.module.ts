@@ -7,6 +7,12 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { UsersComponent } from './admin/users/users.component';
 import { ProductsComponent } from './admin/products/products.component';
 import { ChartsComponent } from './admin/charts/charts.component';
+import { RouterModule } from '@angular/router';
+import { UiModule } from '../shared/components/ui.module';
+import { InputValidationDirective } from '../shared/directives/input-validation.directive';
+import { NgApexchartsModule } from 'ng-apexcharts';
+import { PipeModule } from '../shared/pipes/pipe.module';
+
 
 @NgModule({
   declarations: [
@@ -15,11 +21,16 @@ import { ChartsComponent } from './admin/charts/charts.component';
     UsersComponent,
     ProductsComponent,
     ChartsComponent,
+    InputValidationDirective,
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
-    LayoutModule
+    LayoutModule,
+    RouterModule,
+    UiModule,
+    NgApexchartsModule,
+    PipeModule
   ]
 })
 export class AdminModule { }

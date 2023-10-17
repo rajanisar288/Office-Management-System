@@ -1,0 +1,12 @@
+<div class="card">
+    <div class="title">
+        <ng-content select="#cardTitle"></ng-content>
+        <ng-content select="#cardImage"></ng-content>
+        <div class="card-data"><ng-content select="#carData"></ng-content></div>
+        <div class="card-pera">
+            <p>
+                <ng-content select="#cardPera"></ng-content>
+                <span><ng-content select="#cardStatus"></ng-content></span>
+            </p>
+        </div>
+    </div>

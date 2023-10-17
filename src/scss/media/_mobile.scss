@@ -1,50 +1,46 @@
-body{
-    @include small-screen{
-        background: red;
-    }   
-}
+//@--------------------------------------------@//
+ //this media queries only for mobile devices// 
+ //@-------------------------------------------@//
 
-.sidebarCollapse {
-    @include small-screen{
-        width: 200px;
-        position: fixed;
-        transition: 320ms;
-        margin-left: 0px;
-        z-index: 66;
-       margin-left: -200px;
-        top: 51px; 
-    } 
-}
-#mainDiv .sidebar-collapse {
-    @include small-screen{
-        width: 200px !important;
-        position: fixed;
-        z-index: 66;
-        //  margin-left: -200px;
-        top: 51px; 
-    }
-}
+body {
+    @include small-screen {
+        .sidebarCollapse {
+            width: 200px;
+            position: fixed;
+            transition: 320ms;
+            margin-left: 0px;
+            z-index: 66;
+            margin-left: -200px;
+            top: 51px;
+        }
 
-.sidebarUnCollapse {
-    @include small-screen{
-       margin-left: 0px;
-       width: 200px !important;
-       position: fixed;
-       min-width: 200px !important;
-       z-index: 66;
-       margin-left: -200px;
-        top: 51px; 
-    }
-}
+        #mainDiv .sidebar-collapse {
+            width: 200px !important;
+            position: fixed;
+            z-index: 66;
+            top: 51px;
+        }
 
- #mainDiv #content  {
-    @include small-screen{
-        width: 100% !important;
-    }
-}
+        .sidebarUnCollapse {
+            margin-left: 0px;
+            width: 200px !important;
+            position: fixed;
+            min-width: 200px !important;
+            z-index: 66;
+            margin-left: -200px;
+            top: 51px;
+        }
 
-.card-wrapper{
-    @include small-screen{
-        justify-content: center;
+        #mainDiv #content {
+            width: 100% !important;
+        }
+
+        .card-wrapper {
+            justify-content: center !important;
+        }
+
+        .container {
+            width: 100% !important;
+        }
     }
 }

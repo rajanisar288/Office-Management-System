@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, VERSION, ViewChild, OnInit } from '@angular/core';
+import { cardData } from '../../../../data/data'
+
+
 
 
 @Component({
@@ -7,13 +10,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent {
-
-  constructor(){
-    
+  data:any
+  
+  constructor(){    
+    this.data = cardData
 
   }
   ngOnInit() {
-    // Access the chart instance using the @ViewChild declaration.
    
   }
 }

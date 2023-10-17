@@ -2,7 +2,7 @@
 body {
   --primary: #F6F6F6;
   --secondary: white; //#F0F0F0
-  --cardColor:#EBEBEB;
+  --cardColor:#e6e6e6d1;
   --borderPrimary: #e2e2e2;
   --boxShadowPrimary: rgb(149 149 149 / 27%) 7px 7px 76px -18px;
   --boxShadowSecondary:0px 10px 15px -3px rgba(0,0,0,0.1);
@@ -15,7 +15,7 @@ body {
 body.dark-theme {
   --primary: black;
   --secondary: #232323fc;
-  --cardColor:#EBEBEB;
+  --cardColor:#50505757;
   --borderPrimary: #29292980;
   --boxShadowPrimary: rgb(19 7 7) 10px 12px 69px 17px;
   --boxShadowSecondary: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075), /* shadow ring 👇 */ 0 0 0 1px hsla(0, 0%, 0%, 0.05), /* multiple soft shadows 👇 */ 0 0.3px 0.4px hsla(0, 0%, 0%, 0.02), 0 0.9px 1.5px hsla(0, 0%, 0%, 0.045), 0 3.5px 6px hsla(0, 0%, 0%, 0.09);
@@ -34,25 +34,26 @@ $box-shadow-primary: var(--boxShadowPrimary);
 $shadow-border: var(--borderWithShadow);
 $text-primary: var(--textPrimary);
 $text-secondary: var(--textSecondary);
+$card-red:#E64F5E;
+$card-green:#98CC60;
+$card-blue:#5493E4;
+$card-yellow:#FCC74D;
 
 
 
 //Color Variant (RED, GREEN , BLUE, YELLOW)
-$green-dark: #618264;
-$green-medium: #79AC78;
-$green-light: #B0D9B1;
+$green-dark: #15ca20;
+$green-light: #17a00e1c;
 
-$red-dark: #e60000;
-$red-medium: #FF6969;
-$red-light: #FF6666;
+$red-dark: #fd3550;
+$red-light: #f411271c;
 
-$yellow-dark: #e5e600;
-$yellow-medium: #ffff1a;
-$yellow-light: #ffff4d;
+// $yellow-dark: #e5e600;
+// $yellow-medium: #ffff1a;
+// $yellow-light: #ffff4d;
 
-$blue-dark: #0000e6;
-$blue-medium: #4d4dff;
-$blue-light: #8080ff;
+$blue-dark: #0dcaf0;
+$blue-light: #0dcaf02e;
 
 //Global Colors
 $color-turquoise:#00e6a4;

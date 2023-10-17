@@ -7,16 +7,14 @@ import { AuthGuard } from './shared/guards/auth.guard';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './auth/auth.service';
 
-
 @NgModule({
   declarations: [
     AppComponent,
-  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [AuthGuard, AuthService],
   bootstrap: [AppComponent]

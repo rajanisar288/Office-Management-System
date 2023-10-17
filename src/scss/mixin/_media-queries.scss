@@ -11,3 +11,15 @@
         @content;
     }
 }
+
+@mixin for-macbookair{
+    @media only screen and (max-width: $x-Large){
+        @content
+    }
+}
+
+@mixin for-midLarge{
+    @media only screen and (max-width: $Large){
+        @content
+    }
+}
