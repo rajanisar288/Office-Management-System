@@ -14,7 +14,12 @@
     font-family: poppins-medium;
     src: url(../../assets/fonts/Poppins-Medium.ttf);
   }
+  @font-face {
+    font-family: nova;
+    src: url(../../assets/fonts/NovaSquare-Regular.ttf);
+  }
 
+  $nova:nova;
   $poppins:poppins;
   $poppins-bold:poppins-bold;
   $poppins-italic:poppins-italic;

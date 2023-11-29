@@ -1,0 +1,159 @@
+.landing-page{
+    width: 100%;
+    height: 100vh;
+    background: url('./../../assets/images/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        // background: var(--borderPrimary);
+        .nav-link{
+            display: flex;
+            a{
+                padding: 5px 20px;
+                text-decoration: none;
+                text-align: center;
+                font-family: $poppins-bold;
+                color: $color-black;
+            }
+        }
+                .nav-contact {
+                    display: flex;
+                    gap: 20px;
+                    .theme{
+                        display: flex;
+                        padding: 10px 13px;
+                        background:var(--primary);
+                        border-radius: 6px;
+                        border: 1px solid var(--borderPrimary);
+                        gap: 20px;
+                    }
+                }
+    }
+    .jumboturn{
+        width: 100%;
+        height: 90vh;
+        border-radius: 6px;
+        background: rgba( 255, 255, 255, 0.35 );
+        backdrop-filter: blur( 13px );
+        -webkit-backdrop-filter: blur( 13px );
+        border-radius: 10px;
+        display: flex;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding:  0 50px;
+        p{
+            padding: 0 300px;
+        }
+        .social-icon{
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            text-decoration: none;
+            padding: 20px 10px;
+            a{
+                font-size: 27px;
+            }
+            a.facebook{
+                color:blue ;
+            }
+            a.youtube{
+                color: red;
+            }
+            a.instagram{
+                color: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+            }
+            a.twitter{
+                color: #219bc4;
+            }
+        }
+    }
+}
+
+//about page
+.about-page{
+    background: $secondary;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    .profileImage{
+        display: flex;
+        width: 100%;
+        img{
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .profile-detail{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 30px;
+            h4{
+                font-size: 14px;
+                color: green;
+            }
+        }
+    }
+    .profile-overview{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .experience{
+            width: 80%;
+            display: flex;
+            // border: 1px solid rgb(210 210 210 / 55%);
+            // background: var(--primary);
+            border-radius: 10px;
+            flex-wrap: wrap;
+            .exp{
+                display: flex;
+                width: 100%;
+                flex-wrap: wrap;
+                border: 1px solid rgb(210 210 210 / 55%);
+                background: var(--primary);
+                padding: 20px;
+                margin-top: 10px;
+                border-radius: 10px;
+                cursor: pointer;
+                .exp-number{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 10px;
+                    background: $color-turquoise;
+                    color: black;
+                    font-family: $nova;
+                    text-align: center;
+                    line-height: 40px;
+                    font-size: 20px;
+                }
+                .exp-company{
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 20px;
+                    .exp-time{
+                        font-family: $nova;
+                        font-size: 14px;
+                        margin: 10px 0px;
+                    }
+                }
+                .exp-detail{
+                    width: 100%;
+                    padding-left: 60px;
+                }
+            }
+
+        }
+    }
+}
