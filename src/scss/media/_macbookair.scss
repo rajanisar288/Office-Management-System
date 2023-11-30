@@ -1,5 +1,8 @@
 .container {
     @include for-macbookair{
         width: 1000px !important;
+        .jumboturn-peraghraph{
+            padding: 0 50px !important;
+        }
     }
 }

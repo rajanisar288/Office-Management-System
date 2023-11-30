@@ -6,6 +6,7 @@ body,*{
 }
 body{
     background: $primary;
+    overflow-x: hidden;
 }
 
 //width (in percentage (100%, 50%, 25%))

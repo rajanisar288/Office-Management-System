@@ -39,16 +39,100 @@
         width: 100%;
         height: 90vh;
         border-radius: 6px;
-        background: rgba( 255, 255, 255, 0.35 );
-        backdrop-filter: blur( 13px );
-        -webkit-backdrop-filter: blur( 13px );
+        // background: rgba( 255, 255, 255, 0.35 );
+        // backdrop-filter: blur( 13px );
+        // -webkit-backdrop-filter: blur( 13px );
         border-radius: 10px;
         display: flex;
-        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        // border: 1px solid rgba( 255, 255, 255, 0.18 );
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: end;
         padding:  0 50px;
+        .jumbo-detail{
+            display: flex;
+            // margin-bottom: 100px;
+            width: 100%;
+            // background: red;
+            // border: 1px solid red;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            box-sizing: border-box;
+            .jumbo-card{
+                width: 60%;
+                display: flex;
+                min-width: 770px;
+                padding: 10px;
+                flex-wrap: wrap;
+                box-sizing: border-box;
+                background: rgb(154 112 188 / 24%);
+                backdrop-filter: blur(7.5px);
+                -webkit-backdrop-filter: blur(17.5px);
+                border-radius: 10px;
+                border: 1px solid rgb(138 138 138 / 18%);
+                position: relative;
+                img{
+                    width: 200px;
+                    height: 200px;
+                    object-fit: cover;
+                    border-radius: 6px;
+                    position: relative;
+                }
+                .jumbo-card-heading{
+                    width: calc(100% - 270px);
+                    padding-left: 20px;
+                    h3{
+                        font-family: $nova;
+                    }
+                    h5{
+                        margin-top: 10px;
+                    }
+                    .jumbo-card-footer{
+                        display: flex;
+                        // justify-content: space-around;
+                        margin-top: 20px;
+                        gap: 10px;
+                        div{
+                            padding: 8px 8px;
+                            display: flex;
+                            width: 150px;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            background: rgb(233 233 233 / 24%);
+                            backdrop-filter: blur(8.5px);
+                            -webkit-backdrop-filter: blur(17.5px);
+                            border-radius: 10px;
+                            border: 1px solid rgb(163 163 163 / 32%);
+                            p{
+                                font-size: 14px;
+                                width: 100%;
+                                // text-align: center;
+                                i{
+                                    font-size: 24px;
+                                    &:first-child{
+                                        color: #F55D30;
+                                    }
+                                    &:nth-child(2){
+                                        color: #F5C330;
+                                    }
+                                    &:last-child{
+                                        color:  #30F558;
+                                    }
+                                }
+                                &:last-child{
+                                    font-family: $nova;
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+            
+            }
+        }
         p{
             padding: 0 300px;
         }
@@ -60,6 +144,7 @@
             padding: 20px 10px;
             a{
                 font-size: 27px;
+                // border: 1px solid red;
             }
             a.facebook{
                 color:blue ;
@@ -116,7 +201,21 @@
             // border: 1px solid rgb(210 210 210 / 55%);
             // background: var(--primary);
             border-radius: 10px;
+            padding: 20px 100px;
+            // background: orange;
             flex-wrap: wrap;
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                height: 90%;
+                top: 5%;
+                left: 30px;
+                width: 1px;
+                border-radius: 8px;
+                background: black;
+            }
+
             .exp{
                 display: flex;
                 width: 100%;
@@ -127,6 +226,36 @@
                 margin-top: 10px;
                 border-radius: 10px;
                 cursor: pointer;
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    height: 2px;
+                    top: 50%;
+                    left: -70px;
+                    width: 70px;
+                    border-top: 1px dashed black;
+                    // background: black;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    height: 2px;
+                    top: 50%;
+                    left: 0px;
+                    width: 0px;
+                    transition: 320ms;
+                    // background: black;
+                }
+                &:hover{
+                    border: 1px solid orange;
+                }
+                &:hover:before{
+                    width: 70px;
+                    left: -70px;
+                    background: orange;
+                    z-index: 99;
+                }
                 .exp-number{
                     width: 40px;
                     height: 40px;
@@ -154,6 +283,44 @@
                 }
             }
 
+        }
+    }
+    .specialize{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .spl-detail{
+            width: 100%;
+            display: flex;
+            justify-content: space-around
+            
+            ;
+            flex-wrap: wrap;
+            padding: 30px;
+            .spl-card{
+                width: 350px;
+                padding: 10px;
+                min-width: 250px;
+                border-radius: 6px;
+                border: 1px solid rgb(75 74 74 / 17%);
+                // height: 250px;
+                position: relative;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                background: white;
+                overflow: hidden;
+                align-items: center;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+                img{
+                    width: 40%;
+                }
+                h3{
+                    font-family: $nova;
+                }
+              
+            }
         }
     }
 }
