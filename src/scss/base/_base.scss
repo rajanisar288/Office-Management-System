@@ -27,6 +27,12 @@ body{
 .d-block{
     display: block;
 }
+.justify-end{
+    justify-content: end;
+}
+.justify-space-between{
+    justify-content: space-between;
+}
 
 //text color (primary, secondary)
 .text-primary{
@@ -111,27 +117,33 @@ body{
     color: $color-turquoise;
 }
 
-
-//Validation
-.inValidInput{
-    border: 2px solid red;
-    border-radius: 6px;
-}
-.validInput{
-    border:2px solid green;
-    border-radius: 6px;
-}
-input{
-    width: 200px;
-    height: 50px;
-    font-size: 18px;
-    border: none;
-    border-bottom:1px solid black ;
-    margin-right: 10px;
-    &:focus{
-        outline: none;
-    }
-}
+//margin
 .mt-20{
     margin-top: 20px;
+}
+.mt-10{
+    margin-top: 10px;
+}
+.ml-20{
+    margin-left: 20px;
+}
+.ml-10{
+    margin-left: 10px;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+.mb-10{
+    margin-bottom: 10px;
+}
+.mr-20{
+    margin-right: 20px;
+}
+.mr-10{
+    margin-right: 10px;
+}
+
+//positions
+.text-center{
+    text-align: center;
 }

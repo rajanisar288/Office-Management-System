@@ -1,0 +1,51 @@
+.sign-up{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(
+  205deg,
+  hsl(357deg 65% 93%) 0%,
+  hsl(346deg 62% 93%) 13%,
+  hsl(333deg 54% 93%) 25%,
+  hsl(315deg 42% 92%) 37%,
+  hsl(287deg 39% 92%) 50%,
+  hsl(261deg 49% 93%) 63%,
+  hsl(238deg 58% 93%) 75%,
+  hsl(222deg 70% 92%) 87%,
+  hsl(212deg 74% 91%) 100%
+);
+display: flex;
+justify-content: center;
+align-items: center;
+.signup-card{
+  width: 40%;
+  height: auto;
+  min-width: 400px;
+  background: white;
+  border-radius: 7px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  overflow: hidden;
+  .auth{
+    width: 60%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+  .companyDetail{
+    background: #E9F0FB;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+}
+
+.back{
+  position: fixed;
+  top: 50px;
+  left: 50px;
+}

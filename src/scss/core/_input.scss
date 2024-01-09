@@ -1,0 +1,43 @@
+.oi-input{
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+.oi-input.inValid::after{
+    transition: 500ms;
+    position: absolute;
+    content: '* Field must be valid *';
+    color: $red-dark;
+    right: 9px;
+    top: 12px;
+    font-size: 12px;
+}
+.oi-input.charactorValidation::after{
+    transition: 500ms;
+    position: absolute;
+    content: '* Must be 4 character *';
+    color: $red-dark;
+    right: 9px;
+    top: 12px;
+    font-size: 12px;
+}
+
+input{
+    padding: 15px;
+    border-radius: 7px;
+    font-size: 15px;
+    outline: none;
+    width: 100%;
+    color: $text-primary;
+    border: 1px solid #d2d2d2;
+    position: relative;
+    &:focus{
+        outline: none;
+        border: 2px solid $green-dark;
+    }
+}
+
+//validation
+input.inValidInput{
+    border: 2px solid $red-dark;
+}

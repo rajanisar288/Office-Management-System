@@ -19,6 +19,10 @@ const routes: Routes = [
     loadChildren: () => import('./features/admin.module').then(m => m.AdminModule),
   },
   {
+    path: 'signup',
+    loadChildren: () => import('./public/authComponent/signup/signup.module').then(m => m.SignupModule),
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',

@@ -9,7 +9,6 @@ import { ProductsComponent } from './admin/products/products.component';
 import { ChartsComponent } from './admin/charts/charts.component';
 import { RouterModule } from '@angular/router';
 import { UiModule } from '../shared/components/ui.module';
-import { InputValidationDirective } from '../shared/directives/input-validation.directive';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { PipeModule } from '../shared/pipes/pipe.module';
 
@@ -21,7 +20,6 @@ import { PipeModule } from '../shared/pipes/pipe.module';
     UsersComponent,
     ProductsComponent,
     ChartsComponent,
-    InputValidationDirective,
   ],
   imports: [
     CommonModule,
