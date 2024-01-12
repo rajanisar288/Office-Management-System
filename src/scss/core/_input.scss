@@ -36,6 +36,22 @@ input{
         border: 2px solid $green-dark;
     }
 }
+textarea{
+    padding: 15px;
+    resize: none;
+    border-radius: 7px;
+    font-size: 15px;
+    height: 80px;
+    outline: none;
+    width: 100%;
+    color: $text-primary;
+    border: 1px solid #d2d2d2;
+    position: relative;
+    &:focus{
+        outline: none;
+        border: 2px solid $green-dark;
+    }
+}
 
 //validation
 input.inValidInput{

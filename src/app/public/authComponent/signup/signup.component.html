@@ -38,8 +38,8 @@
        </div>
 
         <div class="mt-20 w-100 d-flex "  [ngClass]="steps < 2 ? 'justify-end' : 'justify-space-between'">
-         <button *ngIf="steps !== 1" (click)="backToPrev()" class="btn-filled-red">({{steps-1}}) Prev <i class="fa-solid fa-arrow-left ml-10"></i></button>
-         <button *ngIf="steps !== 5" (click)="changeSteps()" class="btn-filled-red">{{(steps)}} Next <i class="fa-solid fa-arrow-right ml-10"></i></button>
+         <button *ngIf="steps !== 1" (click)="backToPrev()" class="btn-filled-red"><i class="fa-solid fa-arrow-left mr-10"></i>({{steps-1}}) Prev</button>
+         <button *ngIf="steps !== 5" (click)="changeSteps()" class="btn-filled-red">({{steps}}) Next <i class="fa-solid fa-arrow-right ml-10"></i></button>
       </div>
      </div>
      <div class="companyDetail p-10 ">
