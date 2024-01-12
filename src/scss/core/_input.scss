@@ -23,13 +23,13 @@
 }
 
 input{
-    padding: 15px;
-    border-radius: 7px;
-    font-size: 15px;
+    padding: $input-padding;
+    border-radius: $input-border-radius;
+    font-size: $input-font;
     outline: none;
     width: 100%;
     color: $text-primary;
-    border: 1px solid #d2d2d2;
+    border: $input-border;
     position: relative;
     &:focus{
         outline: none;
@@ -40,4 +40,18 @@ input{
 //validation
 input.inValidInput{
     border: 2px solid $red-dark;
+}
+
+.oi-input .passwordViewer{
+    position: absolute;
+    right: 11px;
+    top: 26px;
+    font-size: 22px;
+    border: none;
+    background: transparent;
+    color: orange;
+    &:focus{
+        outline: none;
+        border: none;
+    }
 }

@@ -15,10 +15,22 @@
          </div> 
          <div *ngSwitchCase="'2'">
             <div class="oi-input"><input type="text" name="" id="" placeholder="Enter email" class="mt-10"></div>
-            <div class="oi-input"><input type="password" name="" id="" placeholder="enter password" class="mt-10"></div>
+            <div class="oi-input"><input type="password" name="" id="" placeholder="enter password" class="mt-10">
+               <!-- <span class="passwordViewer"><i class="fa-regular fa-eye"></i></span> -->
+            </div>
          </div> 
          <div *ngSwitchCase="'3'">
-            <div class="oi-input"><input type="text" name="" id="" placeholder="First Name" class="mt-10"></div>
+            <div class="oi-input">
+               <io-dropdown (value)="getDropdownValue($event)" [defaultValue]="'select country'" class="w-100">
+                  <!-- <div *ngFor="let step of newAr">
+                     <span values>{{step.name}}</span>
+                  </div> -->
+                  <io-dropdown-value [value]="'karachi'" dropdown></io-dropdown-value>
+                  <io-dropdown-value [value]="'lahaore'" dropdown></io-dropdown-value>
+                  <io-dropdown-value [value]="'islambad'" dropdown></io-dropdown-value>
+                  <io-dropdown-value [value]="'hydrabad'" dropdown></io-dropdown-value>
+                </io-dropdown>
+            </div>
             <div class="oi-input"><input type="text" name="" id="" placeholder="Last Name (Optional)" class="mt-10"></div>
          </div> 
          <div *ngSwitchCase="'4'">Four</div> 
@@ -36,11 +48,13 @@
      </div>
     </div>
 
-
-
+    <!-- <io-dropdown (value)="getDropdownValue($event)" [defaultValue]="'select country'">
+      <p values *ngFor="let step of newAr">{{step.name}}</p>
+    </io-dropdown> -->
+    <p>{{values}}</p>
     <!-- just checkout -->
-    <input type="file" id="image" name="profileImage" (change)="onFileSelected($event)" accept="image/*" required>
-    <button (click)="register()">register</button>
+    <!-- <input type="file" id="image" name="profileImage" (change)="onFileSelected($event)" accept="image/*" required>
+    <button (click)="register()">register</button> -->
 </div>
 
 

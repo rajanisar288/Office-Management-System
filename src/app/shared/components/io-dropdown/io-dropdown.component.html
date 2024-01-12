@@ -1,0 +1,8 @@
+<div class="dropDown">
+    <div class="dropdownDefault" ><p *ngIf="defaultSelect">{{defaultSelect}}</p>
+        <p *ngIf="!defaultSelect">Select</p> <button><i class="fa-solid fa-chevron-down"></i></button></div>
+    <div class="dropdownValue" *ngIf="isDropdownCollapse">
+        <!-- <p (click)="getDropDownValue($event.target)"><ng-content select="[dropdown]"></ng-content></p> -->
+        <p id="dropdownElement"><ng-content select="[dropdown]"></ng-content></p>
+    </div>
+</div>
