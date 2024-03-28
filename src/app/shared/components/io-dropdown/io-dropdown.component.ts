@@ -9,17 +9,26 @@ import { DOCUMENT } from '@angular/common';
 export class IoDropdownComponent implements AfterViewInit {
   @Output('value') getValue = new EventEmitter<any>();
   @Input('defaultValue') defaultSelect: any;
-  isDropdownCollapse=true
+  isDropdownCollapse=false
 
-  constructor(@Inject(DOCUMENT) private document: Document) {}
+  constructor(@Inject(DOCUMENT) private document: Document) {
+    
+  }
 
 
   getDropDownValue(val: any) {
-    console.log(val.innerHTML);
-    this.getValue.emit(val.innerHTML);
-    this.defaultSelect = val.innerHTML
+    if(this.isDropdownCollapse === true){
+      console.log(val.innerHTML);
+      this.getValue.emit(val.innerHTML);
+      this.defaultSelect = val.innerHTML
+      this.isDropdownCollapse = false
+    }
   }
 
+  hideShowDropdown(){
+    this.isDropdownCollapse = !this.isDropdownCollapse
+  }
+  
   
 
   ngAfterViewInit(): void {

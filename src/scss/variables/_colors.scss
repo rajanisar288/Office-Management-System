@@ -9,6 +9,10 @@ body {
   --borderWithShadow: #dfdfdf66;
   --textPrimary: #414141d1;
   --textSecondary: #3e3e3eba;
+  --bg-blur:rgba( 255, 255, 255, 0.8 );
+  --active-text-color: #878787fa;
+  --active-bg-color:#F6F6F6;
+  --text-dark:#000000e8;
 }
 
 // Dark Theme  
@@ -22,6 +26,10 @@ body.dark-theme {
   --borderWithShadow: #5a56562b;
   --textPrimary: #adababd4;
   --textSecondary: #6d6565;
+  --bg-blur:rgb(35 35 35 / 80%);
+  --active-text-color: #e9e9e9d1;
+  --active-bg-color:black;
+  --text-dark:#828282e8;
 }
 
 //Theme Setup
@@ -40,6 +48,10 @@ $card-blue:#5493E4;
 $card-yellow:#FCC74D;
 $color-black:black;
 $color-white:white;
+$bg-blur:var(--bg-blur);
+$text-active-color:var(--active-text-color);
+$bg-active-color:var(--active-bg-color);
+$text-dark:var(--text-dark);
 
 
 
@@ -60,3 +72,5 @@ $blue-light: #0dcaf02e;
 //Global Colors
 $color-turquoise:#00e6a4;
 $color-blue:#219bc4;
+
+$active-color:#3F4579;

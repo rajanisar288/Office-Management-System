@@ -42,6 +42,7 @@
         height: auto;
         box-sizing: border-box;
         display: flex;
+        transition: 1000ms;
         flex-direction: column;
         p{
             width: 100%;

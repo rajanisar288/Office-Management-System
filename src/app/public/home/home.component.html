@@ -1,1 +1,67 @@
-<p>home ...</p>
+<div class="container-fluid bg-secondary">
+    <div class="themeChanger" (click)="activeDarkTheme()" [ngClass]="isDarkThemeActive == true ? 'darkThemeActivated' : ''">
+            <i class="fas fa-moon" style="color: #f1c40f;"></i>
+            <i class="fas fa-sun" style="color: #f39c12;margin-right: -15px;"></i>
+            <span class="ball"></span>
+    </div>
+    <!-- Landing page start -->
+    <div class="container">
+        <!-- Navbar Start -->
+        <div class="navbar d-flex justify-space-between">
+            <div class="nav-logo">Office.io</div>
+            <div class="nav-item">
+                <ul>
+                    <a href="#navbar" class="nav-link active">Home</a>
+                    <a href="#navbar" class="nav-link">Features</a>
+                    <a href="#navbar" class="nav-link">Plans</a>
+                    <a href="#navbar" class="nav-link">Why Office.io?</a>
+                </ul>
+            </div>
+            <div class="nav-auth">
+                <div class="auth-link">
+                    <a href="" class="btn-fill active-button-transparent">Login</a>
+                    <a href="" class="btn-fill active-button" routerLink="signup">SignUp</a>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar end -->
+
+        <!-- JumboTurn start -->
+        <div class="container jumboturn d-flex f-direction-column align-items-center justify-space-between">
+            <div class="Jumboturn-top d-flex f-direction-column align-items-center justify-space-center pt-40">
+                <p>All you need Office.io</p>
+                <h1>Make your company easier</h1>
+            </div>
+            <div class="jumboturn-bottom">
+               <div class="jumbo-box">
+                <div class="box-icon"><i class="fa-solid fa-people-group icon-red"></i> <p>Do something in group</p></div>
+                <div class="box-list">
+                    <li>Group Video call</li>
+                    <li>Group Messages</li>
+                    <li>Track anyone which you have access of person</li>
+                </div>
+
+               </div>
+               <div class="jumbo-box">
+                <div class="box-icon"><i class="fa-solid fa-people-group icon-green"></i> <p>Do something in group</p></div>
+                <div class="box-list">
+                    <li>Group Video call</li>
+                    <li>Group Messages</li>
+                    <li>Track anyone which you have access of person</li>
+                </div>
+               </div>
+               <div class="jumbo-box">
+                <div class="box-icon"><i class="fa-solid fa-people-group icon-blue"></i> <p>Do something in group</p></div>
+                <div class="box-list">
+                    <li>Group Video call</li>
+                    <li>Group Messages</li>
+                    <li>Track anyone which you have access of person</li>
+                </div>
+               </div>
+            </div>
+        </div>
+        <!-- JumboTurn end -->
+
+    </div>
+    <!-- Landing page end -->
+</div>

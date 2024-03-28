@@ -1,3 +1,18 @@
+.btn-fill{
+    border-radius: 7px;
+    font-size: 17px;
+    transition: 320ms;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    &:focus{
+        outline: none;
+        border: none;
+    }
+}
+
 //green button .btn-filled-green
 .btn-filled-green{
     background: $green-dark;
@@ -226,5 +241,29 @@
     &:focus{
         outline: none;
         border: none;
+    }
+}
+
+// active button
+
+.active-button{
+    background: $active-color ;
+    color: $text-active-color;
+    transition: 300ms;
+    &:hover{
+        background: $bg-active-color;
+        color: $text-active-color;
+        border: 1px solid $text-primary !important;
+        transition: 300ms;
+    }
+}
+.active-button-transparent{
+    background: $primary;
+    color: $text-primary;
+    transition: 300ms;
+    &:hover{
+        color: $text-primary;
+        transition: 300ms;
+        border: 1px solid $text-primary !important;
     }
 }

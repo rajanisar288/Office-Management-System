@@ -13,14 +13,21 @@ export class HomeComponent implements AfterViewInit {
   isLightTheme: boolean = true;
   menuHideAndShow: boolean = true
   modal = false;
+  isDarkThemeActive:boolean = false;
+  getTheme:any;
+  test:any;
 
-  
-  
   constructor(@Inject(DOCUMENT) document: Document,private _authService:AuthService){
-
+    this.getTheme = localStorage.getItem('activeTheme')
   }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    if(this.getTheme === 'darkTheme'){
+      document.body.classList.add('dark-theme');
+      this.isDarkThemeActive = true
+    }
+    
+  }
       
  
   navToggle(e:any){
@@ -43,13 +50,26 @@ export class HomeComponent implements AfterViewInit {
   }
 
   // themeSwitcher
-  themeSwitcher(){
-    document.body.classList.add('dark-theme');
-    this.isLightTheme = !this.isLightTheme;
-    if(this.isLightTheme === true){
-      document.body.classList.remove('dark-theme');
-    }
+  // themeSwitcher(){
+  //   document.body.classList.add('dark-theme');
+  //   this.isLightTheme = !this.isLightTheme;
+  //   if(this.isLightTheme === true){
+  //     document.body.classList.remove('dark-theme');
+  //   }
      
+  // }
+
+  activeDarkTheme(){
+    this.isDarkThemeActive = !this.isDarkThemeActive;
+    if(this.isDarkThemeActive){
+      document.body.classList.add('dark-theme');
+      localStorage.setItem('activeTheme', 'darkTheme')
+    }
+      else{
+        document.body.classList.remove('dark-theme');
+        localStorage.setItem('activeTheme', 'lightTheme')
+      }
+  
   }
 
   @HostListener("window:scroll", []) onWindowScroll() {

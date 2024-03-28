@@ -33,6 +33,19 @@ body{
 .justify-space-between{
     justify-content: space-between;
 }
+.justify-space-center{
+    justify-content: center;
+}
+.f-wrap{
+    flex-wrap: wrap;
+}
+.f-direction-column{
+    flex-direction: column;
+}
+.align-items-center{
+    align-items: center;
+}
+
 
 //text color (primary, secondary)
 .text-primary{

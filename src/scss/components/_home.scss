@@ -1,0 +1,147 @@
+.navbar{
+    .nav-logo{
+        font-family: $poppins-bold;
+        font-size: 20px;
+        color: $green-dark;
+    }
+    .nav-item{
+        display: flex;
+        ul{
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            .nav-link{
+                text-decoration: none;
+                color: $text-primary;
+                position: relative;
+                font-family: $poppins;
+                transition:  300ms;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 0%;
+                    height: 3px;
+                    border-radius: 5px;
+                    background: $active-color;
+                    bottom: -8px;
+                    left: 35%;
+                    transition: 300ms; 
+                }
+                &:hover::after{
+                    width: 100%;
+                    left: 0;
+                    transition: 300ms; 
+                }
+                &:hover{
+                    color: $active-color;
+                    transition: 300ms;
+                }
+                
+            }
+
+            a.active{
+                color: $active-color;
+                font-family: $poppins-bold;
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 30%;
+                    height: 3px;
+                    border-radius: 5px;
+                    background: $active-color;
+                    bottom: -8px;
+                    left: 35%;
+                    transition: 300ms; 
+                    
+                }
+                &:hover::after{
+                    width: 100%;
+                    left: 0;
+                    transition: 300ms; 
+                }
+            }
+        }
+    }
+    .nav-auth{
+        display: flex;
+        .auth-link{
+            display: flex;
+            gap: 15px;
+        }
+    }
+}
+
+//jumboturn
+.jumboturn{
+    .jumboturn-bottom{
+        width: 80%;
+        height: 200px;
+        border-radius: 25px;
+        background: $primary;
+        position: absolute;
+        box-sizing: border-box;
+        bottom: -60px;
+        background: $bg-blur;
+        backdrop-filter: blur( 10.5px );
+        -webkit-backdrop-filter: blur( 10.5px );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        box-sizing: border-box;
+        .jumbo-box{
+            width: 300px;
+            background: $primary;
+            height: 170px;
+            border-radius:$card-border-radius;
+            display: flex;
+            flex-direction: column;
+            color: $text-dark;
+            padding-left: 20px;
+            justify-content: center;
+            .box-icon{
+                display: flex;
+                justify-content: flex-start;
+                gap: 10px;
+            }
+        }
+    }
+}
+
+
+// theme Changer
+.themeChanger{
+    width: 60px;
+    height: 30px;
+    background: #232323fc;
+    position: fixed;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 50px;
+    top: 2.4%;
+    right: 10px;
+    transition: 320ms;
+    font-size: 16px;
+    &::after{
+        position: absolute;
+        content: '';
+        width: 25px;
+        height: 25px;
+        top: 2.5px;
+        background: $color-white;
+        border-radius: 50%;
+        left: 2px;
+        transition: 320ms;
+        
+    }
+}
+.darkThemeActivated{
+    background: $primary !important;
+    &::after{
+        left: 32px !important;
+        transition: 320ms;
+    }
+}
