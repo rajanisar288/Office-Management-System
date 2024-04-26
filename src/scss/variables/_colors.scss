@@ -1,7 +1,7 @@
 // Light Theme
 body {
-  --primary: #F6F6F6;
-  --secondary: white; //#F0F0F0
+  --primary: #F4F4F4;
+  --secondary: #FFFFFF; //#F0F0F0
   --cardColor:#e6e6e6d1;
   --borderPrimary: #e2e2e2;
   --boxShadowPrimary: rgb(149 149 149 / 27%) 7px 7px 76px -18px;
@@ -13,14 +13,16 @@ body {
   --active-text-color: #878787fa;
   --active-bg-color:#F6F6F6;
   --text-dark:#000000e8;
+  --red-light:#f411271c;
+  --green-light:#3e8f3836;
 }
 
 // Dark Theme  
 body.dark-theme {
-  --primary: black;
-  --secondary: #232323fc;
+  --primary: #171717;
+  --secondary: #1E1E1E;
   --cardColor:#50505757;
-  --borderPrimary: #29292980;
+  --borderPrimary: #292929;
   --boxShadowPrimary: rgb(19 7 7) 10px 12px 69px 17px;
   --boxShadowSecondary: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075), /* shadow ring 👇 */ 0 0 0 1px hsla(0, 0%, 0%, 0.05), /* multiple soft shadows 👇 */ 0 0.3px 0.4px hsla(0, 0%, 0%, 0.02), 0 0.9px 1.5px hsla(0, 0%, 0%, 0.045), 0 3.5px 6px hsla(0, 0%, 0%, 0.09);
   --borderWithShadow: #5a56562b;
@@ -30,6 +32,8 @@ body.dark-theme {
   --active-text-color: #e9e9e9d1;
   --active-bg-color:black;
   --text-dark:#828282e8;
+  --red-light:#572026;
+  --green-light:#1C4626;
 }
 
 //Theme Setup
@@ -56,11 +60,11 @@ $text-dark:var(--text-dark);
 
 
 //Color Variant (RED, GREEN , BLUE, YELLOW)
-$green-dark: #15ca20;
-$green-light: #17a00e1c;
+$green-dark: #15CA20;
+$green-light: var(--green-light);
 
 $red-dark: #fd3550;
-$red-light: #f411271c;
+$red-light: var(--red-light);
 
 // $yellow-dark: #e5e600;
 // $yellow-medium: #ffff1a;
