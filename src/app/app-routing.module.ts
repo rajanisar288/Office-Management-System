@@ -18,6 +18,10 @@ const routes: Routes = [
     path: 'admin',
     loadChildren: () => import('./features/admin.module').then(m => m.AdminModule),
   },
+  // {
+  //   path: '',
+  //   loadChildren: () => import('./features/admin.module').then(m => m.AdminModule),
+  // },
   {
     path: 'signup',
     loadChildren: () => import('./public/authComponent/signup/signup.module').then(m => m.SignupModule),

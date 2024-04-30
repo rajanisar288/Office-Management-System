@@ -24,7 +24,7 @@
     }
     .menu{
         display: flex;
-        width: 83%;
+        width: 90%;
         flex-wrap: wrap;
         position: absolute; 
         top: 100px;
@@ -37,8 +37,8 @@
             li{
                 list-style: none;
                 width: 100%;
-                height: 40px;
-                line-height: 40px;
+                height: auto;
+                line-height: 50px;
                 padding-left: 21px;
                 font-size: 15px;
                 color: $text-primary;
@@ -49,12 +49,67 @@
                 box-sizing: border-box;
                 
                 i{
-                    margin-right: 25px;
+                    margin-right: 12px;
                     font-weight: 700;
                 }
                 &:hover{
                     background: $primary;
                     transition: 320ms;
+                }
+                .subMenu{
+                    position: relative;
+                    left: 0;
+                    width: 100%;
+                    padding-left: 8px;
+                    box-sizing: border-box;
+                    padding-bottom: 15px;
+                    height: auto;
+                    overflow: hidden;
+                    transition: 920ms;
+                    li.subMenu-list{
+                        padding-left: 0;
+                        list-style: none;
+                        width: 100%;
+                        box-sizing: border-box;
+                        border-left: 1px solid $text-secondary;
+                        border-radius: 0px;
+                        margin-top: 0px;
+                        
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            width: 12px;
+                            height: 12px;
+                            background: $text-secondary;
+                            left: -6px;
+                            top: 37%;
+                            border-radius: 50%;
+                        }
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            width: 13px;
+                            height: 2px;
+                            background: $text-secondary;
+                            /* border-radius: 50%; */
+                            top: 24px;
+                        }
+                        a{
+                            text-decoration: none;
+                            color: $text-primary;
+                            width: 100%;
+                            box-sizing: border-box;
+                            padding-left: 27px;
+                            display: flex;
+                            &:hover{
+                                background: $text-secondary
+                            }
+
+                        }
+                        a.subMenuActive{
+                            background: $text-secondary
+                        }
+                    }
                 }
             }
             li.active::before{
@@ -63,17 +118,29 @@
                 position: absolute;
                 width: 4px;
                 height: 15px;
-                top: 29%;
-                background: $color-blue;
+                top: 16px;
+                background:$color-white;
                 left: 5px;
             }
             li.active {
-                color: $color-blue;
-                background: $secondary;
-                box-shadow: $box-shadow-secondary;
+                color: $color-white;
+                background: $active-list;
+                // box-shadow: $box-shadow-secondary;
                 i{
                     font-size: 20px;
                 }
+            }
+            li:hover{
+                color: $color-white;
+                background: $active-list;
+            }
+            li:hover > .subMenu .subMenu-list a{
+                color: $color-white;
+                // background: $active-list;
+            }
+            li.active > .subMenu .subMenu-list a{
+                color: $color-white;
+                // background: $active-list;
             }
         }
     }

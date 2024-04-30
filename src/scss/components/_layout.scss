@@ -6,9 +6,12 @@
     box-sizing: border-box;
     .sidebar{
         height: auto;
-        min-width: 200px;
+        min-width: 250px;
         overflow: hidden;
         transition: 320ms;
+        background: $secondary;
+        border-right: 1px solid $border-primary;
+        box-sizing: border-box;
     }
     .sidebarCollapse{
         width: calc(60px - 100%);
@@ -17,7 +20,7 @@
         border-right: 1px solid $border-primary;
     }
     .sidebarUnCollapse{
-        width: calc(200px - 100%);
+        width: calc(250px - 100%);
         transition: 320ms;
     }
     .sidebar-collapse{
@@ -31,7 +34,7 @@
         width: calc(100% - 60px) !important;
     }
     #content{
-        width: calc(100% - 200px);
+        width: calc(100% - 250px);
         box-sizing: border-box;
         display: block;
         transition: width 320ms;
@@ -201,26 +204,26 @@
 }
 
 // sidebar colors
-.defaultBg{
-    background: $primary;
-}
+// .defaultBg{
+//     background: $primary;
+// }
 
-.bg-1 {
-    background: linear-gradient(139deg, #556270a3, #ff6b6b1f);
-}
+// .bg-1 {
+//     background: linear-gradient(139deg, #556270a3, #ff6b6b1f);
+// }
 
-.bg-2 {
-    background: linear-gradient(139deg, rgb(0 100 208 / 64%), rgb(255 255 255 / 12%));
-}
+// .bg-2 {
+//     background: linear-gradient(139deg, rgb(0 100 208 / 64%), rgb(255 255 255 / 12%));
+// }
 
-.bg-3 {
-    background: linear-gradient(139deg, rgb(134 55 147 / 64%), rgb(107 139 255 / 12%));
-}
+// .bg-3 {
+//     background: linear-gradient(139deg, rgb(134 55 147 / 64%), rgb(107 139 255 / 12%));
+// }
 
-.bg-4 {
-    background: linear-gradient(139deg, rgb(66 73 18 / 64%), rgb(33 70 83 / 45%));
-}
+// .bg-4 {
+//     background: linear-gradient(139deg, rgb(66 73 18 / 64%), rgb(33 70 83 / 45%));
+// }
 
-.bg-5 {
-    background: linear-gradient(139deg, rgb(241 63 63 / 73%), rgb(107 237 255 / 36%));
-}
+// .bg-5 {
+//     background: linear-gradient(139deg, rgb(241 63 63 / 73%), rgb(107 237 255 / 36%));
+// }

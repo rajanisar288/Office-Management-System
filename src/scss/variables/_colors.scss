@@ -15,6 +15,7 @@ body {
   --text-dark:#000000e8;
   --red-light:#f411271c;
   --green-light:#3e8f3836;
+  --active-color:black;
 }
 
 // Dark Theme  
@@ -34,6 +35,7 @@ body.dark-theme {
   --text-dark:#828282e8;
   --red-light:#572026;
   --green-light:#1C4626;
+  --active-color:#2d2d2d;
 }
 
 //Theme Setup
@@ -56,6 +58,7 @@ $bg-blur:var(--bg-blur);
 $text-active-color:var(--active-text-color);
 $bg-active-color:var(--active-bg-color);
 $text-dark:var(--text-dark);
+$active-list:var(--active-color);
 
 
 
