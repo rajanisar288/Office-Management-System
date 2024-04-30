@@ -1,9 +1,9 @@
 // Light Theme
 body {
   --primary: #F4F4F4;
-  --secondary: #FFFFFF; //#F0F0F0
+  --secondary: #F1F3F9; //#F0F0F0
   --cardColor:#e6e6e6d1;
-  --borderPrimary: #e2e2e2;
+  --borderPrimary: #d0d0d0d9;// #e2e2e2;
   --boxShadowPrimary: rgb(149 149 149 / 27%) 7px 7px 76px -18px;
   --boxShadowSecondary:0px 10px 15px -3px rgba(0,0,0,0.1);
   --borderWithShadow: #dfdfdf66;
@@ -19,14 +19,14 @@ body {
 
 // Dark Theme  
 body.dark-theme {
-  --primary: #171717;
-  --secondary: #1E1E1E;
+  --primary:  #1D1E23 ;//#171717;
+  --secondary:  #17181D ;// #1E1E1E;
   --cardColor:#50505757;
-  --borderPrimary: #292929;
+  --borderPrimary: #464646a6;//#292929;
   --boxShadowPrimary: rgb(19 7 7) 10px 12px 69px 17px;
   --boxShadowSecondary: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075), /* shadow ring 👇 */ 0 0 0 1px hsla(0, 0%, 0%, 0.05), /* multiple soft shadows 👇 */ 0 0.3px 0.4px hsla(0, 0%, 0%, 0.02), 0 0.9px 1.5px hsla(0, 0%, 0%, 0.045), 0 3.5px 6px hsla(0, 0%, 0%, 0.09);
   --borderWithShadow: #5a56562b;
-  --textPrimary: #adababd4;
+  --textPrimary: #fefefec7;//#adababd4;
   --textSecondary: #6d6565;
   --bg-blur:rgb(35 35 35 / 80%);
   --active-text-color: #e9e9e9d1;
