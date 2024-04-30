@@ -4,6 +4,7 @@ import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { register } from 'swiper/element/bundle';
 import { LoginComponent } from '../login/login.component';
+import { PipeModule } from 'src/app/shared/pipes/pipe.module';
 
 register();
 @NgModule({
@@ -11,6 +12,7 @@ register();
   imports: [
     CommonModule,
     HomeRoutingModule,
+    PipeModule
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
