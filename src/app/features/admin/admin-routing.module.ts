@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdminComponent } from './admin/admin.component';
-import { DashboardComponent } from './admin/dashboard/dashboard.component';
-import { ChartsComponent } from './admin/charts/charts.component';
-import { ProductsComponent } from './admin/products/products.component';
-import { UsersComponent } from './admin/users/users.component';
+import { AdminComponent } from './admin.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ProductsComponent } from './products/products.component';
+import { UsersComponent } from './users/users.component';
+
 
 const routes: Routes = [
   {

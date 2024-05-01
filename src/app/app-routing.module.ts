@@ -15,12 +15,13 @@ const routes: Routes = [
   //   loadChildren: () => import('./features/admin.module').then(m => m.AdminModule),
   // },
   // {
-  //   path: 'admin',
-  //   loadChildren: () => import('./features/admin.module').then(m => m.AdminModule),
-  // },
+    // {
+    //   path: 'admin',
+    //   loadChildren: () => import('./features/admin/admin.module').then(m => m.AdminModule),
+    // },
   {
     path: '',
-    loadChildren: () => import('./features/admin.module').then(m => m.AdminModule),
+    loadChildren: () => import('./features/admin/admin.module').then(m => m.AdminModule),
   },
   {
     path: 'signup',

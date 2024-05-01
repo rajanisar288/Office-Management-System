@@ -1,0 +1,32 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { AdminRoutingModule } from './admin-routing.module';
+import { RouterModule } from '@angular/router';
+import { AdminComponent } from './admin.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { UsersComponent } from './users/users.component';
+import { ProductsComponent } from './products/products.component';
+import { ChartsComponent } from './charts/charts.component';
+import { LayoutModule } from 'src/app/shared/components/layout/layout.module';
+import { UiModule } from 'src/app/shared/components/ui.module';
+import { PipeModule } from 'src/app/shared/pipes/pipe.module';
+
+
+@NgModule({
+  declarations: [
+    AdminComponent,
+    DashboardComponent,
+    UsersComponent,
+    ProductsComponent,
+    ChartsComponent,
+  ],
+  imports: [
+    CommonModule,
+    AdminRoutingModule,
+    LayoutModule,
+    RouterModule,
+    UiModule,
+    PipeModule
+  ]
+})
+export class AdminModule { }
