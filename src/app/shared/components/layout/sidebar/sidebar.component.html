@@ -1,20 +1,22 @@
 <div id="sidebar">
-    <div class="companyLogo"><p> <i class="fa-solid fa-truck-fast"></i> Shipping</p></div>
+    <div class="companyLogo"><p> <i class="fa-solid fa-truck-fast"></i><span>My Office</span></p></div>
     <div class="menu">
-        <ul>
+        <ul id="sideBarUl">
             <ng-container *ngFor="let menu of menuList">
-                <li [routerLink]="menu.route" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" *ngIf="menu.subMenu; else noSubMenu">
-                    <i class="{{menu.icon}}" (click)="openSubMenu()"></i>
-                    <span (click)="openSubMenu()">{{menu.routeName}}</span>
-                    <span *ngIf="menu.subMenu" style="float: right;" (click)="openSubMenu()"><i class="fa-regular fa-chevron-down"></i></span>
+                <li [routerLink]="menu.route" routerLinkActive="active" class="subMenuLi subMenuDropDown"  [routerLinkActiveOptions]="{exact: true}" *ngIf="menu.subMenu; else noSubMenu" style="position: relative;padding-left: 0;">
+                    <div class="subMenuBtn">
+                        <i class="{{menu.icon}}"></i>
+                    <span>{{menu.routeName}}</span>
+                    <span *ngIf="menu.subMenu" style="float: right;"><i class="fa-regular fa-chevron-down"></i></span>
+                    </div>
                     <ul *ngIf="menu.subMenu" class="subMenu hideSubMenu" id="subMenu">
-                        <li *ngFor="let subMenu of menu.subMenu" class="subMenu-list">
-                            <a [routerLink]="subMenu.route" routerLinkActive="subMenuActive">{{subMenu.routeName}}</a>
+                        <li *ngFor="let subMenu of menu.subMenu" class="subMenu-list" [routerLink]="subMenu.route" routerLinkActive="subMenuActive">
+                            <a>{{subMenu.routeName}}</a>
                         </li>
                     </ul>
                 </li>
                 <ng-template #noSubMenu>
-                    <li [routerLink]="menu.route" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                    <li [routerLink]="menu.route" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidebarLi">
                         <i class="{{menu.icon}}"></i>
                         <span>{{menu.routeName}}</span>
                     </li>

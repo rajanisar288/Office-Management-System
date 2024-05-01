@@ -22,6 +22,11 @@
     .sidebarUnCollapse{
         width: calc(250px - 100%);
         transition: 320ms;
+        height: auto;
+        box-sizing: border-box;
+        &:hover{
+            overflow-y: auto;
+        }
     }
     .sidebar-collapse{
         width: calc(60px - 100%);
@@ -29,6 +34,11 @@
         overflow: hidden;
         border-right: 1px solid $border-primary;
         box-sizing: border-box;
+        height: auto;
+        // overflow-y: auto;
+        &:hover{
+            overflow-y: auto;
+        }
     }
     .contentFullWidth{
         width: calc(100% - 60px) !important;
@@ -170,7 +180,7 @@
     position: absolute;
     width: 30px;
     height: 2px;
-    background: $color-turquoise;
+    background: $card-red;
     border-radius: 10px;
     transition: 0.5s;
 }
