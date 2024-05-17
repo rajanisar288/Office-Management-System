@@ -1,5 +1,5 @@
-import { Component, Injectable } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { Injectable } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +11,11 @@ export class ReactFormService {
     const formGroupConfig: { [key: string]: FormControl } = {};
     for (const key in data) {
       if (data.hasOwnProperty(key) && data[key]) {
-        formGroupConfig[key] = new FormControl('');
+        if (key === 'email') {
+          formGroupConfig[key] = new FormControl('', Validators.email);
+        } else {
+          formGroupConfig[key] = new FormControl('');
+        }
       }
     }
 
