@@ -4,19 +4,16 @@
   justify-content: center;
   box-sizing: border-box;
   flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
 }
 
 .container {
   width: 1400px;
-  background: red;
   box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .row {
   width: 100%;
   box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
 }

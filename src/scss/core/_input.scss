@@ -1,0 +1,73 @@
+.oi-input{
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+.oi-input.inValid::after{
+    transition: 500ms;
+    position: absolute;
+    content: '* Field must be valid *';
+    color: $red-dark;
+    right: 9px;
+    top: 12px;
+    font-size: 12px;
+}
+.oi-input.charactorValidation::after{
+    transition: 500ms;
+    position: absolute;
+    content: '* Must be 4 character *';
+    color: $red-dark;
+    right: 9px;
+    top: 12px;
+    font-size: 12px;
+}
+
+input{
+    padding: $input-padding;
+    border-radius: $input-border-radius;
+    font-size: $input-font;
+    outline: none;
+    width: 100%;
+    color: $text-primary;
+    border: $input-border;
+    position: relative;
+    &:focus{
+        outline: none;
+        border: 2px solid $green-dark;
+    }
+}
+textarea{
+    padding: 15px;
+    resize: none;
+    border-radius: 7px;
+    font-size: 15px;
+    height: 80px;
+    outline: none;
+    width: 100%;
+    color: $text-primary;
+    border: 1px solid #d2d2d2;
+    position: relative;
+    &:focus{
+        outline: none;
+        border: 2px solid $green-dark;
+    }
+}
+
+//validation
+input.inValidInput{
+    border: 2px solid $red-dark;
+}
+
+.oi-input .passwordViewer{
+    position: absolute;
+    right: 11px;
+    top: 26px;
+    font-size: 22px;
+    border: none;
+    background: transparent;
+    color: orange;
+    &:focus{
+        outline: none;
+        border: none;
+    }
+}

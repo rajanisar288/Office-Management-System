@@ -6,9 +6,12 @@
     box-sizing: border-box;
     .sidebar{
         height: auto;
-        min-width: 200px;
+        min-width: 250px;
         overflow: hidden;
         transition: 320ms;
+        background: $secondary;
+        border-right: 1px solid $border-primary;
+        box-sizing: border-box;
     }
     .sidebarCollapse{
         width: calc(60px - 100%);
@@ -17,8 +20,13 @@
         border-right: 1px solid $border-primary;
     }
     .sidebarUnCollapse{
-        width: calc(200px - 100%);
+        width: calc(250px - 100%);
         transition: 320ms;
+        height: auto;
+        box-sizing: border-box;
+        &:hover{
+            overflow-y: auto;
+        }
     }
     .sidebar-collapse{
         width: calc(60px - 100%);
@@ -26,18 +34,23 @@
         overflow: hidden;
         border-right: 1px solid $border-primary;
         box-sizing: border-box;
+        height: auto;
+        // overflow-y: auto;
+        &:hover{
+            overflow-y: auto;
+        }
     }
     .contentFullWidth{
         width: calc(100% - 60px) !important;
     }
     #content{
-        width: calc(100% - 200px);
+        width: calc(100% - 250px);
         box-sizing: border-box;
         display: block;
         transition: width 320ms;
         position: relative;
         .navbar{
-            padding: 0 20px;
+            padding: 5px 20px 5px 20px;
             // border-bottom: 1px solid $border-primary;
             display: flex;
             align-items: center;
@@ -139,7 +152,7 @@
 }
 
 .contents {
-    padding: 22px;
+    padding: 19px;
     .content-wrap{
         background: $secondary;
         height: auto;
@@ -167,7 +180,7 @@
     position: absolute;
     width: 30px;
     height: 2px;
-    background: $color-turquoise;
+    background: $color-red;
     border-radius: 10px;
     transition: 0.5s;
 }
@@ -200,27 +213,33 @@
     transform: translateX(60px);
 }
 
+//navbar
+.mainNavbar{
+    width: calc(100% - 50px);
+    position: relative;
+}
+
 // sidebar colors
-.defaultBg{
-    background: $primary;
-}
+// .defaultBg{
+//     background: $primary;
+// }
 
-.bg-1 {
-    background: linear-gradient(139deg, #556270a3, #ff6b6b1f);
-}
+// .bg-1 {
+//     background: linear-gradient(139deg, #556270a3, #ff6b6b1f);
+// }
 
-.bg-2 {
-    background: linear-gradient(139deg, rgb(0 100 208 / 64%), rgb(255 255 255 / 12%));
-}
+// .bg-2 {
+//     background: linear-gradient(139deg, rgb(0 100 208 / 64%), rgb(255 255 255 / 12%));
+// }
 
-.bg-3 {
-    background: linear-gradient(139deg, rgb(134 55 147 / 64%), rgb(107 139 255 / 12%));
-}
+// .bg-3 {
+//     background: linear-gradient(139deg, rgb(134 55 147 / 64%), rgb(107 139 255 / 12%));
+// }
 
-.bg-4 {
-    background: linear-gradient(139deg, rgb(66 73 18 / 64%), rgb(33 70 83 / 45%));
-}
+// .bg-4 {
+//     background: linear-gradient(139deg, rgb(66 73 18 / 64%), rgb(33 70 83 / 45%));
+// }
 
-.bg-5 {
-    background: linear-gradient(139deg, rgb(241 63 63 / 73%), rgb(107 237 255 / 36%));
-}
+// .bg-5 {
+//     background: linear-gradient(139deg, rgb(241 63 63 / 73%), rgb(107 237 255 / 36%));
+// }

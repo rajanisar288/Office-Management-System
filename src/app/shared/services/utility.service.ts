@@ -1,13 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UtilityService {
-  
-  isSidebarActive = new Subject<boolean>()
-  constructor() { }
-  breadcrumbs: string | undefined = 'raja nisar'
-
+  isSidebarActive = new BehaviorSubject(false);
+  breadcrumbs: any | undefined;
+  constructor() {}
 }

@@ -13,90 +13,30 @@ export class HomeComponent implements AfterViewInit {
   isLightTheme: boolean = true;
   menuHideAndShow: boolean = true
   modal = false;
+  isDarkThemeActive:boolean = false;
+  getTheme:any;
+  test:any;
 
-  skills = [
-    {
-      language:'Angular',
-      experience: 'mid',
-      icon:'fa-brands fa-angular',
-      per:50
-    },
-    {
-      language:'Node js',
-      experience: 'mid',
-      icon:'fa-brands fa-node-js',
-      per:50
-    },
-    {
-      language:'JavaScript',
-      experience: 'senior',
-      icon:'fa-brands fa-js',
-      per:50
-    },
-    {
-      language:'Bootstrap',
-      experience: 'mid',
-      icon:'fa-brands fa-bootstrap',
-      per:50
-    },
-    {
-      language:'Git',
-      experience: 'mid',
-      icon:'fa-brands fa-github',
-      per:50
-    },
-    {
-      language:'Sass',
-      experience: 'mid',
-      icon:'fa-brands fa-sass',
-      per:50
-    }
-
-  ]
-  
-  constructor(@Inject(DOCUMENT) document: Document,private _authService:AuthService  ){}
-
-  ngOnInit() {
-   let  landingPage =  document.getElementsByClassName('home-navbar')
-   let item = document.getElementsByClassName('mene-item')
-   let detailCard = document.getElementById('detailCard')
-   let socialCard = document.getElementById('socialCard')
-   let linkedin = document.getElementsByClassName('linkedin')
-   let facebook = document.getElementsByClassName('facebook')
-   let twitter = document.getElementsByClassName('twitter')
-   let instagram = document.getElementsByClassName('instagram')
-    const gsapTimeLine = gsap.timeline()
-          gsapTimeLine.from(landingPage,{
-            opacity:0,
-          }).from(item,{
-            scale:2,
-            letterSpacing:-10,
-            opacity:0,
-            
-          }).from(detailCard, {
-            y:50,
-            scale:2,
-            skew:20,
-            opacity:0,
-            duration:1
-           
-          }).from(socialCard, {
-            y:50,
-            scale:2,
-            opacity:0,
-            duration:1
-
-          })
-        }
-      
-
-  //show  Modal
-  openModal(){
-    this.modal = true
+  constructor(@Inject(DOCUMENT) document: Document,private _authService:AuthService){
+    this.getTheme = localStorage.getItem('activeTheme')
   }
-  //hide Modal
-  hideModal(){
-    this.modal = false
+
+  ngOnInit() { 
+    if(this.getTheme === 'darkTheme'){
+      document.body.classList.add('dark-theme');
+      this.isDarkThemeActive = true
+    }
+    
+  }
+      
+ 
+  navToggle(e:any){
+    console.log(e.target);
+    e.target.classList.toggle('navToggler-left')
+    let navbar = document.getElementById('navbar')
+    navbar?.classList.toggle('navbar-hide')
+  //  let navbar =  document.getElementById('navbar-fluid')
+   console.log(navbar);
   }
   
   //NavbarToggle
@@ -110,13 +50,26 @@ export class HomeComponent implements AfterViewInit {
   }
 
   // themeSwitcher
-  themeSwitcher(){
-    document.body.classList.add('dark-theme');
-    this.isLightTheme = !this.isLightTheme;
-    if(this.isLightTheme === true){
-      document.body.classList.remove('dark-theme');
-    }
+  // themeSwitcher(){
+  //   document.body.classList.add('dark-theme');
+  //   this.isLightTheme = !this.isLightTheme;
+  //   if(this.isLightTheme === true){
+  //     document.body.classList.remove('dark-theme');
+  //   }
      
+  // }
+
+  activeDarkTheme(){
+    this.isDarkThemeActive = !this.isDarkThemeActive;
+    if(this.isDarkThemeActive){
+      document.body.classList.add('dark-theme');
+      localStorage.setItem('activeTheme', 'darkTheme')
+    }
+      else{
+        document.body.classList.remove('dark-theme');
+        localStorage.setItem('activeTheme', 'lightTheme')
+      }
+  
   }
 
   @HostListener("window:scroll", []) onWindowScroll() {
@@ -134,3 +87,4 @@ export class HomeComponent implements AfterViewInit {
   ngAfterViewInit() {
   }
 }
+

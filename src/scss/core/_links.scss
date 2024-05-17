@@ -1,0 +1,35 @@
+.solid-link {
+    text-decoration: none;
+    padding: 10px 30px;
+    background: transparent;
+    color: $text-dark;
+    font-family: $poppins;
+    border: 1px solid $border-primary;
+    border-radius: $link-border-radius;
+    font-size: $link-font-size;
+}
+
+
+.link-icon {
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    border-radius: $link-border-radius;
+    border:1px solid $border-primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $text-primary;
+    height: 100%;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    i {
+        font-size: 22px;
+    }
+
+    &:hover {
+        color: $color-white;
+        background: $active-list;
+    }
+}

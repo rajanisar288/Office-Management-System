@@ -1,0 +1,27 @@
+@mixin icon{
+    width: 45px;
+    text-align: center !important;
+    line-height: 45px !important;
+    font-size: $fs-icon-22;
+    height: 45px;
+    border-radius: $card-border-radius;
+}
+
+
+@mixin icon-red{
+    background: $red-light;
+    color: $red-dark;
+    @include icon;
+}
+
+@mixin icon-green{
+    background: $green-light;
+    color: $green-dark;
+    @include icon;
+}
+
+@mixin icon-blue{
+    background: $blue-light;
+    color: $blue-dark;
+    @include icon;
+}

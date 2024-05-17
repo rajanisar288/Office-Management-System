@@ -1,27 +1,41 @@
 // Light Theme
 body {
-  --primary: #F6F6F6;
-  --secondary: white; //#F0F0F0
+  --primary: #F4F4F4;
+  --secondary: #F1F3F9; //#F0F0F0
   --cardColor:#e6e6e6d1;
-  --borderPrimary: #e2e2e2;
+  --borderPrimary: #d0d0d0d9;// #e2e2e2;
   --boxShadowPrimary: rgb(149 149 149 / 27%) 7px 7px 76px -18px;
   --boxShadowSecondary:0px 10px 15px -3px rgba(0,0,0,0.1);
   --borderWithShadow: #dfdfdf66;
   --textPrimary: #414141d1;
   --textSecondary: #3e3e3eba;
+  --bg-blur:rgba( 255, 255, 255, 0.8 );
+  --active-text-color: #878787fa;
+  --active-bg-color:#F6F6F6;
+  --text-dark:#000000e8;
+  --red-light:#f411271c;
+  --green-light:#3e8f3836;
+  --active-color:black;
 }
 
 // Dark Theme  
 body.dark-theme {
-  --primary: black;
-  --secondary: #232323fc;
+  --primary:  #1D1E23 ;//#171717;
+  --secondary:  #17181D ;// #1E1E1E;
   --cardColor:#50505757;
-  --borderPrimary: #29292980;
+  --borderPrimary: #464646a6;//#292929;
   --boxShadowPrimary: rgb(19 7 7) 10px 12px 69px 17px;
   --boxShadowSecondary: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075), /* shadow ring 👇 */ 0 0 0 1px hsla(0, 0%, 0%, 0.05), /* multiple soft shadows 👇 */ 0 0.3px 0.4px hsla(0, 0%, 0%, 0.02), 0 0.9px 1.5px hsla(0, 0%, 0%, 0.045), 0 3.5px 6px hsla(0, 0%, 0%, 0.09);
   --borderWithShadow: #5a56562b;
-  --textPrimary: #adababd4;
+  --textPrimary: #fefefec7;//#adababd4;
   --textSecondary: #6d6565;
+  --bg-blur:rgb(35 35 35 / 80%);
+  --active-text-color: #e9e9e9d1;
+  --active-bg-color:black;
+  --text-dark:#828282e8;
+  --red-light:#572026;
+  --green-light:#1C4626;
+  --active-color:#2d2d2d;
 }
 
 //Theme Setup
@@ -34,19 +48,26 @@ $box-shadow-primary: var(--boxShadowPrimary);
 $shadow-border: var(--borderWithShadow);
 $text-primary: var(--textPrimary);
 $text-secondary: var(--textSecondary);
-$card-red:#E64F5E;
-$card-green:#98CC60;
-$card-blue:#5493E4;
+$color-red:#E64F5E;
+$color-green:#98CC60;
+$color-blue:#5493E4;
 $card-yellow:#FCC74D;
+$color-black:black;
+$color-white:white;
+$bg-blur:var(--bg-blur);
+$text-active-color:var(--active-text-color);
+$bg-active-color:var(--active-bg-color);
+$text-dark:var(--text-dark);
+$active-list:var(--active-color);
 
 
 
 //Color Variant (RED, GREEN , BLUE, YELLOW)
-$green-dark: #15ca20;
-$green-light: #17a00e1c;
+$green-dark: #15CA20;
+$green-light: var(--green-light);
 
 $red-dark: #fd3550;
-$red-light: #f411271c;
+$red-light: var(--red-light);
 
 // $yellow-dark: #e5e600;
 // $yellow-medium: #ffff1a;
@@ -58,3 +79,5 @@ $blue-light: #0dcaf02e;
 //Global Colors
 $color-turquoise:#00e6a4;
 $color-blue:#219bc4;
+
+$active-color:#3F4579;

@@ -8,17 +8,22 @@ import {
   RouterEvent,
   RouterOutlet,
 } from '@angular/router';
-
+import { UtilityService } from 'src/app/shared/services/utility.service';
 
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.scss']
+  styleUrls: ['./admin.component.scss'],
 })
 export class AdminComponent {
   title = 'portfolioApp';
   showLoader: boolean = true;
-  constructor(private router: Router) {
+  constructor(private router: Router, private _utilityService: UtilityService) {
+    this._utilityService.breadcrumbs = [
+      { name: 'Welcome to Admin', route: '/admin' },
+      { name: 'Profile', route: '/admin/company-profile' },
+      { name: 'new', route: '/admin/company-profile' },
+    ];
     this.router.events.subscribe((_routerEvent: RouterEvent | any) => {
       this.checkRouteChange(_routerEvent);
     });

@@ -11,8 +11,7 @@ export class LayoutComponent {
 menuToggle:any
 isSidebarCollapse:boolean = true
 isThemeChangerActive:boolean = false
-constructor(@Inject(DOCUMENT) private document: Document, private _UtilityService:UtilityService){
-}
+constructor(@Inject(DOCUMENT) private document: Document, private _UtilityService:UtilityService){}
 ngOnInit(){
 }
 
@@ -21,6 +20,11 @@ toggler(){
   this.menuToggle = document.querySelector('.toggle');
   this.menuToggle.classList.toggle('active')
   this.isSidebarCollapse = !this.isSidebarCollapse
+  if(this.isSidebarCollapse === false){
+    this._UtilityService.isSidebarActive.next(true)  
+  }else{
+    this._UtilityService.isSidebarActive.next(false)
+  }
 }
 
 setting(){

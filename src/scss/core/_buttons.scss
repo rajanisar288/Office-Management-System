@@ -1,0 +1,269 @@
+.btn-fill{
+    border-radius: 7px;
+    font-size: 17px;
+    transition: 320ms;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    &:focus{
+        outline: none;
+        border: none;
+    }
+}
+
+//green button .btn-filled-green
+.btn-filled-green{
+    background: $green-dark;
+    color: white;
+    border-radius: 7px;
+    font-size: 17px;
+    transition: 320ms;
+    outline: none;
+    border: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    &:hover{
+        background: white;
+        color: $green-dark;
+        border: 1px solid $green-dark;
+    }
+    &:focus{
+        outline: none;
+        border: none;
+    }
+}
+//green button .btn-outline-green
+.btn-outline-green{
+    background: white;
+    color: $green-dark;
+    border-radius: 7px;
+    font-size: 17px;
+    transition: 320ms;
+    outline: none;
+    border: none;
+    border: 1px solid $green-dark;
+    padding: 10px 40px;
+    cursor: pointer;
+    &:hover{
+        background: $green-dark;
+        color: white;
+        border: none;
+    }
+    &:focus{
+        outline: none;
+        border: none;
+    }
+}
+
+//red button .btn-filled-red
+.btn-filled-red{
+    background: $red-dark;
+    color: white;
+    border-radius: 7px;
+    font-size: 17px;
+    transition: 320ms;
+    outline: none;
+    border: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    &:hover{
+        background: white;
+        color: $red-dark;
+        border: 1px solid $red-dark;
+    }
+    &:focus{
+        outline: none;
+        border: none;
+    }
+}
+
+//red button .btn-outline-red
+.btn-outline-red{
+    background: white;
+    color: $red-dark;
+    border: 1px solid $red-dark;
+    border-radius: 7px;
+    font-size: 17px;
+    transition: 320ms;
+    outline: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    &:hover{
+        background: $red-dark;
+        color: white;
+        border: none;
+    }
+    &:focus{
+        outline: none;
+        border: none;
+    }
+}
+
+//blue button .btn-filled-red
+.btn-filled-blue{
+    background: $blue-dark;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 17px;
+    transition: 320ms;
+    outline: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    &:hover{
+        background: white;
+        color: $blue-dark;
+        border: 1px solid $blue-dark;
+    }
+    &:focus{
+        outline: none;
+        border: none;
+    }
+}
+
+//blue button .btn-outline-red
+.btn-outline-blue{
+    background: white;
+    color: $blue-dark;
+    border: 1px solid $blue-dark;
+    border-radius: 7px;
+    font-size: 17px;
+    transition: 320ms;
+    outline: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    &:hover{
+        background: $blue-dark;
+        color: white;
+        border: none;
+    }
+    &:focus{
+        outline: none;
+        border: none;
+    }
+}
+
+
+//turk button .btn-filled-red
+.btn-filled-turk{
+    background: $color-turquoise;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 17px;
+    transition: 320ms;
+    outline: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    &:hover{
+        background: white;
+        color: $color-turquoise;
+        border: 1px solid $color-turquoise;
+    }
+    &:focus{
+        outline: none;
+        border: none;
+    }
+}
+
+//blue button .btn-outline-red
+.btn-outline-turk{
+    background: white;
+    color: $color-turquoise;
+    border: 1px solid $color-turquoise;
+    border-radius: 7px;
+    font-size: 17px;
+    transition: 320ms;
+    outline: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    &:hover{
+        background: $color-turquoise;
+        color: white;
+        border: none;
+    }
+    &:focus{
+        outline: none;
+        border: none;
+    }
+}
+
+
+
+
+// float buttons
+//red button .btn-filled-red
+.f-btn-fill-red{
+    background: $red-dark;
+    color: white;
+    border-radius: 50%;
+    font-size: 17px;
+    transition: 320ms;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 50px;
+    text-decoration: none;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    &:hover{
+        background: white;
+        color: $red-dark;
+        border: 1px solid $red-dark;
+    }
+    &:focus{
+        outline: none;
+        border: none;
+    }
+}
+
+//red button .btn-outline-red
+.btn-outline-red{
+    background: white;
+    color: $red-dark;
+    border: 1px solid $red-dark;
+    border-radius: 7px;
+    font-size: 17px;
+    transition: 320ms;
+    outline: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    &:hover{
+        background: $red-dark;
+        color: white;
+        border: none;
+    }
+    &:focus{
+        outline: none;
+        border: none;
+    }
+}
+
+// active button
+
+.active-button{
+    background: $active-color ;
+    color: $text-active-color;
+    transition: 300ms;
+    &:hover{
+        background: $bg-active-color;
+        color: $text-active-color;
+        border: 1px solid $text-primary !important;
+        transition: 300ms;
+    }
+}
+.active-button-transparent{
+    background: $primary;
+    color: $text-primary;
+    transition: 300ms;
+    &:hover{
+        color: $text-primary;
+        transition: 300ms;
+        border: 1px solid $text-primary !important;
+    }
+}

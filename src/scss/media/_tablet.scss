@@ -2,7 +2,17 @@ body{
     @include for-tablet{
         .container{
             width: 700px !important;
-            background: orange;
+            // background: orange;
+        }
+        .landing-page .jumboturn .jumbo-detail .jumbo-card {
+            min-width: 540px;
+        }
+        .landing-page .jumboturn .jumbo-detail .jumbo-card .jumbo-card-heading .jumbo-card-footer div {
+            padding: 6px 5px;
+            min-width: 270px;
+        }
+        .landing-page .jumboturn .jumbo-detail .jumbo-card .jumbo-card-heading .jumbo-card-footer{
+            flex-wrap: wrap;
         }
     }
 }
