@@ -6,9 +6,13 @@ import { AdminComponent } from './admin.component';
 import { LayoutModule } from 'src/app/shared/components/layout/layout.module';
 import { UiModule } from 'src/app/shared/components/ui.module';
 import { PipeModule } from 'src/app/shared/pipes/pipe.module';
+import { ProfileComponent } from './profile/profile.component';
+import { CompanyProfileComponent } from './company-profile/company-profile.component';
+import { TotalManagersComponent } from './total-managers/total-managers.component';
+import { TotalEmployeesComponent } from './total-employees/total-employees.component';
 
 @NgModule({
-  declarations: [AdminComponent],
+  declarations: [AdminComponent, ProfileComponent, CompanyProfileComponent, TotalManagersComponent, TotalEmployeesComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
