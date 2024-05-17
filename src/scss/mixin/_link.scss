@@ -1,0 +1,22 @@
+@mixin link-with-icon{
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    border-radius: $link-border-radius;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    // border: 1px solid $red-dark;
+}
+
+@mixin link-icon-red{
+    @include link-with-icon;
+    background: $red-light;
+    color: $red-dark;
+    &:hover{
+        color: $red-light;
+        background: $red-dark;  
+    }
+}

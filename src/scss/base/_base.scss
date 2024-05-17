@@ -141,7 +141,9 @@ body{
 .br-50{
     border-radius: 50px;
 }
-
+.brPerc-50{
+    border-radius: 50%;
+}
 .color-blue{
     color: $color-blue;
 }
@@ -178,4 +180,9 @@ body{
 //positions
 .text-center{
     text-align: center;
+}
+
+//borders
+.br-box{
+    box-sizing: border-box;
 }
