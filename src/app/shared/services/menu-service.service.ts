@@ -6,13 +6,15 @@ import { Injectable } from '@angular/core';
 export class MenuServiceService {
   //admin
   adminMenu = [
-    { routeName: 'My Profile', route: '/', icon: 'fa-solid fa-user' },
-    { routeName: 'Company Profile', icon: 'fa-regular fa-building',
-    subMenu: [
-      { routeName: 'Company', route: 'companyProfile/managers' },
-      { routeName: 'Managers', route: '/products' },
-      { routeName: 'Employees', route: 'companyProfile/managers' },
-    ],
+    { routeName: 'My Profile', route: '/admin', icon: 'fa-solid fa-user' },
+    {
+      routeName: 'Company Profile',
+      icon: 'fa-regular fa-building',
+      subMenu: [
+        { routeName: 'Company', route: '/admin/company-profile' },
+        { routeName: 'Managers', route: '/admin/total-managers' },
+        { routeName: 'Employees', route: '/admin/total-employee' },
+      ],
     },
     {
       routeName: 'Contact',
