@@ -50,7 +50,7 @@
         transition: width 320ms;
         position: relative;
         .navbar{
-            padding: 0 20px;
+            padding: 5px 20px 5px 20px;
             // border-bottom: 1px solid $border-primary;
             display: flex;
             align-items: center;
@@ -152,7 +152,7 @@
 }
 
 .contents {
-    padding: 22px;
+    padding: 19px;
     .content-wrap{
         background: $secondary;
         height: auto;
@@ -211,6 +211,12 @@
 
 .toggle.active span:nth-child(3) {
     transform: translateX(60px);
+}
+
+//navbar
+.mainNavbar{
+    width: calc(100% - 50px);
+    position: relative;
 }
 
 // sidebar colors

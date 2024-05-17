@@ -19,7 +19,11 @@ export class AdminComponent {
   title = 'portfolioApp';
   showLoader: boolean = true;
   constructor(private router: Router, private _utilityService: UtilityService) {
-    this._utilityService.breadcrumbs = 'Welcome to Admin';
+    this._utilityService.breadcrumbs = [
+      { name: 'Welcome to Admin', route: '/admin' },
+      { name: 'Profile', route: '/admin/company-profile' },
+      { name: 'new', route: '/admin/company-profile' },
+    ];
     this.router.events.subscribe((_routerEvent: RouterEvent | any) => {
       this.checkRouteChange(_routerEvent);
     });
