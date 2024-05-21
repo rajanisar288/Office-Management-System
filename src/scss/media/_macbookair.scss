@@ -6,3 +6,21 @@
         }
     }
 }
+
+//sign up
+body{
+    @include for-macbookair{
+        .sign-up{
+            .signup-card{
+                flex-direction: column-reverse;
+                div{
+                    width: 100% !important;
+                }
+                div.auth{
+                    padding:30px 12px !important;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+}

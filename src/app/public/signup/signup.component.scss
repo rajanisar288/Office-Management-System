@@ -1,0 +1,46 @@
+@import 'src/scss/index';
+
+.sign-up {
+  width: 100%;
+  height: 100vh;
+  background-image: $backgroundImage;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .signup-card {
+    width: 40%;
+    height: auto;
+    min-width: 400px;
+    background: $primary;
+    border: 1px solid $border-primary;
+    border-radius: 7px;
+    box-shadow: $box-shadow-primary;
+    display: flex;
+    overflow: hidden;
+
+    .auth {
+      width: 60%;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    .companyDetail {
+      background: $secondary;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.back {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+}

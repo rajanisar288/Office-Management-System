@@ -39,9 +39,7 @@ const routes: Routes = [
   {
     path: 'signup',
     loadChildren: () =>
-      import('./public/authComponent/signup/signup.module').then(
-        (m) => m.SignupModule
-      ),
+      import('./public/signup/signup.module').then((m) => m.SignupModule),
   },
   {
     path: '',

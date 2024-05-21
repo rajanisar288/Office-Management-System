@@ -119,5 +119,39 @@ body {
         .container {
             width: 100% !important;
         }
+
+
+          //sign up page
+          .sign-up{
+            .back{
+                top: 4px !important;
+                left: 27px !important;
+            }
+            .signup-card{
+                width: 95% !important;
+                min-width: auto !important;
+                margin-top: 40px;
+                div{
+                    width: 100% !important;
+                }
+                div.auth{
+                    padding:30px 12px !important;
+                    box-sizing: border-box;
+                }
+            }
+        }
+        //buttons
+                .btn-filled-red,
+                .btn-outline-red,
+                .btn-fill,
+                .btn-filled-green,
+                .btn-outline-green,
+                .btn-filled-blue,
+                .btn-outline-blue,
+                .btn-filled-turk,
+                .btn-outline-turk {
+                    padding: 13px 27px !important;
+                    font-size: 14px !important;
+                }
     }
 }
