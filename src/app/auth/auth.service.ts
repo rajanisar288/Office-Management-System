@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/evnironment';
 import { Router } from '@angular/router';
-import { catchError } from 'rxjs';
+import { Observable, catchError } from 'rxjs';
 import { HttpErrorService } from '../shared/services/http-error.service';
 
 @Injectable({
@@ -23,13 +23,13 @@ export class AuthService {
   // userRegister(payload: any) {
   //   return this._http.post(this.url + 'api/v1/register', payload);
   // }
-  post(payload: any, route: string) {
+  post(payload: any, route: string): Observable<any> {
     return this._http
       .post(`${this.url}${route}`, payload)
       .pipe(catchError(this._HttpErrorService.handleHttpError));
   }
 
-  fetchThirdPartyServices(url: string) {
+  fetchThirdPartyServices(url: string): Observable<any> {
     return this._http
       .get(`${url}`)
       .pipe(catchError(this._HttpErrorService.handleHttpError));

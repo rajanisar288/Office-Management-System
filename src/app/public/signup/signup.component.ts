@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from 'src/app/auth/auth.service';
+import { UtilityService } from 'src/app/shared/services/utility.service';
 
 @Component({
   selector: 'app-signup',
@@ -8,6 +9,8 @@ import { AuthService } from 'src/app/auth/auth.service';
 })
 export class SignupComponent {
   countries: any;
+  totalCities: any;
+  isLogin = false;
   steps = 1;
   resgisterform = {
     // profileImage: null as File | null,
@@ -32,36 +35,41 @@ export class SignupComponent {
   newAr = [{ name: 'one' }, { name: 'tow' }, { name: 'three' }];
   // values: any;
 
-  constructor(private _authService: AuthService) {
+  constructor(
+    private _authService: AuthService,
+    private _utilityService: UtilityService
+  ) {
     this.FetchCountries();
-    this._authService.post(this.resgisterform, '/v1/register/').subscribe({
-      next: (res) => {
-        console.log('ress', res);
-      },
-      error: (err) => {
-        console.log('my erros', err);
-      },
-    });
+    this._utilityService.isLogin.subscribe((res) => (this.isLogin = res));
+    console.log(this.isLogin);
+    // this._authService.post(this.resgisterform, '/v1/register/').subscribe({
+    //   next: (res) => {
+    //     console.log('ress', res);
+    //   },
+    //   error: (err) => {
+    //     console.log('my erros', err);
+    //   },
+    // });
   }
+  ngOnInit(): void {}
+
   changeSteps() {
     this.steps++;
   }
   backToPrev() {
     this.steps--;
   }
-  getDropdownValue(value: string): string[] | null {
+
+  getGender(val: any) {}
+  getCity(val: any) {}
+  getCountry(value: string) {
     console.log(value);
     const countryCode = this.countries.filter(
       (country: { name: string }) => country.name === value
     );
     if (countryCode.length === 0) {
-      console.log('No country found for selected value.');
-      return null; // Or return a default value as needed
     }
-    console.log(countryCode);
     this.fetchCities(countryCode[0].cca2Code);
-    return countryCode;
-    // cca2Code
   }
 
   FetchCountries() {
@@ -102,7 +110,13 @@ export class SignupComponent {
         `http://api.geonames.org/searchJSON?formatted=true&maxRows=10&username=raja_nisarr&country=${countryCode}`
       )
       .subscribe((response) => {
-        console.log(response);
+        const cities = response.geonames;
+        const mapCities = cities.map((city: any) => city.adminName1);
+        const removeDuplicateCities = [...new Set(mapCities)];
+        this.totalCities = removeDuplicateCities.filter(
+          (cities) => cities != ''
+        );
+        console.log(this.totalCities);
       });
   }
 

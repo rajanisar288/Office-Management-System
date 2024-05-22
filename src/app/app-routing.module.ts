@@ -42,6 +42,11 @@ const routes: Routes = [
       import('./public/signup/signup.module').then((m) => m.SignupModule),
   },
   {
+    path: 'home/signup',
+    loadChildren: () =>
+      import('./public/signup/signup.module').then((m) => m.SignupModule),
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
