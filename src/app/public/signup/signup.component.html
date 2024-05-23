@@ -1,0 +1,94 @@
+<div class="sign-up">
+   <div class="back">
+      <a routerLink="/" class="f-btn-fill-red"><i class="fa-solid fa-arrow-left"></i></a>
+   </div>
+    <div *ngIf="!isLogin" class="main-card">
+      <div class="signup-card">
+         <div class="auth">
+            <h3 class="text-center heading">Sign up us with today</h3>
+            <h5 class="text-center desc mb-20">Enter your email and choose your password to setup your account</h5>
+             
+    
+            <div [ngSwitch]="steps"> 
+             <div *ngSwitchCase="'1'">
+                <div class="oi-input"><input type="text" name="" id="" placeholder="First Name" class="mt-10"></div>
+            <div class="oi-input"><input type="text" name="" id="" placeholder="Last Name" class="mt-10"></div>
+             </div> 
+             <div *ngSwitchCase="'2'">
+                <div class="oi-input">
+                   <io-dropdown (value)="getGender($event)" [defaultValue]="'Select Gender'" class="w-100">
+                      <io-dropdown-value [value]="'Male'" dropdown></io-dropdown-value>
+                      <io-dropdown-value [value]="'Female'" dropdown></io-dropdown-value>
+                    </io-dropdown>
+                </div>
+                <div class="oi-input"><input type="text" name="" id="" placeholder="Enter email" class="mt-10"></div>
+             </div> 
+             <div *ngSwitchCase="'3'">
+                <div class="oi-input">
+                   <io-dropdown (value)="getCountry($event)" [defaultValue]="'select country'" class="w-100">
+                      <io-dropdown-value *ngFor="let country of countries" [value]="country.name" dropdown></io-dropdown-value>
+                    </io-dropdown>
+                </div>
+                <div class="oi-input mt-10">
+                   <io-dropdown (value)="getCity($event)" [defaultValue]="'select city'" class="w-100">
+                      <io-dropdown-value *ngFor="let city of totalCities" [value]="city" dropdown></io-dropdown-value>
+                    </io-dropdown>
+                </div>
+                <!-- <div class="oi-input"><input type="text" name="" id="" placeholder="Last Name (Optional)" class="mt-10"></div> -->
+             </div> 
+             <div *ngSwitchCase="'4'">
+                <div class="oi-input"><input type="password" name="" id="" placeholder="Enter password" class="mt-10"></div>
+                <div class="oi-input"><input type="password" name="" id="" placeholder="Confirm password" class="mt-10"></div>
+    
+             </div> 
+             <div *ngSwitchCase="'5'">Five</div> 
+           </div>
+    
+            <div class="mt-20 w-100 d-flex "  [ngClass]="steps < 2 ? 'justify-end' : 'justify-space-between'">
+             <button *ngIf="steps !== 1" (click)="backToPrev()" class="btn-filled-red"><i class="fa-solid fa-arrow-left mr-10"></i>({{steps-1}}) Prev</button>
+             <button *ngIf="steps !== 5" (click)="changeSteps()" class="btn-filled-red">({{steps}}) Next <i class="fa-solid fa-arrow-right ml-10"></i></button>
+          </div>
+         </div>
+         <div class="companyDetail p-10 ">
+            <img src="../../../../assets/images/LOGO.png" alt="" style="width: 85%;" class="mb-10">
+            <h5 class="desc mt-10">A line is made of a set of points which is extended in opposite directions infinitely.</h5>
+         </div>
+        </div>
+    </div>
+
+
+    <!-- login -->
+    <div *ngIf="isLogin" class="main-card">
+      <div class="signup-card">
+         <div class="auth">
+            <h3 class="text-center heading">Sign up us with today</h3>
+            <h5 class="text-center desc mb-20">Enter your email and choose your password to setup your account</h5>
+             
+    
+            
+             <div>
+                <div class="oi-input"><input type="text" name="" id="" placeholder="Enter Email or Username" class="mt-10"></div>
+               <div class="oi-input"><input type="password" name="" id="" placeholder="Enter Password" class="mt-10"></div>
+             </div> 
+    
+            <div class="mt-20 w-100 d-flex justify-space-center">
+             <button  class="btn-filled-red">Login</button>
+          </div>
+         </div>
+         <div class="companyDetail p-10 ">
+            <img src="../../../../assets/images/LOGO.png" alt="" style="width: 85%;" class="mb-10">
+            <h5 class="desc mt-10">A line is made of a set of points which is extended in opposite directions infinitely.</h5>
+         </div>
+        </div>
+    </div>
+
+    <!-- <io-dropdown (value)="getDropdownValue($event)" [defaultValue]="'select country'">
+      <p values *ngFor="let step of newAr">{{step.name}}</p>
+    </io-dropdown> -->
+    <!-- <p>{{values}}</p> -->
+    <!-- just checkout -->
+    <!-- <input type="file" id="image" name="profileImage" (change)="onFileSelected($event)" accept="image/*" required>
+    <button (click)="register()">register</button> -->
+</div>
+
+

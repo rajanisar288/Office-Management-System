@@ -6,6 +6,7 @@ import { BehaviorSubject, Subject } from 'rxjs';
 })
 export class UtilityService {
   isSidebarActive = new BehaviorSubject(false);
+  isLogin = new BehaviorSubject(false);
   breadcrumbs: any | undefined;
   constructor() {}
 }
