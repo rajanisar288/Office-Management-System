@@ -4,81 +4,70 @@
 
 body {
     @include small-screen {
-
-        .landing-page{
-            height: auto;
-        }
-        .landing-page .jumboturn{
-            height: auto;
-            margin-top: 40px;
-        }
-        .landing-page .jumboturn .jumbo-detail .jumbo-card img {
-            width: 100%;
-            height: 30%;
-        }
-        .landing-page .jumboturn .jumbo-detail .jumbo-card {
-            min-width: 100% !important;
-            width: 100%;
-        }
         .container {
             width: 100% !important;
         }
-        .landing-page .jumboturn .jumbo-detail .jumbo-card .jumbo-card-heading{
+        //    Home Page 
+
+        .stickyNavbar {
+            width: 100% !important;
+            display: flex !important;
+            justify-content: space-between !important;
+            flex-direction: column !important;
+            position: fixed !important;
+            height: 60px !important;
+            padding: 67px 0px 15px 20px !important;
+            min-height: 460px !important;
+            top: -600px !important;
+            align-items: start !important;
+            margin-top: 0px !important;
+            transition: 320ms !important;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(12.6px) !important;
+            -webkit-backdrop-filter: blur(12.6px) !important;
+            border-bottom: none !important;
+        }
+        .homeNav{
             width: 100%;
-            padding: 20px;
-        }
-        .landing-page .jumboturn .jumbo-detail .jumbo-card .jumbo-card-heading .jumbo-card-footer div p{
-        margin-left: 30px;
-        }
-        .about-page{
-            flex-direction: row;
-        }
-        .about-page .profileImage{
-            justify-content: center;
-            padding: 5px 0 24px 0;
-        }
-        .about-page .profile-overview .experience::after{
-            display: none;
-        }
-        .about-page .profile-overview .experience .exp::before,
-        .about-page .profile-overview .experience .exp::after{
-            display: none;
-        }
-        .navbar-hide{
-            margin-left: -70% !important;
-            transition: 320ms;
-        }
-        .navToggler{
-            display: block !important;
-            z-index: 8888;
-        }
-        .navbar{
             display: flex;
-            width: 70% !important;
-            position: fixed;
+            justify-content: space-between !important;
+            flex-direction: column !important;
+            position: fixed !important;
+            height: 60px;
+            padding: 67px 0px 15px 20px !important;
+            min-height: 460px;
+            top: -600px;
+            align-items: start !important;
+            margin-top: 0px !important;
             transition: 320ms;
-            z-index: 999;
-            top: 0;
-            height: 100vh !important;
-            background: red ;
-          flex-direction: column !important;
-            .nav-logo{
-                width: 100%;
-                padding: 20px 0;
-                display: flex;
-                justify-content: center;
-            }
-             .nav-link{
-                display: flex;
-                width: 100%;
-             } 
-             .nav-link ul{
-                flex-direction: column;
-                display: flex;
-                a{
-                    width: 100%;
-                }
-             } 
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(12.6px);
+            -webkit-backdrop-filter: blur(12.6px);
+        }
+        .navbarUnHide{
+            top: 0 !important;
+        }
+        .toggle{
+            display: flex !important;
+            position: fixed !important;
+            z-index: 55 !important;
+        }
+        #landingPage div.mainContainer .homeNav .navMenu ul{
+            display: flex !important;
+            gap: 10px !important;
+            flex-direction: column !important;
+        }
+        #landingPage div.mainContainer .homeCenter div.centerLeft h1{
+            font-size: 38px !important;
+            padding: 0px 14px !important;
+
+        }
+        #landingPage div.mainContainer .homeCenter div.centerLeft span{
+            font-size: 40px !important;
+            padding: 0px 14px !important;
+        }
+        #landingPage div.mainContainer .homeCenter div.centerLeft p{
+            padding: 4px 14px !important;
         }
         //dashboard css
         .sidebarCollapse {
@@ -116,10 +105,7 @@ body {
             justify-content: center !important;
         }
 
-        .container {
-            width: 100% !important;
-        }
-
+       
 
           //sign up page
           .sign-up{

@@ -1,142 +1,102 @@
-<div class="container-fluid bg-secondary">
-    <div class="themeChanger" (click)="activeDarkTheme()" [ngClass]="isDarkThemeActive == true ? 'darkThemeActivated' : ''">
-            <i class="fas fa-moon" style="color: #f1c40f;"></i>
-            <i class="fas fa-sun" style="color: #f39c12;margin-right: -15px;"></i>
-            <span class="ball"></span>
-    </div>
-    <!-- Landing page start -->
-    <div class="container">
-        <!-- Navbar Start -->
-        <div class="navbar d-flex justify-space-between">
-            <div class="nav-logo">Office.io</div>
-            <div class="nav-item">
-                <ul>
-                    <a href="#navbar" class="nav-link active">Home</a>
-                    <a href="#features" class="nav-link">Features</a>
-                    <a href="#navbar" class="nav-link">Plans</a>
-                    <a href="#navbar" class="nav-link">Why Office.io?</a>
-                </ul>
+<div class="container-fluid">
+    <!--===== Landing Page =======-->
+    <div class="container-fluid" id="landingPage">
+        <div class="rightSide">
+        </div>
+        <div class="container f-direction-column d-flex mainContainer">
+            <div class="toggle" (click)="navToggle()">
+                      <span id="span1"></span>
+                      <span id="span2"></span>
+                      <span id="span3"></span>
             </div>
-            <div class="nav-auth">
-                <div class="auth-link">
-                    <a href="" class="btn-fill active-button-transparent" routerLink="signup" (click)="login()">Login</a>
-                    <a href="" class="btn-fill active-button" routerLink="signup">SignUp</a>
+            <div class="homeNav" id="homeNav">
+                <div class="navLogo"><a href="">
+                    <span>MY</span>
+                    <SPAn>Office</SPAn>
+                </a></div>
+                <div class="navMenu">
+                    <ul>
+                        <a href="#feature">Home</a>
+                        <a href="">Feature</a>
+                        <a href="">Services</a>
+                        <a href="">Plan</a>
+                    </ul>
+                </div>
+                <div class="navAuth">
+                    <li routerLink="signup" (click)="login()">Sign in</li>
+                    <li routerLink="signup" (click)="signup()">Sign up</li>
                 </div>
             </div>
-        </div>
-        <!-- Navbar end -->
-
-        <!-- JumboTurn start -->
-        <div class="container jumboturn d-flex f-direction-column align-items-center justify-space-between">
-            <div class="Jumboturn-top d-flex f-direction-column align-items-center justify-space-center pt-40">
-                <p>All you need Office.io</p>
-                <h1>Make your company easier</h1>
-            </div>
-            <div class="jumboturn-bottom">
-               <div class="jumbo-box">
-                <div class="box-icon"><i class="fa-solid fa-people-group icon-red"></i> <p>Do something in group</p></div>
-                <div class="box-list">
-                    <li>Group Video call</li>
-                    <li>Group Messages</li>
-                    <li>Track anyone which you have access of person</li>
+            <div class="homeCenter">
+                <div class="centerLeft">
+                    <h1>THERE IS NO PROBLEM WHEN YOU USE</h1>
+                    <span>MY OFFICE</span>
+                    <p>A few weeks ago, I worked on a website refresh and wanted to outline text in a few titles. This is not the effect I’d normally use, but in this case, the titles</p>
+                    <a href="">Get start <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="centerRight">
+                    <img src="./../../../assets/images/vactorImage.png" alt="">
                 </div>
 
-               </div>
-               <div class="jumbo-box">
-                <div class="box-icon"><i class="fa-solid fa-people-group icon-green"></i> <p>Do something in group</p></div>
-                <div class="box-list">
-                    <li>Group Video call</li>
-                    <li>Group Messages</li>
-                    <li>Track anyone which you have access of person</li>
-                </div>
-               </div>
-               <div class="jumbo-box">
-                <div class="box-icon"><i class="fa-solid fa-people-group icon-blue"></i> <p>Do something in group</p></div>
-                <div class="box-list">
-                    <li>Group Video call</li>
-                    <li>Group Messages</li>
-                    <li>Track anyone which you have access of person</li>
-                </div>
-               </div>
+            </div>
+            <div class="homeEnd">
+                <a href=""></a>
             </div>
         </div>
-        <!-- JumboTurn end -->
+    </div>
+    <!--===== Landing Page End=======-->
+
+    <!--========== Feature Page =============-->
+    <div class="container-fluid" id="feature"> 
+        <div class="container d-flex f-direction-column">
+            <h1 class="w-100">Features</h1>
+            <div class="featureCards">
+                <div class="featureCard">
+                    <div class="blue">
+                        <a href=""><i class="fa-solid fa-video"></i></a>
+                    </div>
+                    <div><h1>Let's Connect with video call</h1></div>
+                    <div><p>A box-shadow CSS generator that helps you quickly generate box-shadow CSS declarations for your website. It comes with many options and it demonstrates instantly. If you want</p></div>
+                </div>
+                <div class="featureCard">
+                    <div class="red">
+                        <a href=""><i class="fa-solid fa-video"></i></a>
+                    </div>
+                    <div><h1>Let's Connect with video call</h1></div>
+                    <div><p>A box-shadow CSS generator that helps you quickly generate box-shadow CSS declarations for your website. It comes with many options and it demonstrates instantly. If you want</p></div>
+                </div>
+                <div class="featureCard">
+                    <div class="green">
+                        <a href=""><i class="fa-solid fa-video"></i></a>
+                    </div>
+                    <div><h1>Let's Connect with video call</h1></div>
+                    <div><p>A box-shadow CSS generator that helps you quickly generate box-shadow CSS declarations for your website. It comes with many options and it demonstrates instantly. If you want</p></div>
+                </div>
+                <div class="featureCard">
+                    <div class="yellow">
+                        <a href=""><i class="fa-solid fa-video"></i></a>
+                    </div>
+                    <div><h1>Let's Connect with video call</h1></div>
+                    <div><p>A box-shadow CSS generator that helps you quickly generate box-shadow CSS declarations for your website. It comes with many options and it demonstrates instantly. If you want</p></div>
+                </div>
+                <div class="featureCard">
+                    <div class="blue">
+                        <a href=""><i class="fa-solid fa-video"></i></a>
+                    </div>
+                    <div><h1>Let's Connect with video call</h1></div>
+                    <div><p>A box-shadow CSS generator that helps you quickly generate box-shadow CSS declarations for your website. It comes with many options and it demonstrates instantly. If you want</p></div>
+                </div>
+                <div class="featureCard">
+                    <div class="red">
+                        <a href=""><i class="fa-solid fa-video"></i></a>
+                    </div>
+                    <div><h1>Let's Connect with video call</h1></div>
+                    <div><p>A box-shadow CSS generator that helps you quickly generate box-shadow CSS declarations for your website. It comes with many options and it demonstrates instantly. If you want</p></div>
+                </div>
+                
+            </div>
+        </div>
 
     </div>
-    <!-- Landing page end -->
-    <div class="container bg-secondary" id="features"> 
-        <h1 class="text-primary">Features</h1>
-        <div class="pt-15 d-flex gap-10 align-items-center f-wrap justify-space-center">
-            <p class="solid-link">video call</p>
-            <p class="solid-link">task assgin</p>
-            <p class="solid-link">realtime notification</p>
-            <p class="solid-link">arrange employees</p>
-            <p class="solid-link">screen share</p>
-            <p class="solid-link">group meeting</p>
-            <p class="solid-link">deadline tracker</p>
-            <p class="solid-link">create project with team</p>
-            <p class="solid-link">budget</p>
-        </div>
-          <div  class="pt-15 d-flex gap-10 align-items-center w-100 f-wrap justify-space-center">
-            <swiper-container slides-per-view="3" speed="500" [spaceBetween]="30"  autoplay-delay="3000"  loop="true" init="true" css-mode="true" class="w-100 f-wrap">
-                <swiper-slide><div class="feature-card">
-                    <img src="./../../../assets/images/video.jpg" alt="">
-                    <div class="feature-detail">
-                        <div><img src="../../../assets/images/home/videocall.png" alt="video call"> <h3>Video Call</h3></div>
-                        <div><p>{{ 'Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Quo eius, nemo saepe similique laudantium perspiciatis,
-                             ipsa assumenda nobis fugiat necessitatibus hic deserunt rem sapiente omnis 
-                             iste mollitia odit totam soluta, beatae molestias commodi qui quaerat eveniet.
-                              Debitis repellat omnis tempora quae esse illo recusandae consequuntur delectus tenetur aliquam, ea nihil?'  | formatText:100}}</p></div>
-                    </div>
-                </div></swiper-slide>
-                <swiper-slide><div class="feature-card">
-                    <img src="./../../../assets/images/video.jpg" alt="">
-                    <div class="feature-detail">
-                        <div><img src="../../../assets/images/home/notification.png" alt="video call"> <h3>Realtime Notification</h3></div>
-                        <div><p>{{ 'Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Quo eius, nemo saepe similique laudantium perspiciatis,
-                             ipsa assumenda nobis fugiat necessitatibus hic deserunt rem sapiente omnis 
-                             iste mollitia odit totam soluta, beatae molestias commodi qui quaerat eveniet.
-                              Debitis repellat omnis tempora quae esse illo recusandae consequuntur delectus tenetur aliquam, ea nihil?'  | formatText:100}}</p></div>
-                    </div>
-                </div></swiper-slide>
-                <swiper-slide><div class="feature-card">
-                    <img src="./../../../assets/images/video.jpg" alt="">
-                    <div class="feature-detail">
-                        <div><img src="../../../assets/images/home/meet.png" alt="video call"> <h3>Meetings</h3></div>
-                        <div><p>{{ 'Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Quo eius, nemo saepe similique laudantium perspiciatis,
-                             ipsa assumenda nobis fugiat necessitatibus hic deserunt rem sapiente omnis 
-                             iste mollitia odit totam soluta, beatae molestias commodi qui quaerat eveniet.
-                              Debitis repellat omnis tempora quae esse illo recusandae consequuntur delectus tenetur aliquam, ea nihil?'  | formatText:100}}</p></div>
-                    </div>
-                </div></swiper-slide>
-                <swiper-slide><div class="feature-card">
-                    <img src="./../../../assets/images/video.jpg" alt="">
-                    <div class="feature-detail">
-                        <div><img src="../../../assets/images/home/sreenshare.png" alt="video call"> <h3>Screen Share</h3></div>
-                        <div><p>{{ 'Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Quo eius, nemo saepe similique laudantium perspiciatis,
-                             ipsa assumenda nobis fugiat necessitatibus hic deserunt rem sapiente omnis 
-                             iste mollitia odit totam soluta, beatae molestias commodi qui quaerat eveniet.
-                              Debitis repellat omnis tempora quae esse illo recusandae consequuntur delectus tenetur aliquam, ea nihil?'  | formatText:100}}</p></div>
-                    </div>
-                </div></swiper-slide>
-                <swiper-slide><div class="feature-card">
-                    <img src="./../../../assets/images/video.jpg" alt="">
-                    <div class="feature-detail">
-                        <div><img src="../../../assets/images/home/task.png" alt="video call"> <h3>Task Assgin</h3></div>
-                        <div><p>{{ 'Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Quo eius, nemo saepe similique laudantium perspiciatis,
-                             ipsa assumenda nobis fugiat necessitatibus hic deserunt rem sapiente omnis 
-                             iste mollitia odit totam soluta, beatae molestias commodi qui quaerat eveniet.
-                              Debitis repellat omnis tempora quae esse illo recusandae consequuntur delectus tenetur aliquam, ea nihil?'  | formatText:100}}</p></div>
-                    </div>
-                </div></swiper-slide>
-                </swiper-container>
-          </div>
-    </div>
+    <!--========== Feature Page =============-->
 </div>
-
-<!-- autoplay-delay="3000"  -->

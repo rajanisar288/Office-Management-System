@@ -1,24 +1,32 @@
-.navbar {
-    display: flex;
-    align-items: center;
-    height: 80px;
+.stickyNavbar {
+    position: fixed !important;
+    z-index: 4 !important;
+    transition: 320ms;
+    left: 0 !important;
+    margin-top: 0 !important;
+    justify-content: space-around !important;
+    height: 80px !important;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12.6px);
+    -webkit-backdrop-filter: blur(12.6px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.36);
 }
-.jumboturn{
-    background: url(../../../assets/images/jumboturn.jpg);
-    height: 70vh;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-top: 50px;
-    border-radius: 30px;
-    position: relative;
+.span1{
+    transform: rotate(55deg) !important;
+    transition: 320ms !important;
+
 }
-.pt-40{
-    padding-top: 40px;
+.span3{
+    transform: rotate(139deg) !important;
+    width: 100% !important;
+    transition: 320ms !important;
+}
+.span2{
+    width: 0px !important;
+    height: 0px !important;
 }
 
-
-swiper-slide{
+swiper-slide {
     // background: red;
     height: auto;
     // overflow: hidden;
@@ -26,4 +34,4 @@ swiper-slide{
 }
 
 
-  
+//theme switcher

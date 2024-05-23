@@ -28,6 +28,7 @@ body {
     hsl(222deg 70% 92%) 87%,
     hsl(212deg 74% 91%) 100%
   );
+  --color-whiteBlack:black;
 }
 
 // Dark Theme  
@@ -49,6 +50,8 @@ body.dark-theme {
   --green-light:#1C4626;
   --active-color:#2d2d2d;
   --background-image:linear-gradient(225deg, #030303 0%, #404040 100%);
+  --color-whiteBlack:white;
+
 }
 
 //Theme Setup
@@ -73,6 +76,7 @@ $bg-active-color:var(--active-bg-color);
 $text-dark:var(--text-dark);
 $active-list:var(--active-color);
 $backgroundImage:var(--background-image);
+$blackWhite:var(--color-whiteBlack);
 
 
 

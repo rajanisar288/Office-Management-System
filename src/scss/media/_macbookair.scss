@@ -10,6 +10,11 @@
 //sign up
 body{
     @include for-macbookair{
+        //Home page
+
+        #landingPage div.mainContainer .homeCenter{
+            padding: 100px 0px 0px 0px !important;
+        }
         .sign-up{
             .signup-card{
                 flex-direction: column-reverse;

@@ -1,18 +1,38 @@
 body{
     @include for-tablet{
         .container{
-            width: 700px !important;
+            width: 100% !important;
             // background: orange;
         }
-        .landing-page .jumboturn .jumbo-detail .jumbo-card {
-            min-width: 540px;
+      
+        //Home Page
+        #landingPage div.mainContainer .homeNav .navAuth li {
+            padding: 5px 15px !important;
+            font-size: 14px !important;
         }
-        .landing-page .jumboturn .jumbo-detail .jumbo-card .jumbo-card-heading .jumbo-card-footer div {
-            padding: 6px 5px;
-            min-width: 270px;
+        #landingPage div.mainContainer .homeNav .navMenu ul a{
+            padding: 5px 15px !important;
+            font-size: 14px !important;
         }
-        .landing-page .jumboturn .jumbo-detail .jumbo-card .jumbo-card-heading .jumbo-card-footer{
-            flex-wrap: wrap;
+        #landingPage div.mainContainer .homeCenter{
+            flex-direction: column-reverse !important;   
+        }
+        #landingPage div.mainContainer .homeCenter div.centerRight {
+            display: none !important;
+        }
+        #landingPage div.mainContainer .homeCenter div.centerLeft{
+            width: 100% !important;
+            justify-content: center !important;
+            align-items: center !important;
+            *{
+                text-align: center;
+            }
+        }
+        #landingPage div.mainContainer .homeNav .navLogo  {
+            margin-left: 20px !important;
+        }
+        #landingPage div.mainContainer .homeNav .navAuth{
+            margin-right: 20px !important;
         }
 
         //sign up page
@@ -28,6 +48,8 @@ body{
                 }
             }
         }
+
+        
     }
 }
 

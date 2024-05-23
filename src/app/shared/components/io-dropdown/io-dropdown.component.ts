@@ -23,7 +23,6 @@ export class IoDropdownComponent implements AfterViewInit {
 
   getDropDownValue(val: any) {
     if (this.isDropdownCollapse === true) {
-      console.log(val.innerHTML);
       this.getValue.emit(val.innerHTML);
       this.defaultSelect = val.innerHTML;
       this.isDropdownCollapse = false;

@@ -40,7 +40,7 @@
         width: 100%;
         top: 59px;
         background: $secondary;
-        z-index: 8888;
+        // z-index: 8888;
         border-radius: $input-border-radius;
         border: 1px solid $border-primary;
         padding: 0 0px;
@@ -48,6 +48,7 @@
         box-sizing: border-box;
         display: flex;
         transition: 1000ms;
+        overflow: hidden;
         flex-direction: column;
         p{
             width: 100%;
@@ -57,7 +58,11 @@
             overflow: hidden;
             display: flex;
             z-index: 999999;
+            border-radius: $input-border-radius;
+            overflow: auto;
+            box-sizing: border-box;
             padding: 0 10px 0px 10px;
+            background: $secondary;
             flex-direction: column;
             &:hover{
                 overflow: auto;
