@@ -69,9 +69,9 @@
     padding: 10px 40px;
     cursor: pointer;
     &:hover{
-        background: white;
+        background: $primary;
         color: $red-dark;
-        border: 1px solid $red-dark;
+        border: 1px solid $red-dark !important;
     }
     &:focus{
         outline: none;
@@ -201,6 +201,7 @@
     border-radius: 50%;
     font-size: 17px;
     transition: 320ms;
+    box-sizing: border-box;
     outline: none;
     border: none;
     height: 50px;
@@ -209,12 +210,17 @@
     display: block;
     justify-content: center;
     text-align: center;
-    line-height: 50px;
+    display: flex;
+    align-items: center;
+    // line-height: 50px;
     cursor: pointer;
+    i{
+        font-size: 16px;
+    }
     &:hover{
-        background: white;
+        background: $primary;
         color: $red-dark;
-        border: 1px solid $red-dark;
+        border: 2px solid $red-dark;
     }
     &:focus{
         outline: none;

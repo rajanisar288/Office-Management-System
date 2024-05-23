@@ -26,10 +26,11 @@ input{
     padding: $input-padding;
     border-radius: $input-border-radius;
     font-size: $input-font;
+    background: $secondary;
     outline: none;
     width: 100%;
     color: $text-primary;
-    border: $input-border;
+    border: 1px solid $border-primary;
     position: relative;
     &:focus{
         outline: none;

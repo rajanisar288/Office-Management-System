@@ -19,8 +19,21 @@
     src: url(../../assets/fonts/NovaSquare-Regular.ttf);
   }
 
+  //shadow
+  @font-face {
+    font-family: shadow-light;
+    src: url(../../assets/fonts/ShadowsIntoLight-Regular.ttf);
+  }
+  
+  //Mate
+  @font-face {
+    font-family: mate-regular;
+    src: url(../../assets/fonts/MateSC-Regular.ttf);
+  }
   $nova:nova;
   $poppins:poppins;
   $poppins-bold:poppins-bold;
   $poppins-italic:poppins-italic;
   $poppins-medium:poppins-medium;
+  $shadow-light:shadow-light;
+  $mate-regular:mate-regular;

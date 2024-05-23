@@ -4,6 +4,14 @@ body,*{
     font-family: $poppins;
     scroll-behavior: smooth;
 }
+.fa-classic,.fa-regular,.fa-solid,.far,.fas {
+    font-family: "Font Awesome 6 Free"
+}
+
+.fa-brands,.fab {
+    font-family: "Font Awesome 6 Brands"
+}
+
 body{
     background: $primary;
     overflow-x: hidden;
