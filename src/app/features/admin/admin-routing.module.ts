@@ -2,9 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin.component';
 import { ProfileComponent } from './profile/profile.component';
-import { CompanyProfileComponent } from './company-profile/company-profile.component';
-import { TotalManagersComponent } from './total-managers/total-managers.component';
-import { TotalEmployeesComponent } from './total-employees/total-employees.component';
 
 const routes: Routes = [
   {
@@ -12,9 +9,48 @@ const routes: Routes = [
     component: AdminComponent,
     children: [
       { path: '', component: ProfileComponent },
-      { path: 'admin/company-profile', component: CompanyProfileComponent },
-      { path: 'admin/total-managers', component: TotalManagersComponent },
-      { path: 'admin/total-employee', component: TotalEmployeesComponent },
+      {
+        path: 'admin/company-profile',
+        loadChildren: () =>
+          import('./company-profile/company-profile.module').then(
+            (m) => m.CompanyProfileModule
+          ),
+      },
+      {
+        path: 'admin/total-managers',
+        loadChildren: () =>
+          import('./total-managers/total-manager.module').then(
+            (m) => m.TotalManagerModule
+          ),
+      },
+      {
+        path: 'admin/total-employees',
+        loadChildren: () =>
+          import('./total-employees/total-employee.module').then(
+            (m) => m.TotalEmployeeModule
+          ),
+      },
+      {
+        path: 'admin/emails',
+        loadChildren: () =>
+          import('./workspace/emails/email.module').then(
+            (m) => m.EmailGroupsModule
+          ),
+      },
+      {
+        path: 'admin/meetings',
+        loadChildren: () =>
+          import('./workspace/meetings/meeting.module').then(
+            (m) => m.MeetingModule
+          ),
+      },
+      {
+        path: 'admin/chat-groups',
+        loadChildren: () =>
+          import('./workspace/chat-groups/chat-groups.module').then(
+            (m) => m.ChatGroupsModule
+          ),
+      },
     ],
   },
 ];

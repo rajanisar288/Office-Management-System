@@ -1,12 +1,21 @@
 <div id="navbar">
     <div class="bread-crumbs">
-        <div *ngFor="let breadcrumbs of breadcrumbs; let last = last">
-            <a [routerLink]="breadcrumbs.route" [ngClass]="{'current': last}">{{breadcrumbs.name}}</a><span
-                *ngIf="!last"> /</span>
-            <!-- <p [ngClass]="{'current': last}">{{breadcrumbs.name}}</p> -->
+        <div class="crumbs">
+            <div *ngFor="let breadcrumbs of breadcrumbs; let last = last">
+                <a [routerLink]="breadcrumbs.route" [ngClass]="{'current': last}">{{breadcrumbs.name}}</a><span
+                    *ngIf="!last"> /</span>
+                <!-- <p [ngClass]="{'current': last}">{{breadcrumbs.name}}</p> -->
+            </div>
         </div>
+    
+        <div class="menuBtn" (click)="navMenuBtn()">
+            <span class="mt-5"></span>
+            <span></span>
+            <span></span>
+        </div>
+    
     </div>
-    <div class="nav-menu">
+    <div class="nav-menu hide-nav" id="nav-menu">
         <div class="notification">
             <a class="link-icon"><i class="fa-solid fa-bell"></i></a>
             <p class="noti-count">19</p>

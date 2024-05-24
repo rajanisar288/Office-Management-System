@@ -1,12 +1,13 @@
 //@--------------------------------------------@//
- //this media queries only for mobile devices// 
- //@-------------------------------------------@//
+//this media queries only for mobile devices// 
+//@-------------------------------------------@//
 
 body {
     @include small-screen {
         .container {
             width: 100% !important;
         }
+
         //    Home Page 
 
         .stickyNavbar {
@@ -27,7 +28,8 @@ body {
             -webkit-backdrop-filter: blur(12.6px) !important;
             border-bottom: none !important;
         }
-        .homeNav{
+
+        .homeNav {
             width: 100%;
             display: flex;
             justify-content: space-between !important;
@@ -44,56 +46,73 @@ body {
             backdrop-filter: blur(12.6px);
             -webkit-backdrop-filter: blur(12.6px);
         }
-        .navbarUnHide{
+
+        .navbarUnHide {
             top: 0 !important;
         }
-        .toggle{
+
+        .toggle {
             display: flex !important;
             position: fixed !important;
             z-index: 55 !important;
+            margin-left: 10px;
+            transition: all 320ms ease-in-out;
         }
-        #landingPage div.mainContainer .homeNav .navMenu ul{
+        .toggleCollapse{
+            margin-left: 245px !important;
+            z-index: 888 !important;
+            background-color: $blackWhite !important;
+        }
+        #landingPage div.mainContainer .homeNav .navMenu ul {
             display: flex !important;
             gap: 10px !important;
             flex-direction: column !important;
         }
-        #landingPage div.mainContainer .homeCenter div.centerLeft h1{
+
+        #landingPage div.mainContainer .homeCenter div.centerLeft h1 {
             font-size: 38px !important;
             padding: 0px 14px !important;
 
         }
-        #landingPage div.mainContainer .homeCenter div.centerLeft span{
+
+        #landingPage div.mainContainer .homeCenter div.centerLeft span {
             font-size: 40px !important;
             padding: 0px 14px !important;
         }
-        #landingPage div.mainContainer .homeCenter div.centerLeft p{
+
+        #landingPage div.mainContainer .homeCenter div.centerLeft p {
             padding: 4px 14px !important;
         }
+
         //dashboard css
         .sidebarCollapse {
-            width: 200px;
+            width: 250px;
             position: fixed;
             transition: 320ms;
             margin-left: 0px;
             z-index: 66;
-            margin-left: -200px;
-            top: 51px;
+            margin-left: -250px;
+            // top: 51px;
+        }
+
+        #sidebar .menu ul li {
+            width: 100% !important;
         }
 
         #mainDiv .sidebar-collapse {
-            width: 200px !important;
+            width: 250px !important;
             position: fixed;
             z-index: 66;
-            top: 51px;
+            // top: 51px;
         }
 
         .sidebarUnCollapse {
             margin-left: 0px;
-            width: 200px !important;
+            width: 250px !important;
             position: fixed;
-            min-width: 200px !important;
+            min-width: 250px !important;
             z-index: 66;
-            margin-left: -200px;
+            margin-left: -250px;
             top: 51px;
         }
 
@@ -105,39 +124,133 @@ body {
             justify-content: center !important;
         }
 
-       
 
-          //sign up page
-          .sign-up{
-            .back{
+        //dashboard navbar
+        #navbar {
+            margin-left: 44px !important;
+        }
+
+        #navbar .bread-crumbs {
+            width: 100%;
+            // background: red;
+            display: flex;
+            justify-content: space-between;
+
+            div.crumbs {
+                padding-top: 12px;
+            }
+
+        }
+
+        #navbar .bread-crumbs div a {
+            font-size: 14px;
+        }
+
+        #navbar .nav-menu {
+            position: fixed;
+            z-index: 8888;
+            flex-direction: column;
+            background: $primary;
+            right: 18px;
+            top: 57px;
+            border-radius: 7px;
+            // border-top: none;
+            box-sizing: border-box;
+            border-radius: 7px;
+            gap: 0 !important;
+            // transition: max-height 320ms ease-in-out, border 320ms ease-in-out;
+        }
+
+        #navbar .nav-menu div {
+            margin: 8px !important;
+        }
+
+        .open-nav {
+            border: 1px solid $border-primary;
+            max-height: 500px !important;
+        }
+
+        .hide-nav {
+            max-height: 0px !important;
+            border: none;
+        }
+
+        .menuBtn {
+            display: flex !important;
+            justify-content: center;
+            align-items: end;
+            box-sizing: border-box;
+            padding-right: 5px;
+            gap: 7px;
+            width: 40px;
+            height: 40px;
+            border-radius: 7px;
+            margin-right: -11px;
+            transition: gap 320ms ease-in-out;
+            flex-direction: column;
+            cursor: pointer;
+
+            span {
+                width: 90%;
+                height: 2px;
+                background: $text-primary;
+                transform: rotate(0deg) !important;
+
+                &:last-child {
+                    width: 70%;
+                }
+
+                &:nth-child(2) {
+                    width: 50%;
+                }
+
+            }
+
+            &:hover {
+                gap: 4px;
+            }
+        }
+
+        //sign up page
+        .sign-up {
+            .back {
                 top: 4px !important;
                 left: 27px !important;
             }
-            .signup-card{
+
+            .signup-card {
                 width: 95% !important;
                 min-width: auto !important;
                 margin-top: 40px;
-                div{
+
+                div {
                     width: 100% !important;
                 }
-                div.auth{
-                    padding:30px 12px !important;
+
+                div.auth {
+                    padding: 30px 12px !important;
                     box-sizing: border-box;
                 }
             }
         }
+
+        // cards 
+        .user-card {
+            justify-content: center !important;
+        }
+
         //buttons
-                .btn-filled-red,
-                .btn-outline-red,
-                .btn-fill,
-                .btn-filled-green,
-                .btn-outline-green,
-                .btn-filled-blue,
-                .btn-outline-blue,
-                .btn-filled-turk,
-                .btn-outline-turk {
-                    padding: 13px 27px !important;
-                    font-size: 14px !important;
-                }
+        .btn-filled-red,
+        .btn-outline-red,
+        .btn-fill,
+        .btn-filled-green,
+        .btn-outline-green,
+        .btn-filled-blue,
+        .btn-outline-blue,
+        .btn-filled-turk,
+        .btn-outline-turk {
+            padding: 13px 27px !important;
+            font-size: 14px !important;
+        }
     }
 }

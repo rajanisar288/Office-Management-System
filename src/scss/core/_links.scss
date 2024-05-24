@@ -53,7 +53,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: $text-primary;
+    color: $blackWhite;
     height: 100%;
     cursor: pointer;
     box-sizing: border-box;
@@ -69,26 +69,3 @@
 }
 
 
-.link-icon {
-    text-decoration: none;
-    width: 45px;
-    height: 45px;
-    border-radius: $link-border-radius;
-    border:1px solid $border-primary;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $text-primary;
-    height: 100%;
-    cursor: pointer;
-    box-sizing: border-box;
-
-    i {
-        font-size: 22px;
-    }
-
-    &:hover {
-        color: $color-white;
-        background: $active-list;
-    }
-}

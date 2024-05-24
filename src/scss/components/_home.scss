@@ -8,6 +8,7 @@
     object-fit: cover;
     position: relative;
     box-sizing: border-box;
+   
 
     .rightSide {
         background: rgb(255, 255, 255);
@@ -205,9 +206,9 @@
         padding: 30px 30px;
         flex-wrap: wrap;
         .featureCard {
-            background: $primary;
+                background: $primary;
                 width: 25%;
-                min-width: 300px;
+                min-width: 280px;
                 height: 300px;
                 border: 1px solid $border-primary;
                 border-radius: 7px;

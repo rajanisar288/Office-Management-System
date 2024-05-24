@@ -1,11 +1,51 @@
-.user-image{
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 7px;
-    img{
-        width: 200px;
-        height: 200px;
+.user-cover {
+    position: relative;
+    min-height: 250px;
+    height: 250px;
+
+    img {
+        // min-height: 250px;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
         object-fit: cover;
+        min-height: 250px;
+        height: 250px;
+    }
+}
+.user-detail{
+    position: relative;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    margin-bottom: 15px;
+    div{
+        &:first-child{
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            width: 150px;
+            height: 150px;
+            position: relative;
+            img {
+                    width: 150px;
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    object-fit: contain;
+                    height: 150px;
+                    top: -75px;
+                    border-radius: 50%;
+                    position: absolute;
+                    z-index: 7;
+                }
+        }
+        &:nth-child(2){
+            position: absolute;
+            top: 75px;
+            h2{
+                font-size: 18px;
+            }
+        }
     }
 }

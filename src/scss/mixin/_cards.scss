@@ -1,0 +1,12 @@
+@mixin cards{
+    min-width: 280px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 32.33333333333333%;
+    border-radius: $input-border-radius;
+    box-sizing: border-box;
+    background: $primary;
+    cursor: pointer;
+    position: relative;
+}

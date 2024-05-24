@@ -14,7 +14,9 @@
     width: auto;
     // padding-left: 20px;
     display: flex;
-
+    .menuBtn{
+      display: none;
+    }
     div {
       display: flex;
 

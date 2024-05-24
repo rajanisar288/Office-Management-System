@@ -69,6 +69,9 @@ body{
 .align-items-center{
     align-items: center;
 }
+.align-items-start{
+    align-items: start;
+}
 .gap-10{
     gap: 10px;
 }
@@ -81,6 +84,9 @@ body{
 .text-secondary{
     color: $text-secondary;
 }
+.textwhiteblack{
+    color: $blackWhite;
+}
 
 //background color (primary, secondary)
 .bg-primary{
@@ -88,6 +94,14 @@ body{
 }
 .bg-secondary{
     background: $secondary;
+}
+
+
+//headings
+.heading{
+    font-size: 24px;
+    font-family: $poppins-bold;
+    color: $blackWhite;
 }
 
 //padding (5px, 10px, 15px)
@@ -139,9 +153,9 @@ body{
     padding-right: 15px;
 }
 
-//border radius (6px , 15px , 50px)
-.br-6{
-    border-radius: 6px;
+//border radius (7px , 15px , 50px)
+.br-7{
+    border-radius: 7px;
 }
 .br-15{
     border-radius: 15px;
@@ -193,4 +207,77 @@ body{
 //borders
 .br-box{
     box-sizing: border-box;
+}
+
+// heights
+.h-200{
+    height: 200px;
+}
+.h-250{
+    height: 250px;
+}
+.h-300{
+    height: 300px;
+}
+//overFlow
+.ovFW-hidden{
+    overflow: hidden;
+}
+.ovFW-x-hidden{
+overflow-x: hidden;
+}
+.ovFW-y-hidden{
+    overflow-y: hidden;
+    }
+
+//  borders
+.br-red{
+    border: 1px solid $color-red;
+} 
+.br-blue{
+    border: 1px solid $color-blue;
+} 
+.br-green{
+    border: 1px solid $color-green;
+} 
+.br-yellow{
+    border: 1px solid $card-yellow;
+} 
+.br-primary{
+    border: 1px solid $border-primary;
+}
+
+//colors
+.color-red{
+    color: $color-red;
+}
+.color-darkgreen{
+    color: $color-green;
+}
+.color-yellow{
+    color: $card-yellow;
+}
+
+//font families
+
+.ff-nova{
+    font-family: $nova;
+}
+.ff-poppins{
+    font-family: $poppins;
+}
+.ff-poppins-bold{
+    font-family: $poppins-bold;
+}
+.ff-poppins-italic{
+    font-family: $poppins-italic;
+}
+.ff-poppins-medium{
+    font-family: $poppins-medium;
+}
+.ff-shadow-light{
+    font-family: $shadow-light;
+}
+.ff-mate-ragular{
+    font-family: $mate-regular;
 }

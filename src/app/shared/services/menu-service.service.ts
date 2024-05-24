@@ -13,7 +13,16 @@ export class MenuServiceService {
       subMenu: [
         { routeName: 'Company', route: '/admin/company-profile' },
         { routeName: 'Managers', route: '/admin/total-managers' },
-        { routeName: 'Employees', route: '/admin/total-employee' },
+        { routeName: 'Employees', route: '/admin/total-employees' },
+      ],
+    },
+    {
+      routeName: 'My workspace',
+      icon: 'fa-solid fa-briefcase',
+      subMenu: [
+        { routeName: 'Mails', route: '/admin/emails' },
+        { routeName: 'Meetings', route: '/admin/meetings' },
+        { routeName: 'Groups', route: '/admin/chat-groups' },
       ],
     },
     {

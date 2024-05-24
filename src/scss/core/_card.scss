@@ -1,0 +1,11 @@
+.mo-card{
+    @include cards;
+    transition: 920ms;
+    &:hover{
+        margin-top: -10px;
+        transition: 920ms;
+    }
+}
+.mo-card-red{
+    border: 1px solid $color-red;
+}
