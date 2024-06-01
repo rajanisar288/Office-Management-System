@@ -1,0 +1,15 @@
+.wrapper{
+    height: calc(100vh - 100px);
+    div.wrapp{
+        &:first-child{
+            width: 300px;
+            min-width: 300px;
+            border-top-left-radius: 7px;
+            border-bottom-left-radius: 7px;
+        }
+        &:last-child{
+            width: calc(100% - 300px);
+            // background: red;
+        }
+    }
+}

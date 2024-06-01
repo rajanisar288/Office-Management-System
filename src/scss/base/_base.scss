@@ -76,6 +76,9 @@ body{
     gap: 10px;
 }
 
+.crsr-pointer{
+    cursor: pointer;
+}
 
 //text color (primary, secondary)
 .text-primary{
@@ -124,6 +127,9 @@ body{
 }
 .pt-15{
     padding-top: 15px;
+}
+.pt-20{
+    padding-top: 20px;
 }
 .pb-5{
     padding-bottom: 5px;
@@ -204,6 +210,15 @@ body{
     text-align: center;
 }
 
+.p-relative{
+    position: relative;
+}
+.p-absulute{
+    position: absolute;
+}
+.p-fixed{
+    position: fixed;
+}
 //borders
 .br-box{
     box-sizing: border-box;
@@ -218,6 +233,9 @@ body{
 }
 .h-300{
     height: 300px;
+}
+.h-vh100{
+    height: 100vh;
 }
 //overFlow
 .ovFW-hidden{
@@ -280,4 +298,36 @@ overflow-x: hidden;
 }
 .ff-mate-ragular{
     font-family: $mate-regular;
+}
+//list (li)
+.li-syl-nn{
+    list-style: none;
+}
+
+//user images
+.user-image{
+    position: relative;
+    width: 50px;
+    height:50px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-sizing: border-box;
+    img{
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+    }
+}
+
+
+//fons size
+.fs-15{
+    font-size: $profile-font-name;
+}
+.fs-12{
+    font-size: $profile-font-pera;
 }
