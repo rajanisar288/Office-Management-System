@@ -13,3 +13,39 @@
         }
     }
 }
+
+.sendMessageBox{
+    width: 96%;
+    border-radius: 7px;
+    bottom: 10px;
+    // padding: ;
+    .searchInput{
+        input{
+            padding: 0px !important;
+            height: 50px;
+            max-height: 200px;
+            padding-left: 15px !important;
+            box-sizing: border-box;
+            background-color: transparent !important;
+            border: none !important;
+            &:focus{
+                border: none !important;
+            }
+        }
+    }
+}
+
+.searchAction{
+    div{
+        &:first-child{
+            button{
+                // background: transparent;
+                border: none;
+                &:focus{
+                    outline: none;
+                    border: none;
+                }
+            }
+        }
+    }
+}

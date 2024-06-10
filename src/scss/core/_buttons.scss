@@ -1,3 +1,8 @@
+button{
+    cursor: pointer;
+    @include buttons;
+}
+
 .btn-fill{
     border-radius: 7px;
     font-size: 17px;
@@ -276,4 +281,36 @@
 
 .button-icon{
     
+}
+
+.btn-black{
+    background: $blackWhite;
+    outline: none;
+    border: none;
+    padding: 7px 15px;
+    border-radius: 7px;
+    font-size: 16px;
+    color: $active-color;
+    transition: all 320ms;
+    &:focus{
+        outline: none;
+        border: none;
+    }
+    &:hover{
+        letter-spacing: 1px;
+    }
+}
+
+.icon-btn-secondary{
+    padding: 8px 10px;
+    border-radius: 7px;
+    font-size: 14px;
+    background: $secondary;
+    color: $text-secondary;
+
+}
+.icon-btn{
+    font-size: 14px;
+    background: transparent;
+    color: $text-secondary;
 }
