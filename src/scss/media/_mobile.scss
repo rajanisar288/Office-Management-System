@@ -6,6 +6,7 @@ body {
     @include small-screen {
         .container {
             width: 100% !important;
+            padding: 0 10px !important;
         }
 
         //    Home Page 
@@ -251,6 +252,10 @@ body {
         .btn-outline-turk {
             padding: 13px 27px !important;
             font-size: 14px !important;
+        }
+        //footer
+        #footer{
+            justify-content: center !important;
         }
     }
 }

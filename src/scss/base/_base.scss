@@ -38,6 +38,9 @@ body{
 .w-100{
     width: 100%;
 }
+.w-75{
+    width: 75%;
+}
 .w-50{
     width: 50%;
 }
@@ -106,6 +109,15 @@ body{
     background: $border-primary;
 }
 
+.bg-blue{
+    background: $color-blue;
+}
+.bg-red{
+    background: $red-light;
+}
+.bg-turk{
+    background: $color-turquoise;
+}
 
 //headings
 .heading{
@@ -138,6 +150,9 @@ body{
 
 .p-15 {
     padding: 15px;
+}
+.p-20 {
+    padding: 20px;
 }
 .pt-5{
     padding-top: 5px;
@@ -388,4 +403,24 @@ overflow-x: hidden;
 //links 
 .t-dec{
     text-decoration: none;
+}
+
+
+.text-dark{
+    color:$text-dark;
+}
+.primary-label {
+    font-size: 22px;
+    background: linear-gradient(to right, $red-dark, $green-dark, $blue-dark);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.secondary-label {
+    font-size: 18px;
+    font-family: $poppins-bold;
+    color: $text-primary;
+    word-spacing: 4px;
+}
+.word-space3{
+    word-spacing: 3px;
 }

@@ -1,0 +1,39 @@
+// .box {
+//     position: absolute;
+//     pointer-events: none;
+//     transition: top 320ms, left 320ms;
+//     z-index: -1;
+//     margin: -50px 0 0 -50px;
+// }
+
+// .box1 {
+//     width: 1px;
+//     height: 1px;
+//     background: #fd3550;
+//     -webkit-box-shadow: -11px 2px 130px 72px #fd3550;
+//     -moz-box-shadow: -11px 2px 130px 72px #fd3550;
+//     box-shadow: -11px 2px 130px 72px #fd3550;
+// }
+
+// .box2 {
+//     width: 1px;
+//     height: 1px;
+//     background: #0dcaf0;
+//     -webkit-box-shadow: -11px 2px 70px 72px #0dcaf0;
+//     -moz-box-shadow: -11px 2px 70px 72px #0dcaf0;
+//     box-shadow: -11px 2px 70px 72px #0dcaf0;
+// }
+
+// .box3 {
+//     width: 1px;
+//     height: 1px;
+//     background: #219bc4;
+//     -webkit-box-shadow: -11px 2px 130px 72px #219bc4;
+//     -moz-box-shadow: -11px 2px 130px 72px #219bc4;
+//     box-shadow: -11px 2px 130px 72px #219bc4;
+// }
+
+.cardWidth{
+    max-width: 670px;
+    min-width: 250px;
+}
