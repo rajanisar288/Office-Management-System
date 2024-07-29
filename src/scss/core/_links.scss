@@ -1,3 +1,9 @@
+.basic-link{
+    text-decoration: none;
+    font-size: 17px;
+    font-family: $poppins-italic;
+    color: $text-dark;
+}
 .solid-link {
     text-decoration: none;
     padding: 10px 30px;
@@ -45,27 +51,51 @@
 }
 
 .link-icon {
-    text-decoration: none;
-    width: 45px;
-    height: 45px;
+    @include link-with-icon;
     border-radius: $link-border-radius;
     border:1px solid $border-primary;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $blackWhite;
-    height: 100%;
-    cursor: pointer;
-    box-sizing: border-box;
 
-    i {
-        font-size: 22px;
-    }
+}
+.link-icon-circle{
+    @include link-with-icon;
+    border-radius: 50%;
+    border:1px solid $border-primary;
 
-    &:hover {
-        color: $color-white;
-        background: $active-list;
+}
+
+
+
+.link-filled-red{
+    @include link;
+    background: $red-dark;
+    color: white;
+    border-radius: 7px;
+    &:hover{
+        background: $primary;
+        color: $red-dark;
+        border: 1px solid $red-dark !important;
     }
+}
+
+//red button .btn-outline-red
+.link-outline-red{
+    @include link;
+    background: white;
+    color: $red-dark;
+    border: 1px solid $red-dark;
+    &:hover{
+        background: $red-dark;
+        color: white;
+        border: none;
+    }
+}
+
+
+//active class for links
+.activeNav{
+    background: $red-dark;
+    color: white !important;
+    border-top-left-radius: 15px;
 }
 
 
