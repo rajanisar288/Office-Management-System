@@ -79,6 +79,9 @@ body{
 .gap-10{
     gap: 10px;
 }
+.gap-25{
+    gap: 25px;
+}
 
 .gap-5{
     gap: 5px;
@@ -97,7 +100,9 @@ body{
 .textwhiteblack{
     color: $blackWhite;
 }
-
+.backgroundImage{
+    background: $backgroundImage;
+}
 //background color (primary, secondary)
 .bg-primary{
     background: $primary;
@@ -213,6 +218,7 @@ body{
 .color-green{
     color: $color-turquoise;
 }
+
 
 //margin
 .mt-20{
@@ -416,11 +422,56 @@ overflow-x: hidden;
     color: transparent;
 }
 .secondary-label {
-    font-size: 18px;
+    font-size: 32px;
     font-family: $poppins-bold;
-    color: $text-primary;
-    word-spacing: 4px;
+    letter-spacing: 20px;
+    padding: 10px 30px;
+    margin-left: 120px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    color: white;
+    transition: all 320ms ease-in-out;
 }
+.secondary-label:hover{
+    letter-spacing: 14px;
+}
+.secondary-label::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: black;
+    z-index: -1;
+    transition: all 320ms ease-in-out 320ms;
+    
+}
+.secondary-label::after{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 60px;
+    background: rgb(124, 1, 1);
+    right: 32px;
+    z-index: -2;
+    top: 1px;
+    transition: all 320ms ease-in-out;
+    // animation: labelAnimation 9s ease-in-out;
+}
+
+.secondary-label:hover::after{
+   width: 100%;
+   top: -6px;
+}
+.secondary-label:hover::before{
+    height: 60px;
+    left: 56px;
+ }
+
+
+
+
 .word-space3{
     word-spacing: 3px;
 }

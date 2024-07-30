@@ -5,18 +5,11 @@ import { HomeRoutingModule } from './home-routing.module';
 import { register } from 'swiper/element/bundle';
 import { PipeModule } from 'src/app/shared/pipes/pipe.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { PublicModule } from 'src/app/shared/components/public/public.module';
 
 register();
 @NgModule({
   declarations: [HomeComponent],
-  imports: [
-    CommonModule,
-    HomeRoutingModule,
-    PipeModule,
-    ReactiveFormsModule,
-    PublicModule,
-  ],
+  imports: [CommonModule, HomeRoutingModule, PipeModule, ReactiveFormsModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HomeModule {}

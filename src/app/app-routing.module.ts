@@ -13,21 +13,21 @@ const routes: Routes = [
   //   loadChildren: () =>
   //     import('./public/home/home.module').then((m) => m.HomeModule),
   // },
-  {
-    path: 'plan',
-    loadChildren: () =>
-      import('./public/plan/plan.module').then((m) => m.PlanModule),
-  },
-  {
-    path: 'services',
-    loadChildren: () =>
-      import('./public/services/services.module').then((m) => m.ServicesModule),
-  },
-  {
-    path: 'features',
-    loadChildren: () =>
-      import('./public/features/features.module').then((m) => m.FeaturesModule),
-  },
+  // {
+  //   path: 'plan',
+  //   loadChildren: () =>
+  //     import('./public/plan/plan.module').then((m) => m.PlanModule),
+  // },
+  // {
+  //   path: 'services',
+  //   loadChildren: () =>
+  //     import('./public/services/services.module').then((m) => m.ServicesModule),
+  // },
+  // {
+  //   path: 'features',
+  //   loadChildren: () =>
+  //     import('./public/features/features.module').then((m) => m.FeaturesModule),
+  // },
 
   {
     path: 'admin',
