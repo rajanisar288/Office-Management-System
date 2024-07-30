@@ -3,6 +3,7 @@ body,*{
     margin: 0;
     font-family: $poppins;
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 .fa-classic,.fa-regular,.fa-solid,.far,.fas {
     font-family: "Font Awesome 6 Free"
@@ -36,6 +37,9 @@ body{
 //width (in percentage (100%, 50%, 25%))
 .w-100{
     width: 100%;
+}
+.w-75{
+    width: 75%;
 }
 .w-50{
     width: 50%;
@@ -75,7 +79,13 @@ body{
 .gap-10{
     gap: 10px;
 }
+.gap-25{
+    gap: 25px;
+}
 
+.gap-5{
+    gap: 5px;
+}
 .crsr-pointer{
     cursor: pointer;
 }
@@ -90,7 +100,9 @@ body{
 .textwhiteblack{
     color: $blackWhite;
 }
-
+.backgroundImage{
+    background: $backgroundImage;
+}
 //background color (primary, secondary)
 .bg-primary{
     background: $primary;
@@ -98,7 +110,19 @@ body{
 .bg-secondary{
     background: $secondary;
 }
+.bg-w-and-b{
+    background: $border-primary;
+}
 
+.bg-blue{
+    background: $color-blue;
+}
+.bg-red{
+    background: $red-light;
+}
+.bg-turk{
+    background: $color-turquoise;
+}
 
 //headings
 .heading{
@@ -131,6 +155,9 @@ body{
 
 .p-15 {
     padding: 15px;
+}
+.p-20 {
+    padding: 20px;
 }
 .pt-5{
     padding-top: 5px;
@@ -192,12 +219,19 @@ body{
     color: $color-turquoise;
 }
 
+
 //margin
 .mt-20{
     margin-top: 20px;
 }
+.mt-15{
+    margin-top: 15px;
+}
 .mt-10{
     margin-top: 10px;
+}
+.mt-30{
+    margin-top: 30px;
 }
 .ml-20{
     margin-left: 20px;
@@ -210,6 +244,9 @@ body{
 }
 .mb-10{
     margin-bottom: 10px;
+}
+.mb-30{
+    margin-bottom: 30px;
 }
 .mr-20{
     margin-right: 20px;
@@ -238,6 +275,9 @@ body{
 }
 
 // heights
+.h-50{
+    height: 50px;
+}
 .h-100{
     height: 100px;
 }
@@ -279,6 +319,9 @@ overflow-x: hidden;
 } 
 .br-primary{
     border: 1px solid $border-primary;
+}
+.br-primary-btm{
+    border-bottom: 1px solid $border-primary;
 }
 
 //colors
@@ -341,9 +384,94 @@ overflow-x: hidden;
 
 
 //fons size
+
+.fs-15{
+    font-size: 15px  !important;
+}
+.fs-14{
+    font-size: 15px  !important;
+}.fs-13{
+    font-size: 13px  !important;
+}
 .fs-15{
     font-size: $profile-font-name;
 }
 .fs-12{
     font-size: $profile-font-pera;
+}
+
+//box shadow
+.bx-shadow-priamry{
+    box-shadow: $box-shadow-primary;
+}
+
+
+//links 
+.t-dec{
+    text-decoration: none;
+}
+
+
+.text-dark{
+    color:$text-dark;
+}
+.primary-label {
+    font-size: 22px;
+    background: linear-gradient(to right, $red-dark, $green-dark, $blue-dark);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.secondary-label {
+    font-size: 32px;
+    font-family: $poppins-bold;
+    letter-spacing: 20px;
+    padding: 10px 30px;
+    margin-left: 120px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    color: white;
+    transition: all 320ms ease-in-out;
+}
+.secondary-label:hover{
+    letter-spacing: 14px;
+}
+.secondary-label::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: black;
+    z-index: -1;
+    transition: all 320ms ease-in-out 320ms;
+    
+}
+.secondary-label::after{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 60px;
+    background: rgb(124, 1, 1);
+    right: 32px;
+    z-index: -2;
+    top: 1px;
+    transition: all 320ms ease-in-out;
+    // animation: labelAnimation 9s ease-in-out;
+}
+
+.secondary-label:hover::after{
+   width: 100%;
+   top: -6px;
+}
+.secondary-label:hover::before{
+    height: 60px;
+    left: 56px;
+ }
+
+
+
+
+.word-space3{
+    word-spacing: 3px;
 }

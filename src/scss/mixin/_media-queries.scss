@@ -18,8 +18,15 @@
     }
 }
 
+@mixin for-desktop{
+    @media screen and (max-width: 1920px) and (min-width: 1500px) {
+        @content
+    }
+}
+
 @mixin for-midLarge{
     @media only screen and (max-width: $Large){
         @content
     }
 }
+

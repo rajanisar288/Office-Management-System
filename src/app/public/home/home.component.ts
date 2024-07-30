@@ -41,46 +41,6 @@ export class HomeComponent implements AfterViewInit {
     this._utilityService.isLogin.next(false);
   }
 
-  navToggle() {
-    let span1 = document.getElementById('span1');
-    let span2 = document.getElementById('span2');
-    let span3 = document.getElementById('span3');
-    let nav = document.getElementById('homeNav');
-    // navbarUnHide
-    if (this.isNavbarHide == true) {
-      span1?.classList.add('span1');
-      span2?.classList.add('span2');
-      span3?.classList.add('span3');
-      nav?.classList.add('navbarUnHide');
-      this.isNavbarHide = !this.isNavbarHide;
-    } else {
-      span1?.classList.remove('span1');
-      span2?.classList.remove('span2');
-      span3?.classList.remove('span3');
-      nav?.classList.remove('navbarUnHide');
-      this.isNavbarHide = true;
-    }
-  }
-
-  // navToggle(e: any) {
-  //   console.log(e.target);
-  //   e.target.classList.toggle('navToggler-left');
-  //   let navbar = document.getElementById('navbar');
-  //   navbar?.classList.toggle('navbar-hide');
-  //   //  let navbar =  document.getElementById('navbar-fluid')
-  //   console.log(navbar);
-  // }
-
-  //NavbarToggle
-  navbarHomeHideAndShow(data: any) {
-    data.classList.remove('homeNavbarHide');
-    console.log(data);
-    this.menuHideAndShow = !this.menuHideAndShow;
-    if (this.menuHideAndShow === true) {
-      data.classList.add('homeNavbarHide');
-    }
-  }
-
   // themeSwitcher
   // themeSwitcher(){
   //   document.body.classList.add('dark-theme');

@@ -1,102 +1,99 @@
-<div class="container-fluid">
-    <!--===== Landing Page =======-->
-    <div class="container-fluid" id="landingPage">
-        <div class="rightSide">
+<div class="container-fluid p-relative backgroundImage" style="justify-content: flex-start;">
+    <!--********************************* 
+    ===============Navbar===================== 
+    *************************************** -->
+    <div class="container h-50 d-flex justify-space-between align-items-center pt-20" id="main-nav">
+        <div class="logo"><a href=""><img src="../../../../../assets/images/lg.png" alt="logo" width="50"></a></div>
+        <div class="item h-50">
+            <ul class="h-50 d-flex justify-space-between align-items-center">
+                <a href="">Home</a>
+                <a href="">Features</a>
+                <a href="">About</a>
+                <a href="">Service</a>
+                <a href="">Plan</a>
+            </ul>
         </div>
-        <div class="container f-direction-column d-flex mainContainer">
-            <div class="toggle" (click)="navToggle()">
-                      <span id="span1"></span>
-                      <span id="span2"></span>
-                      <span id="span3"></span>
-            </div>
-            <div class="homeNav" id="homeNav">
-                <div class="navLogo"><a href="">
-                    <span>MY</span>
-                    <SPAn>Office</SPAn>
-                </a></div>
-                <div class="navMenu">
-                    <ul>
-                        <a href="#feature">Home</a>
-                        <a href="">Feature</a>
-                        <a href="">Services</a>
-                        <a href="">Plan</a>
-                    </ul>
-                </div>
-                <div class="navAuth">
-                    <li routerLink="signup" (click)="login()">Sign in</li>
-                    <li routerLink="signup" (click)="signup()">Sign up</li>
-                </div>
-            </div>
-            <div class="homeCenter">
-                <div class="centerLeft">
-                    <h1>THERE IS NO PROBLEM WHEN YOU USE</h1>
-                    <span>MY OFFICE</span>
-                    <p>A few weeks ago, I worked on a website refresh and wanted to outline text in a few titles. This is not the effect I’d normally use, but in this case, the titles</p>
-                    <a href="">Get start <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-                <div class="centerRight">
-                    <img src="./../../../assets/images/vactorImage.png" alt="">
-                </div>
+        <div class="auth d-flex justify-space-between gap-10 align-items-center">
+            <button class="btn-filled-red" routerLink="/signup" (click)="signup()">Sign up</button>
+            <button class="btn-outline-red" routerLink="/signup" (click)="login()">Sign in</button>
+        </div>
+    </div>
 
+
+
+
+    <!--********************************* 
+===============Service===================== 
+*************************************** -->
+    <div class="container d-flex f-wrap align-items-start mb-30 mt-30">
+        <div class="w-100 d-flex">
+            <h1 class="secondary-label">Service</h1>
+        </div>
+        <div class="d-flex f-wrap gap-10 align-items-start justify-space-between">
+            <div class="roundBox box1">
+                <h1>The Leading Customer Data Platform</h1>
+                <button>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-            <div class="homeEnd">
-                <a href=""></a>
+            <div class="roundBox box2">
+                <h1>The Leading Customer Data Platform</h1>
+                <button>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="roundBox box3">
+                <h1>The Leading Customer Data Platform</h1>
+                <button>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </div>
-    <!--===== Landing Page End=======-->
+</div>
+<!-- <app-footer></app-footer> -->
 
-    <!--========== Feature Page =============-->
-    <div class="container-fluid" id="feature"> 
-        <div class="container d-flex f-direction-column">
-            <h1 class="w-100">Features</h1>
-            <div class="featureCards">
-                <div class="featureCard">
-                    <div class="blue">
-                        <a href=""><i class="fa-solid fa-video"></i></a>
-                    </div>
-                    <div><h1>Let's Connect with video call</h1></div>
-                    <div><p>A box-shadow CSS generator that helps you quickly generate box-shadow CSS declarations for your website. It comes with many options and it demonstrates instantly. If you want</p></div>
+
+<!--********************************* 
+===============Footer===================== 
+*************************************** -->
+<div class="container-fluid bg-secondary">
+    <div class="container d-flex f-wrap align-items-center f-direction-column">
+        <div class="top w-100 d-flex justify-space-between f-wrap" id="footer">
+            <div class="leftFooter d-flex  f-direction-column" style="min-width: 320px;">
+                <div><a routerLink="/.." class="t-dec"><img src="../../../../../assets/images/lg.png" alt="logo"
+                            width="100"></a></div>
+                <div class="d-flex gap-10">
+                    <a href="" class="link-filled-red">Try</a>
+                    <a href="" class="link-outline-red">Watch Demo</a>
                 </div>
-                <div class="featureCard">
-                    <div class="red">
-                        <a href=""><i class="fa-solid fa-video"></i></a>
-                    </div>
-                    <div><h1>Let's Connect with video call</h1></div>
-                    <div><p>A box-shadow CSS generator that helps you quickly generate box-shadow CSS declarations for your website. It comes with many options and it demonstrates instantly. If you want</p></div>
+                <div class="mt-30 mb-30 d-flex gap-5">
+                    <a href="" class="link-icon"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="" class="link-icon"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="" class="link-icon"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="" class="link-icon"><i class="fa-brands fa-instagram"></i></a>
                 </div>
-                <div class="featureCard">
-                    <div class="green">
-                        <a href=""><i class="fa-solid fa-video"></i></a>
-                    </div>
-                    <div><h1>Let's Connect with video call</h1></div>
-                    <div><p>A box-shadow CSS generator that helps you quickly generate box-shadow CSS declarations for your website. It comes with many options and it demonstrates instantly. If you want</p></div>
-                </div>
-                <div class="featureCard">
-                    <div class="yellow">
-                        <a href=""><i class="fa-solid fa-video"></i></a>
-                    </div>
-                    <div><h1>Let's Connect with video call</h1></div>
-                    <div><p>A box-shadow CSS generator that helps you quickly generate box-shadow CSS declarations for your website. It comes with many options and it demonstrates instantly. If you want</p></div>
-                </div>
-                <div class="featureCard">
-                    <div class="blue">
-                        <a href=""><i class="fa-solid fa-video"></i></a>
-                    </div>
-                    <div><h1>Let's Connect with video call</h1></div>
-                    <div><p>A box-shadow CSS generator that helps you quickly generate box-shadow CSS declarations for your website. It comes with many options and it demonstrates instantly. If you want</p></div>
-                </div>
-                <div class="featureCard">
-                    <div class="red">
-                        <a href=""><i class="fa-solid fa-video"></i></a>
-                    </div>
-                    <div><h1>Let's Connect with video call</h1></div>
-                    <div><p>A box-shadow CSS generator that helps you quickly generate box-shadow CSS declarations for your website. It comes with many options and it demonstrates instantly. If you want</p></div>
-                </div>
-                
+
+            </div>
+            <div class="leftFooter d-flex mt-20 f-direction-column" style="min-width: 320px;">
+                <a href="" class="basic-link fs-14 mt-20">Plan</a>
+                <a href="" class="basic-link fs-14 mt-15">Services</a>
+                <a href="" class="basic-link fs-14 mt-15">Features</a>
+                <a href="" class="basic-link fs-14 mt-15">Blogs</a>
+                <a href="" class="basic-link fs-14 mt-15">Terms & Condition</a>
             </div>
         </div>
-
+        <div class="w-100 bg-w-and-b mb-30" style="height: 1px;"></div>
+        <div class="bottom w-100 mb-30 d-flex justify-space-between f-wrap" id="footer">
+            <p class="text-primary" style="min-width: 320px;">&copy;2024 Office Inc. <span class="ff-poppins-italic">All
+                    rights reserved</span></p>
+            <p class="text-primary" style="min-width: 320mx;">M.Nisar (Software Developer)</p>
+        </div>
     </div>
-    <!--========== Feature Page =============-->
 </div>
