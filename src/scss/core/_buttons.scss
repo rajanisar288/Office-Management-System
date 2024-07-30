@@ -4,7 +4,7 @@ button{
 }
 
 .btn-fill{
-    border-radius: 7px;
+    // border-radius: 7px;
     font-size: 17px;
     transition: 320ms;
     outline: none;
@@ -22,7 +22,7 @@ button{
 .btn-filled-green{
     background: $green-dark;
     color: white;
-    border-radius: 7px;
+    // border-radius: 7px;
     font-size: 17px;
     transition: 320ms;
     outline: none;
@@ -43,7 +43,7 @@ button{
 .btn-outline-green{
     background: white;
     color: $green-dark;
-    border-radius: 7px;
+    // border-radius: 7px;
     font-size: 17px;
     transition: 320ms;
     outline: none;
@@ -66,7 +66,7 @@ button{
 .btn-filled-red{
     background: $red-dark;
     color: white;
-    border-radius: 7px;
+    // border-radius: 7px;
     font-size: 17px;
     transition: 320ms;
     outline: none;
@@ -89,7 +89,7 @@ button{
     background: white;
     color: $red-dark;
     border: 1px solid $red-dark;
-    border-radius: 7px;
+    // border-radius: 7px;
     font-size: 17px;
     transition: 320ms;
     outline: none;
@@ -111,7 +111,7 @@ button{
     background: $blue-dark;
     color: white;
     border: none;
-    border-radius: 7px;
+    // border-radius: 7px;
     font-size: 17px;
     transition: 320ms;
     outline: none;
@@ -133,7 +133,7 @@ button{
     background: white;
     color: $blue-dark;
     border: 1px solid $blue-dark;
-    border-radius: 7px;
+    // border-radius: 7px;
     font-size: 17px;
     transition: 320ms;
     outline: none;
@@ -156,7 +156,7 @@ button{
     background: $color-turquoise;
     color: white;
     border: none;
-    border-radius: 7px;
+    // border-radius: 7px;
     font-size: 17px;
     transition: 320ms;
     outline: none;
@@ -178,7 +178,7 @@ button{
     background: white;
     color: $color-turquoise;
     border: 1px solid $color-turquoise;
-    border-radius: 7px;
+    // border-radius: 7px;
     font-size: 17px;
     transition: 320ms;
     outline: none;
@@ -238,7 +238,7 @@ button{
     background: white;
     color: $red-dark;
     border: 1px solid $red-dark;
-    border-radius: 7px;
+    // border-radius: 7px;
     font-size: 17px;
     transition: 320ms;
     outline: none;
@@ -288,7 +288,7 @@ button{
     outline: none;
     border: none;
     padding: 7px 15px;
-    border-radius: 7px;
+    // border-radius: 7px;
     font-size: 16px;
     color: $active-color;
     transition: all 320ms;
@@ -303,7 +303,7 @@ button{
 
 .icon-btn-secondary{
     padding: 8px 10px;
-    border-radius: 7px;
+    // border-radius: 7px;
     font-size: 14px;
     background: $secondary;
     color: $text-secondary;
