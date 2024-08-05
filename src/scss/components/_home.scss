@@ -1,218 +1,282 @@
-//navbar
-#main-nav{
-    ul{
-        background: $primary;
-        border-radius: 7px;
-        padding: 10px 10px;
-        a{
-            text-decoration: none;
-            padding: 20px 30px;
-            text-align: center;
-            position: relative;
-            z-index: 2;
-            &::after{
-                content: '';
-                position: absolute;
-                width: 0;
-                right: 0;
-                top: 10px;
-                z-index: -2;
-                height: 45px;
-                background: $color-red;
-                transition: all 320ms ease-in-out;
-            }
-            &:hover::after{
-                width: 100%;
-            }
-            &::before{
-                content: '';
-                position: absolute;
-                width: 0;
-                left: 0;
-                bottom: 10px;
-                z-index: -1;
-                height: 2px;
-                background: $text-dark;
-                transition: all 320ms ease-in-out 320ms;
-            }
-            &:hover::before{
-                width: 100%;
-            }
+// //navbar
+// #main-nav{
+//     ul{
+//         background: $primary;
+//         // border-radius: 7px;
+//         padding: 10px 10px;
+//         a{
+//             text-decoration: none;
+//             padding: 20px 30px;
+//             text-align: center;
+//             position: relative;
+//             z-index: 2;
+//             &::after{
+//                 content: '';
+//                 position: absolute;
+//                 width: 0;
+//                 right: 0;
+//                 top: 10px;
+//                 z-index: -2;
+//                 height: 45px;
+//                 background: $color-red;
+//                 transition: all 320ms ease-in-out;
+//             }
+//             &:hover::after{
+//                 width: 100%;
+//             }
+//             &::before{
+//                 content: '';
+//                 position: absolute;
+//                 width: 0;
+//                 left: 0;
+//                 bottom: 10px;
+//                 z-index: -1;
+//                 height: 2px;
+//                 background: $text-dark;
+//                 transition: all 320ms ease-in-out 320ms;
+//             }
+//             &:hover::before{
+//                 width: 100%;
+//             }
 
-        }
-    }
-}
-
-
+//         }
+//     }
+// }
 
 
 
+// //Home
+// #homePage{
+//     div{
+//         &:nth-child(1){
+//             h1{
+//                 display: flex;
+//                 align-items: center;
+//                 cursor: pointer;
+//                 transition: all 320ms ease-in-out;
+//                 &:nth-child(1){
+//                     width: 60% !important;
+//                     padding: 5px 30px 0px 30px;
+//                     font-size: 25px;
+//                     // background-color: $primary;
+//                     position: relative;
+//                     z-index: 2;
+//                     font-family: $poppins-italic;
+//                     letter-spacing: 0px;
+//                     // &:hover{
+//                     //     letter-spacing: 4px;
+//                     // }
+//                     &::after{
+//                         content: '';
+//                         position: absolute;
+//                         z-index: -2;
+//                         width: 40%;
+//                         height: 100%;
+//                         background: $color-red;
+//                         right: 0;
+//                         transition: all 320ms ease-in-out;
+
+//                     }
+//                     &::before{
+//                         content: '';
+//                         position: absolute;
+//                         z-index: 3;
+//                         width: 50%;
+//                         height: 2px;
+//                         background: black;
+//                         left: 30%;
+//                         bottom: 5px;
+//                         transition: all 320ms ease-in-out 320ms;
+
+//                     }
+//                     // &:hover::after{
+//                     //     width: 100%;
+//                     // }
+//                     // &:hover::before{
+//                     //     width: 80%;
+//                     // }
+//                 }
+//                 &:last-child{
+//                     background-color: $color-red;
+//                     padding: 15px 30px;
+
+//                 }
+//                 img{
+//                     // background: $primary;
+//                     // margin-bottom: -40px;
+//                 }
+//             }
+//         }
+//     }
+// }
 
 
 
 
 
 
-//service
-.roundBox {
-    max-width: 500px;
-    min-width: 300px;
-    padding: 50px 50px;
-    border-radius: 122px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    margin-top: 40px;
-    cursor: pointer;
-    transition: all 2s ease;
-}
-.box1:hover{
-    background: linear-gradient(to bottom, #af262642, #af262642);
-}
-.box1:hover::before{
-    transition: background 0.3s ease;
-    background: linear-gradient(to bottom, $color-red, $color-red);
-}
-
-.roundBox h1{
-    color: $blackWhite;
-    font-family: $poppins-italic; 
-    text-align: center;   
-}
-.roundBox button{
-    width: 100px;
-    font-size: 35px;
-    position: relative;
-    margin-top: 10px;
-    display: flex;
-    height: 70px;
-   background: transparent;
-   transition: all 2s ease;
-}
-
-.roundBox button span{
-    height: 2px;
-    position: absolute;
-}
-.roundBox button span:nth-child(1){
-    background: $blackWhite;
-    width: 23px;
-    right: 24px;
-    top: 10px;
-}
-.roundBox button span:nth-child(2){
-    background: $blackWhite;
-    right: 15px;
-    width: 23px;
-    transform: rotate(106deg);
-    top: 21px;
-}.roundBox button span:nth-child(3){
-    background: $blackWhite;
-    width: 67px;
-    right: 16px;
-    top: 31px;
-    transform: rotate(-39deg);
-}
-.box1 button::before{
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: $color-red;
-    right: 8px;
-    top: -4px;
-}
 
 
+// //service
+// .roundBox {
+//     max-width: 500px;
+//     min-width: 300px;
+//     padding: 50px 50px;
+//     // border-radius: 122px;
+//     position: relative;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     overflow: hidden;
+//     margin-top: 40px;
+//     cursor: pointer;
+//     transition: all 2s ease;
+// }
+// .box1:hover{
+//     background: linear-gradient(to bottom, #af262642, #af262642);
+// }
+// .box1:hover::before{
+//     transition: background 0.3s ease;
+//     background: linear-gradient(to bottom, $color-red, $color-red);
+// }
 
-.box1{
-    background: linear-gradient(to bottom, #af262642, transparent);
-}
-.box1::before {
-    content: "";
-    transition: background 0.3s ease;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 122px; /* Match the border-radius of the parent */
-    padding: 2px; /* This creates the illusion of a border */
-    background: linear-gradient(to bottom, $color-red, transparent);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-}
+// .roundBox h1{
+//     color: $blackWhite;
+//     font-family: $poppins-italic; 
+//     text-align: center;   
+// }
+// .roundBox button{
+//     width: 100px;
+//     font-size: 35px;
+//     position: relative;
+//     margin-top: 10px;
+//     display: flex;
+//     height: 70px;
+//    background: transparent;
+//    transition: all 2s ease;
+// }
 
-
-.box2{
-    background: linear-gradient(to bottom, #00800057, transparent);
-    margin-right: 100px;
-    margin-top: 150px;
-}
-.box2::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 122px; /* Match the border-radius of the parent */
-    padding: 2px; /* This creates the illusion of a border */
-    background: linear-gradient(to bottom, $green-dark, transparent);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-}
-
-
-.box2 button::before{
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: $green-dark;
-    right: 8px;
-    top: -4px;
-}
-
-
-.box3{
-    background: linear-gradient(to bottom, rgb(0 241 255 / 26%), transparent);
-    margin-left: 100px;
-    // margin-top: 150px;
-}
-.box3::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 122px; /* Match the border-radius of the parent */
-    padding: 2px; /* This creates the illusion of a border */
-    background: linear-gradient(to bottom, $blue-dark, transparent);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-}
+// .roundBox button span{
+//     height: 2px;
+//     position: absolute;
+// }
+// .roundBox button span:nth-child(1){
+//     background: $blackWhite;
+//     width: 23px;
+//     right: 24px;
+//     top: 10px;
+// }
+// .roundBox button span:nth-child(2){
+//     background: $blackWhite;
+//     right: 15px;
+//     width: 23px;
+//     transform: rotate(106deg);
+//     top: 21px;
+// }.roundBox button span:nth-child(3){
+//     background: $blackWhite;
+//     width: 67px;
+//     right: 16px;
+//     top: 31px;
+//     transform: rotate(-39deg);
+// }
+// .box1 button::before{
+//     content: '';
+//     position: absolute;
+//     width: 50px;
+//     height: 50px;
+//     border-radius: 50%;
+//     background: $color-red;
+//     right: 8px;
+//     top: -4px;
+// }
 
 
-.box3 button::before{
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: $blue-dark;
-    right: 8px;
-    top: -4px;
-}
+
+// .box1{
+//     background: linear-gradient(to bottom, #af262642, transparent);
+// }
+// .box1::before {
+//     content: "";
+//     transition: background 0.3s ease;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     // border-radius: 122px; /* Match the border-radius of the parent */
+//     padding: 2px; /* This creates the illusion of a border */
+//     background: linear-gradient(to bottom, $color-red, transparent);
+//     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+//     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+//     -webkit-mask-composite: xor;
+//     mask-composite: exclude;
+// }
+
+
+// .box2{
+//     background: linear-gradient(to bottom, #00800057, transparent);
+//     margin-right: 100px;
+//     margin-top: 150px;
+// }
+// .box2::before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     // border-radius: 122px; /* Match the border-radius of the parent */
+//     padding: 2px; /* This creates the illusion of a border */
+//     background: linear-gradient(to bottom, $green-dark, transparent);
+//     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+//     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+//     -webkit-mask-composite: xor;
+//     mask-composite: exclude;
+// }
+
+
+// .box2 button::before{
+//     content: '';
+//     position: absolute;
+//     width: 50px;
+//     height: 50px;
+//     border-radius: 50%;
+//     background: $green-dark;
+//     right: 8px;
+//     top: -4px;
+// }
+
+
+// .box3{
+//     background: linear-gradient(to bottom, rgb(0 241 255 / 26%), transparent);
+//     margin-left: 100px;
+//     // margin-top: 150px;
+// }
+// .box3::before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     // border-radius: 122px; /* Match the border-radius of the parent */
+//     padding: 2px; /* This creates the illusion of a border */
+//     background: linear-gradient(to bottom, $blue-dark, transparent);
+//     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+//     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+//     -webkit-mask-composite: xor;
+//     mask-composite: exclude;
+// }
+
+
+// .box3 button::before{
+//     content: '';
+//     position: absolute;
+//     width: 50px;
+//     height: 50px;
+//     border-radius: 50%;
+//     background: $blue-dark;
+//     right: 8px;
+//     top: -4px;
+// }
