@@ -1,1 +1,69 @@
-<p>total-managers works!</p>
+<div class="main-content">
+ <h1>Managers</h1>
+ <div class="table">
+<div class="tableHeading">
+    <div class="">hello </div>
+    <div class="rightAction"><input type="text" placeholder="search...." style="width: 100px;">
+        <div>Filter</div>
+        <button>add user</button>
+    </div>
+</div>
+
+   <div class="mainTable">
+        <table>
+            <tbody>
+                <tr>
+                    <th>SN</th>
+                    <th>NAME</th>
+                    <th>AGE</th>
+                    <th>CLASS</th>
+                    <th>ADDRESS</th>
+                    <th>ROLL</th>
+                    <th>ACTION</th>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr *ngFor="let manager of managers;let i = index">
+                    <td>{{i + 1}}</td>
+                    <td>
+                        <div class="profile">
+                            <div>
+                                <img src="{{manager.profile}}" alt="" >    
+                            </div>
+                            <div class="detail">
+                                    <h2>john</h2>
+                                    <p>emal@gmail.com</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>{{manager.age}}</td>
+                    <td>{{manager.class}}</td>
+                    <td>{{manager.address}}</td>
+                    <td>{{manager.roll}}</td>
+                    <td><button (click)="openAction(i)"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        <div class="actionModel" *ngIf="selectedIndex === i">
+                            <button (click)="viewProfile(manager)"><i class="fa-regular fa-user"></i><span>View Profile</span></button>
+                            <button><i class="fa-solid fa-pen-to-square"></i><span>Edit Detail</span></button>
+                            <button><i class="fa-solid fa-key"></i><span>Change Permission</span></button>
+                            <button><i class="fa-solid fa-file-export"></i><span>Export Details</span></button>
+                            <button><i class="fa-solid fa-trash-can"></i><span>Delete User</span></button>
+
+                        </div>
+                    
+                    </td>
+                </tr>
+               
+                
+             
+            </tbody>
+        </table>
+   </div>
+ </div>   
+</div>
+
+
+
+<!-- model -->
+ <ng-container>
+    <app-profile-view [profileData]="profileData"></app-profile-view>
+ </ng-container>

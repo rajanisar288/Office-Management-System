@@ -7,6 +7,8 @@ import { BehaviorSubject, Subject } from 'rxjs';
 export class UtilityService {
   isSidebarActive = new BehaviorSubject(false);
   isLogin = new BehaviorSubject(false);
+  profileViewer = new BehaviorSubject(false);
+
   breadcrumbs: any | undefined;
   constructor() {}
 }

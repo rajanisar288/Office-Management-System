@@ -29,6 +29,7 @@ body {
     hsl(212deg 74% 91%) 100%
   );
   --color-whiteBlack:black;
+  --table-border:#3e3e3e29;
 }
 
 // Dark Theme  
@@ -51,6 +52,7 @@ body.dark-theme {
   --active-color:#2d2d2d;
   --background-image:linear-gradient(225deg, #030303 0%, #404040 100%);
   --color-whiteBlack:white;
+  --table-border:#cccccc26;
 
 }
 
@@ -77,6 +79,7 @@ $text-dark:var(--text-dark);
 $active-list:var(--active-color);
 $backgroundImage:var(--background-image);
 $blackWhite:var(--color-whiteBlack);
+$tableBorder:var(--table-border);
 
 
 
@@ -85,6 +88,7 @@ $green-dark: #15CA20;
 $green-light: var(--green-light);
 
 $red-dark: #fd3550;
+
 $red-light: var(--red-light);
 
 // $yellow-dark: #e5e600;

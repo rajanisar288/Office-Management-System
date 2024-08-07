@@ -475,3 +475,13 @@ overflow-x: hidden;
 .word-space3{
     word-spacing: 3px;
 }
+
+.main-content{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 10px;
+    position: relative;
+}

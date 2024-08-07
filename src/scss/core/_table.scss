@@ -1,0 +1,148 @@
+.table{
+    display: flex;
+    width: 100%;
+    position: relative;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background: $primary;
+    box-sizing: border-box;
+    padding: 10px 7px;
+    border-radius: 7px;
+    .tableHeading{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        position: relative;
+        padding: 10px;
+        align-items: center;
+        .rightAction{
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            position: relative;
+            padding: 10px;
+            align-items: center;
+        }
+    }
+    .mainTable{
+        width: 100%;
+        position: relative;
+        display: flex;
+        overflow-x: auto;
+        border-radius: 7px;
+        table{
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            border-collapse: separate;
+            border-spacing: 0; 
+            width: 100%;
+            // overflow: auto;
+             
+         tbody{
+            margin: 0;
+            padding: 0;
+            &:first-child{
+                tr{
+                    background: #e64f5e88;
+                    border-top: none !important;
+                }
+            }
+            tr{
+               
+                th{
+                    text-align: left;
+                    padding: 7px 8px;
+                    min-width: 150px;
+                    color: $text-primary;
+                    font-size: 13px;
+                    font-family:   $poppins;
+                  &:first-child{
+                    max-width: 70px;
+                    min-width: 40px !important;
+                  }  
+                  &:last-child{
+                    max-width: 50px;
+                    min-width: 50px !important;
+                    position: relative;
+                    text-align: center;
+                  } 
+                }
+                td{
+                    text-align: left;
+                    padding: 8px 8px;
+                    min-width: 150px;
+                    border-bottom: 1px solid $tableBorder ;
+                    position: relative;
+                    box-sizing: border-box;
+                    color: $text-primary;
+                    button{
+                        background: transparent;
+                        padding: 5px 20px;
+                        font-size: 20px;
+                        color:   $blackWhite;
+                        border: 1px solid $border-primary;
+                        background: $secondary;
+                        border-radius: 7px;
+                        &:focus{
+                            outline: none;
+                            border: none;
+                        }
+                        // &:hover{
+                        //     background: $secondary;
+                        //     color: $blackWhite;
+                        // }
+                    }
+                    .profile{
+                        display: flex;
+                        div{
+                            &:first-child{
+                                width: 60px;
+                                display: flex;
+                                align-items: center;
+                                img {
+                                    width: 50px;
+                                    border-radius: 50%;
+                                    height: 50px;
+                                    object-fit: cover;
+                                }
+                            }
+                            &:last-child{
+                                display: flex;
+                                width: auto;
+                                flex-direction: column;
+                                h2{
+                                    font-size: 15px;
+                                    font-family:$shadow-light;
+                                    letter-spacing: 2px;
+                                    font-weight: bold;
+                                    color: $blackWhite;
+                                }
+                                p{
+                                    font-size: 13px;
+                                    color: $text-primary;
+                                }
+                            }
+                        }
+                    }
+                  &:first-child{
+                    max-width: 70px;
+                    min-width: 40px !important;
+                  }  
+                  &:last-child{
+                    max-width: 50px;
+                    min-width: 50px !important;
+                    position: relative;
+                    text-align: center;
+                  }
+                }
+                &:last-child td{
+                    border-bottom: none !important;
+                }
+            }
+         }
+
+        }
+    }
+}
