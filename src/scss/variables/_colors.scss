@@ -2,6 +2,7 @@
 body {
   --primary: white;
   --secondary: #F1F3F9; //#F0F0F0
+  --secondaryHover:#edf1ff;
   --cardColor:#e6e6e6d1;
   --borderPrimary: #d0d0d0d9;// #e2e2e2;
   --boxShadowPrimary: rgb(149 149 149 / 27%) 7px 7px 76px -18px;
@@ -59,6 +60,7 @@ body.dark-theme {
 //Theme Setup
 $primary: var(--primary);
 $secondary: var(--secondary);
+$secondaryHover:var(--secondaryHover);
 $main-bg:var(--cardColor);
 $box-shadow-secondary:var(--boxShadowSecondary);
 $border-primary: var(--borderPrimary);

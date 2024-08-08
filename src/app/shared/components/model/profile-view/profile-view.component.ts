@@ -7,16 +7,26 @@ import { UtilityService } from 'src/app/shared/services/utility.service';
   styleUrls: ['./profile-view.component.scss'],
 })
 export class ProfileViewComponent {
-  @Input('profileData') profileData?: any;
+  @Input('userData') userData?: any;
   isModelActive = false;
+  imageView = false
+  userProfile:string | undefined
   constructor(private _utilityService: UtilityService) {}
   ngOnInit() {}
   closeModel() {
     this._utilityService.profileViewer.next(false);
   }
 
+  fullImage(profile:any){
+    this.userProfile = profile
+    this.imageView = true
+  }
+  exitFullIamge(){
+    this.imageView = false
+  }
+
   ngOnChanges() {
-    console.log(this.profileData);
+    console.log(this.userData);
     this._utilityService.profileViewer.subscribe(
       (res) => (this.isModelActive = res)
     );

@@ -9,44 +9,44 @@ import { UtilityService } from 'src/app/shared/services/utility.service';
 export class TotalManagersComponent {
   managers = [
     {
-      name: 'alex',
-      age: 2,
-      address: 'xyz',
+      name: 'Alex',
+      age: 22,
+      address: 'London , United Kingdom',
       profile:
         'https://thumbs.dreamstime.com/b/photo-charming-cheerful-girl-beaming-smile-arms-hold-cuddle-book-isolated-bright-aquamarine-color-background-258635881.jpg',
       class: '8th',
-      roll: 5855,
+      roll: 58587,
     },
     {
-      name: 'alex',
+      name: 'Nisar Ahmed',
       age: 28,
-      address: 'xyz',
+      address: 'Karachi, Pakistan',
       profile:
-        'https://thumbs.dreamstime.com/b/photo-charming-cheerful-girl-beaming-smile-arms-hold-cuddle-book-isolated-bright-aquamarine-color-background-258635881.jpg',
-      class: '8th',
+        'https://media.istockphoto.com/id/1347005975/photo/portrait-of-a-serious-muslim-young-man-looking-at-camera.jpg?s=612x612&w=0&k=20&c=mxRUDCuwDD3ML6-vMaUlTY7Ghqlj2R_LOhWWCB5CTXE=',
+      class: '7th',
       roll: 5855,
     },
     {
-      name: 'alex',
-      age: 99,
-      address: 'xyz',
+      name: 'Aamir Khan',
+      age: 30,
+      address: 'Mumbai, India',
       profile:
-        'https://thumbs.dreamstime.com/b/photo-charming-cheerful-girl-beaming-smile-arms-hold-cuddle-book-isolated-bright-aquamarine-color-background-258635881.jpg',
-      class: '8th',
-      roll: 5855,
+        'https://sb.kaleidousercontent.com/67418/1920x1545/c5f15ac173/samuel-raita-ridxdghg7pw-unsplash.jpg',
+      class: '11th',
+      roll: 587955,
     },
     {
-      name: 'alex',
-      age: 25,
-      address: 'xyz',
+      name: 'Khalid Hussain',
+      age: 32,
+      address: 'Riyadh, Saudia Arbia',
       profile:
-        'https://thumbs.dreamstime.com/b/photo-charming-cheerful-girl-beaming-smile-arms-hold-cuddle-book-isolated-bright-aquamarine-color-background-258635881.jpg',
-      class: '8th',
-      roll: 5855,
+        'https://sb.kaleidousercontent.com/67418/1920x1545/c5f15ac173/samuel-raita-ridxdghg7pw-unsplash.jpg',
+      class: 'BA ',
+      roll: 585,
     },
   ];
   selectedIndex: number | null = null;
-  profileData: any = {};
+  userObj: any = {};
   constructor(private _utilityService: UtilityService) {}
 
   openAction(index: number) {
@@ -57,10 +57,13 @@ export class TotalManagersComponent {
     }
   }
 
-  viewProfile(managerData: any) {
-    this.profileData = {
-      name: managerData.name,
-      age: managerData.age,
+  
+
+  viewProfile(userData: any) {
+    this.userObj = {
+      name: userData.name,
+      age: userData.age,
+      profile:userData.profile
     };
     this._utilityService.profileViewer.next(true);
   }

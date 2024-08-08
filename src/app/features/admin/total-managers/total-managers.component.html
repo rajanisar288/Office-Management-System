@@ -31,7 +31,7 @@
                                 <img src="{{manager.profile}}" alt="" >    
                             </div>
                             <div class="detail">
-                                    <h2>john</h2>
+                                    <h2>{{manager.name}}</h2>
                                     <p>emal@gmail.com</p>
                             </div>
                         </div>
@@ -65,5 +65,5 @@
 
 <!-- model -->
  <ng-container>
-    <app-profile-view [profileData]="profileData"></app-profile-view>
+    <app-profile-view [userData]="userObj"></app-profile-view>
  </ng-container>

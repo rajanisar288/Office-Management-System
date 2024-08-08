@@ -1,8 +1,37 @@
 <div class="profileViewModel" *ngIf="isModelActive">
-    <button (click)="closeModel()" style="background: red !important;">Close Model</button>
+    <!-- <button (click)="closeModel()" style="background: red !important;">Close Model</button>
     <p style="color: white;">
         <span>{{profileData.name}}</span>
         <span>{{profileData.age}}</span>
 
-    </p>
+    </p> -->
+
+    <div class="modelWrapper">
+        <div class="modelCloseBtn">
+            <button (click)="closeModel()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="profile">
+            <div class="cover">nio</div>
+            <div class="profilePic">
+                <div class="userProfile" (click)="fullImage(userData.profile)">
+                    <img src="{{userData.profile}}" alt="">
+                </div>
+                <div class="buttons">
+                    <button><i class="fa-solid fa-link"></i> <span>Copy Link</span></button>
+                </div>
+            </div>
+        </div>
+        <div class="modelContent">
+kp[]
+        </div>
+    </div>
+
+    <div class="ImageView" *ngIf="imageView">
+        <div class="modelCloseBtn">
+            <button (click)="exitFullIamge()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+       <div class="image">
+        <img src="{{userProfile}}" alt="">
+       </div>
+    </div>
 </div>
