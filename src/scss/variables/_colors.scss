@@ -31,6 +31,9 @@ body {
   );
   --color-whiteBlack:black;
   --table-border:#3e3e3e29;
+  --color-blackWhite:white;
+  --model-main-bg:#0000008a;
+
 }
 
 // Dark Theme  
@@ -54,6 +57,9 @@ body.dark-theme {
   --background-image:linear-gradient(225deg, #030303 0%, #404040 100%);
   --color-whiteBlack:white;
   --table-border:#cccccc26;
+  --color-blackWhite:black;
+  --secondaryHover:#494949;
+  --model-main-bg:rgb(142 142 142 / 54%);
 
 }
 
@@ -69,6 +75,7 @@ $shadow-border: var(--borderWithShadow);
 $text-primary: var(--textPrimary);
 $text-secondary: var(--textSecondary);
 $color-red:#E64F5E;
+$color-red-light:#ff000038;
 $color-green:#98CC60;
 $color-blue:#5493E4;
 $card-yellow:#FCC74D;
@@ -82,6 +89,8 @@ $active-list:var(--active-color);
 $backgroundImage:var(--background-image);
 $blackWhite:var(--color-whiteBlack);
 $tableBorder:var(--table-border);
+$whiteBlack:var(--color-blackWhite);
+$modelMainBg:var(--model-main-bg);
 
 
 

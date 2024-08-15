@@ -317,7 +317,45 @@ button{
 
 
 
-//
+//model buttons
+.mdl-delete{
+    @include buttons;
+    border-radius: 7px;
+    padding: 10px 0px;
+    padding: 7px 0px;
+    font-size: 15px;
+    background: $color-red;
+    margin: 7px 0;
+    color: $color-white;
+    transition: all 320ms ease-in-out;
+    box-sizing: border-box;
+    &:hover{
+        background: transparent;
+        border: 1px solid $color-red;
+        color: $blackWhite;
+    }
+}
+
+.mdl-cancel{
+    @include buttons;
+    border-radius: 7px;
+    padding: 10px 0px;
+    padding: 7px 0px;
+    font-size: 15px;
+    background: transparent;
+    margin: 7px 0;
+    color: $blackWhite;
+    transition: all 320ms ease-in-out;
+    box-sizing: border-box;
+    border: 1px solid $border-primary;
+    &:hover{
+        background: $border-primary;
+        border: none ;
+        // color: $blackWhite;
+    }
+}
+
+
 .modelCloseBtn{
     position: absolute;
     right: 10px;
@@ -325,8 +363,8 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 7px;
     overflow: hidden;
     box-sizing: border-box;
@@ -338,6 +376,7 @@ button{
         background: $secondary;
         border: 1px solid $border-primary;
         font-size: 22px;
+        color: $blackWhite;
         &:hover{
             background: $secondaryHover;
         }

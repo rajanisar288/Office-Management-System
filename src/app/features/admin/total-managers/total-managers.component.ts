@@ -57,14 +57,28 @@ export class TotalManagersComponent {
     }
   }
 
-  
-
   viewProfile(userData: any) {
     this.userObj = {
       name: userData.name,
       age: userData.age,
-      profile:userData.profile
+      profile: userData.profile,
     };
     this._utilityService.profileViewer.next(true);
+  }
+
+  //delete user
+  deleteUser(user: any) {
+    this._utilityService.openConfirm(
+      'Are you sure you want to really delete this item?'
+    );
+    this._utilityService.onConfirm().subscribe((confirmed: boolean) => {
+      if (confirmed) {
+        // Perform deletion logic here
+        console.warn('Item deleted');
+        this._utilityService.showToast('deleted!', 'danger');
+      } else {
+        console.warn('Item not deleted');
+      }
+    });
   }
 }

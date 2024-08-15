@@ -1,0 +1,15 @@
+<div class="profileViewModel" *ngIf="isView">
+    <div class="modelWrapper" style="width: 20%;">
+        <div class="modelCloseBtn">
+            <button (click)="closeModel()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="d-flex f-direction-column w-100 br-box align-items-center justify-space-center"
+            style="padding: 35px;">
+            <span class="model-alert"><i class="fa-solid fa-triangle-exclamation"></i></span>
+            <h2 class="text-center w-100 textwhiteblack">Are you sure?</h2>
+            <p class="text-center w-100 text-primary">{{msg}}</p>
+            <button class="w-100 mdl-delete" (click)="confirm()">yes Delete</button>
+            <button class="w-100 mdl-cancel" (click)="cancel()">cancel</button>
+        </div>
+    </div>
+</div>

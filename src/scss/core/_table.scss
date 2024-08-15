@@ -39,13 +39,15 @@
             border-spacing: 0; 
             width: 100%;
             // overflow: auto;
+            border: 1px solid $border-primary;
+            border-radius: 7px;
              
          tbody{
             margin: 0;
             padding: 0;
             &:first-child{
                 tr{
-                    background: #e64f5e88;
+                    background: $color-red;
                     border-top: none !important;
                 }
             }
@@ -53,11 +55,12 @@
                
                 th{
                     text-align: left;
-                    padding: 7px 8px;
+                    padding: 13px 8px;
                     min-width: 150px;
                     color: $text-primary;
                     font-size: 13px;
                     font-family:   $poppins;
+                    color: $color-white;
                   &:first-child{
                     max-width: 70px;
                     min-width: 40px !important;

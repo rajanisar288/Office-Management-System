@@ -46,7 +46,7 @@
                             <button><i class="fa-solid fa-pen-to-square"></i><span>Edit Detail</span></button>
                             <button><i class="fa-solid fa-key"></i><span>Change Permission</span></button>
                             <button><i class="fa-solid fa-file-export"></i><span>Export Details</span></button>
-                            <button><i class="fa-solid fa-trash-can"></i><span>Delete User</span></button>
+                            <button (click)="deleteUser(manager)"><i class="fa-solid fa-trash-can"></i><span>Delete User</span></button>
 
                         </div>
                     
@@ -63,7 +63,19 @@
 
 
 
-<!-- model -->
+<!--@ Profile viewer model
+-- When you want to see user profile then user this 
+---------------------->
  <ng-container>
     <app-profile-view [userData]="userObj"></app-profile-view>
+ </ng-container>
+
+
+
+ <ng-container>
+    <app-confirmation></app-confirmation>
+ </ng-container>
+
+ <ng-container>
+    <app-toaster></app-toaster>
  </ng-container>
