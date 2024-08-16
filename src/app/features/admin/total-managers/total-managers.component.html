@@ -3,9 +3,10 @@
  <div class="table">
 <div class="tableHeading">
     <div class="">hello </div>
-    <div class="rightAction"><input type="text" placeholder="search...." style="width: 100px;">
-        <div>Filter</div>
-        <button>add user</button>
+    <div class="rightAction br-box">
+        <input type="text" placeholder="Search " class="table-input" >
+        <button class="btn-black"> <i class="fa-solid fa-filter"></i> Filter</button>
+        <button class="btn-black" (click)="addUsers()"> <i class="fa-solid fa-plus"></i> Add user</button>
     </div>
 </div>
 
@@ -40,7 +41,8 @@
                     <td>{{manager.class}}</td>
                     <td>{{manager.address}}</td>
                     <td>{{manager.roll}}</td>
-                    <td><button (click)="openAction(i)"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    <td class="action-container"><button (click)="openAction(i)"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                       <ng-container *ngIf="actionModel">
                         <div class="actionModel" *ngIf="selectedIndex === i">
                             <button (click)="viewProfile(manager)"><i class="fa-regular fa-user"></i><span>View Profile</span></button>
                             <button><i class="fa-solid fa-pen-to-square"></i><span>Edit Detail</span></button>
@@ -49,6 +51,7 @@
                             <button (click)="deleteUser(manager)"><i class="fa-solid fa-trash-can"></i><span>Delete User</span></button>
 
                         </div>
+                       </ng-container>
                     
                     </td>
                 </tr>
@@ -66,6 +69,42 @@
 <!--@ Profile viewer model
 -- When you want to see user profile then user this 
 ---------------------->
+<ng-container *ngIf="userForm">
+    <div class="profileViewModel">
+        <div class="modelWrapper p-0">
+            <div class="modelCloseBtn">
+                <button (click)="closeModel()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="p-10 bg-red-dark br-7">
+                <h1 class="text-white">Add User</h1>
+            </div>
+            <div class="modelContent d-flex f-wrap br-box justify-space-between p-10 bg-secondary">
+                <div class="w-45 d-flex f-wrap f-direction-column ">
+                    <h4 class="mb-5">Name</h4>
+                    <input type="text" placeholder="Enter Name">
+                </div>
+                <div class="w-45 d-flex f-wrap f-direction-column ">
+                    <h4 class="mb-5">Last Name</h4>
+                    <input type="text" placeholder="Enter Last Name">
+                </div>
+                <div class="w-45 d-flex f-wrap f-direction-column ">
+                    <h4 class="mb-5">Email</h4>
+                    <input type="text" placeholder="example@gmail.com ">
+                </div>
+                <div class="w-45 d-flex f-wrap f-direction-column ">
+                    <h4 class="mb-5">Address</h4>
+                    <input type="text" placeholder="United, berlen">
+                </div>
+                <div class="w-45 d-flex f-wrap f-direction-column ">
+                    <h4 class="mb-5">City</h4>
+                    <input type="text" placeholder="New York">
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+
  <ng-container>
     <app-profile-view [userData]="userObj"></app-profile-view>
  </ng-container>
@@ -76,6 +115,4 @@
     <app-confirmation></app-confirmation>
  </ng-container>
 
- <ng-container>
-    <app-toaster></app-toaster>
- </ng-container>
+ 

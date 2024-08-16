@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { UtilityService } from 'src/app/shared/services/utility.service';
 
 @Component({
@@ -47,13 +47,25 @@ export class TotalManagersComponent {
   ];
   selectedIndex: number | null = null;
   userObj: any = {};
+  actionModel: boolean = false;
+  userForm: boolean = true;
   constructor(private _utilityService: UtilityService) {}
 
   openAction(index: number) {
     if (this.selectedIndex === index) {
       this.selectedIndex = null;
+      this.actionModel = false;
     } else {
       this.selectedIndex = index;
+      this.actionModel = true;
+    }
+  }
+
+  @HostListener('document:click', ['$event'])
+  handleClickOutside(event: Event) {
+    const targetElement = event.target as HTMLElement;
+    if (targetElement && !targetElement.closest('.action-container')) {
+      this.actionModel = false;
     }
   }
 
@@ -66,6 +78,12 @@ export class TotalManagersComponent {
     this._utilityService.profileViewer.next(true);
   }
 
+  addUsers() {
+    this.userForm = true;
+  }
+  closeModel() {
+    this.userForm = false;
+  }
   //delete user
   deleteUser(user: any) {
     this._utilityService.openConfirm(
@@ -75,7 +93,6 @@ export class TotalManagersComponent {
       if (confirmed) {
         // Perform deletion logic here
         console.warn('Item deleted');
-        this._utilityService.showToast('deleted!', 'danger');
       } else {
         console.warn('Item not deleted');
       }

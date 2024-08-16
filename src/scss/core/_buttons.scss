@@ -1,6 +1,7 @@
 button{
     cursor: pointer;
     @include buttons;
+    box-sizing: border-box;
 }
 
 .btn-fill{
@@ -284,25 +285,27 @@ button{
 }
 
 .btn-black{
+    @include buttons;
     background: $blackWhite;
     outline: none;
     border: none;
-    padding: 7px 15px;
-    // border-radius: 7px;
+    padding: 0px 15px;
+    border-radius: 7px;
     font-size: 16px;
-    color: $active-color;
-    transition: all 320ms;
-    &:focus{
-        outline: none;
-        border: none;
-    }
+    color: $whiteBlack;
+    height: 42px;
+    transition: all 320ms ease-in-out;
+    box-sizing: border-box;
     &:hover{
-        letter-spacing: 1px;
+        // letter-spacing: 1px;
+        background: $whiteBlack;
+        color: $blackWhite;
+        border: 1px solid $blackWhite;
     }
 }
 
 .icon-btn-secondary{
-    padding: 8px 10px;
+    padding: 9px 10px;
     // border-radius: 7px;
     font-size: 14px;
     background: $secondary;
@@ -321,7 +324,6 @@ button{
 .mdl-delete{
     @include buttons;
     border-radius: 7px;
-    padding: 10px 0px;
     padding: 7px 0px;
     font-size: 15px;
     background: $color-red;
@@ -339,7 +341,6 @@ button{
 .mdl-cancel{
     @include buttons;
     border-radius: 7px;
-    padding: 10px 0px;
     padding: 7px 0px;
     font-size: 15px;
     background: transparent;

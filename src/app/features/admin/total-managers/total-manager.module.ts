@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { TotalManagerRoutingModule } from './total-manager-routing.module';
 import { TotalManagersComponent } from './total-managers.component';
 import { ModelModule } from 'src/app/shared/components/model/model.module';
-import { ToasterModule } from 'src/app/shared/components/toaster/toaster.module';
 
 @NgModule({
   declarations: [TotalManagersComponent],
@@ -11,7 +10,6 @@ import { ToasterModule } from 'src/app/shared/components/toaster/toaster.module'
     CommonModule,
     TotalManagerRoutingModule,
     ModelModule,
-    ToasterModule,
   ],
 })
 export class TotalManagerModule {}
