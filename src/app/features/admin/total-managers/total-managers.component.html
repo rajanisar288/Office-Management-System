@@ -5,8 +5,8 @@
     <div class="">hello </div>
     <div class="rightAction br-box">
         <input type="text" placeholder="Search " class="table-input" >
-        <button class="btn-black"> <i class="fa-solid fa-filter"></i> Filter</button>
-        <button class="btn-black" (click)="addUsers()"> <i class="fa-solid fa-plus"></i> Add user</button>
+        <button class="btn-black"> <i class="fa-thin fa-filter"></i> Filter</button>
+        <button class="btn-black" (click)="addUsers()"> <i class="fa-thin fa-plus"></i> Add user</button>
     </div>
 </div>
 
@@ -44,11 +44,11 @@
                     <td class="action-container"><button (click)="openAction(i)"><i class="fa-solid fa-ellipsis-vertical"></i></button>
                        <ng-container *ngIf="actionModel">
                         <div class="actionModel" *ngIf="selectedIndex === i">
-                            <button (click)="viewProfile(manager)"><i class="fa-regular fa-user"></i><span>View Profile</span></button>
-                            <button><i class="fa-solid fa-pen-to-square"></i><span>Edit Detail</span></button>
-                            <button><i class="fa-solid fa-key"></i><span>Change Permission</span></button>
-                            <button><i class="fa-solid fa-file-export"></i><span>Export Details</span></button>
-                            <button (click)="deleteUser(manager)"><i class="fa-solid fa-trash-can"></i><span>Delete User</span></button>
+                            <button (click)="viewProfile(manager)"><i class="fa-thin fa-user"></i><span>View Profile</span></button>
+                            <button><i class="fa-thin fa-pen-to-square"></i><span>Edit Detail</span></button>
+                            <button><i class="fa-thin fa-key"></i><span>Change Permission</span></button>
+                            <button><i class="fa-thin fa-file-export"></i><span>Export Details</span></button>
+                            <button (click)="deleteUser(manager)"><i class="fa-thin fa-trash"></i><span>Delete User</span></button>
 
                         </div>
                        </ng-container>

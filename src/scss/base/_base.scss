@@ -12,6 +12,9 @@ body,*{
 .fa-brands,.fab {
     font-family: "Font Awesome 6 Brands"
 }
+.fa-thin{
+    font-weight: 300 !important;
+}
 
 body{
     background: $primary;

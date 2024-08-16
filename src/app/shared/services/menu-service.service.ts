@@ -6,10 +6,14 @@ import { Injectable } from '@angular/core';
 export class MenuServiceService {
   //admin
   adminMenu = [
-    { routeName: 'My Profile', route: '/admin', icon: 'fa-solid fa-user' },
+    {
+      routeName: 'Dashboard',
+      route: '/admin',
+      icon: 'fa-thin fa-table-columns',
+    },
     {
       routeName: 'Company Profile',
-      icon: 'fa-regular fa-building',
+      icon: 'fa-thin fa-building',
       subMenu: [
         { routeName: 'Company', route: '/admin/company-profile' },
         { routeName: 'Managers', route: '/admin/total-managers' },
@@ -18,7 +22,7 @@ export class MenuServiceService {
     },
     {
       routeName: 'My workspace',
-      icon: 'fa-solid fa-briefcase',
+      icon: 'fa-thin fa-briefcase',
       subMenu: [
         { routeName: 'Mails', route: '/admin/emails' },
         { routeName: 'Meetings', route: '/admin/meetings' },
@@ -28,9 +32,9 @@ export class MenuServiceService {
     {
       routeName: 'Contact',
       route: '/contact',
-      icon: 'fa-regular fa-address-book',
+      icon: 'fa-thin fa-address-book',
     },
-    { routeName: 'Report', route: '/report', icon: 'fa-solid fa-bug' },
+    { routeName: 'Report', route: '/report', icon: 'fa-thin fa-bug' },
   ];
 
   //manager
