@@ -1,0 +1,28 @@
+<div class="main-content">
+    <div class="tabs d-flex f-wrap w-100  bg-primary br-7 br-box">
+        <button class="tabBtn"
+        [ngClass]="{ tabActive: selectedTab === 'configuration' }"
+      (click)="selectedTab = 'configuration'"
+        >Configuration</button>
+        <button class="tabBtn" [ngClass]="{ tabActive: selectedTab === 'appearance' }"
+        (click)="selectedTab = 'appearance'">Appearance</button>
+        <button class="tabBtn">thess</button>
+    </div>
+
+
+
+    <div class="tab-content pt-10 pb-10 w-100">
+        <!-- Only load content when the tab is active -->
+        <ng-container *ngIf="selectedTab === 'configuration'">
+          <app-config></app-config>
+        </ng-container>
+        
+        <ng-container *ngIf="selectedTab === 'appearance'">
+          <h2>Appearance Content</h2>
+          <p>This is the content for the appearance tab.</p>
+        </ng-container>
+      </div>
+
+
+    
+</div>

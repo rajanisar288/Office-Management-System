@@ -35,6 +35,7 @@ export class MenuServiceService {
       icon: 'fa-thin fa-address-book',
     },
     { routeName: 'Report', route: '/report', icon: 'fa-thin fa-bug' },
+    { routeName: 'Setting', route: '/admin/setting', icon: 'fa-thin fa-gear' },
   ];
 
   //manager

@@ -1,6 +1,13 @@
 import { Component, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { UtilityService } from 'src/app/shared/services/utility.service';
+import {
+  NavigationCancel,
+  NavigationEnd,
+  NavigationError,
+  NavigationStart,
+  Router,
+} from '@angular/router';
 
 @Component({
   selector: 'app-layout',
@@ -8,13 +15,27 @@ import { UtilityService } from 'src/app/shared/services/utility.service';
   styleUrls: ['./layout.component.scss'],
 })
 export class LayoutComponent {
+  isLoading = false;
   menuToggle: any;
   isSidebarCollapse: boolean = true;
   isThemeChangerActive: boolean = false;
   constructor(
     @Inject(DOCUMENT) private document: Document,
-    private _UtilityService: UtilityService
-  ) {}
+    private _UtilityService: UtilityService,
+    private router: Router
+  ) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationStart) {
+        this.isLoading = true;
+      } else if (
+        event instanceof NavigationEnd ||
+        event instanceof NavigationCancel ||
+        event instanceof NavigationError
+      ) {
+        this.isLoading = false;
+      }
+    });
+  }
   ngOnInit() {}
 
   toggler() {

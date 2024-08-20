@@ -7,3 +7,16 @@
     border: none;
   }
 }
+
+//tabs button
+@mixin tabBtn{
+  border: none;
+  box-sizing: border-box;
+  outline: none;
+  // border-radius: 7px;
+  font-size: 17px;
+  &:focus{
+    outline: none;
+    border: none;
+  }
+}

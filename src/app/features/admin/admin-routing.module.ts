@@ -51,6 +51,11 @@ const routes: Routes = [
             (m) => m.ChatGroupsModule
           ),
       },
+      {
+        path: 'admin/setting',
+        loadChildren: () =>
+          import('./setting/setting.module').then((m) => m.SettingModule),
+      },
     ],
   },
 ];
